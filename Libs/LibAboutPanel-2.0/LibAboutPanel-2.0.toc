@@ -1,28 +1,30 @@
-﻿## Title: Lib: AboutPanel
+## Interface: 70000
+## Title: Lib: AboutPanel-2.0
+## Notes: Parses ToC and adds About panel to Interface options
+## Notes-ruRU: Parses ToC and adds About panel to Interface options
+## Notes-deDE: Parses ToC and adds About panel to Interface options
+## Notes-koKR: Parses ToC and adds About panel to Interface options
+## Notes-esMX: Parses ToC and adds About panel to Interface options
+## Notes-esES: Parses ToC and adds About panel to Interface options
+## Notes-ptBR: Parses ToC and adds About panel to Interface options
+## Notes-zhCN: Parses ToC and adds About panel to Interface options
+## Notes-zhTW: Parses ToC and adds About panel to Interface options
+## Notes-itIT: Parses ToC and adds About panel to Interface options
+## Notes-frFR: Parses ToC and adds About panel to Interface options
+## X-Curse-Packaged-Version: r2
+## X-Curse-Project-Name: LibAboutPanel-2.0
+## X-Curse-Project-ID: libaboutpanel-2-0
+## X-Curse-Repository-ID: wow/libaboutpanel-2-0/mainline
 
-## Notes: Adds an about panel to interface options.
+## Version: r2
+## X-Revision: 2
+## X-Date: 2016-09-11T06:20:19Z
+## Author: Paul "Myrroddin" Vandersypen
+## X-Copyright: Public Domain
+## X-Category: Library
+## LoadOnDemand: 1
+## OptionalDeps: LibStub, Ace3
 
-## Author: Ackis
-## X-Email: ackis AT gmail DOT com
-## X-Author-Faction: Horde
-## X-Author-Server: Hyjal US
-## X-Donate: http://www.curseforge.com/projects/libaboutpanel/#w_donations
+LibStub\LibStub.lua
 
-## Interface: 70200
-## Version: @project-version@
-## X-Revision: @project-revision@
-## X-Date: @file-date-iso@
-
-## X-Category: Libraries
-## X-Localizations: enUS, deDE, esES, esMX
-## X-Website: http://www.wowwiki.com/LibAboutPanel
-## X-Feedback: http://wow.curse.com/downloads/wow-addons/details/libaboutpanel.aspx
-
-## OptionalDeps: LibStub, CallbackHandler-1.0
-
-#@no-lib-strip@
-libs\LibStub\LibStub.lua
-libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
-#@end-no-lib-strip@
-
-LibAboutPanel.lua
+lib.xml
