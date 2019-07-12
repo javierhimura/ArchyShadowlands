@@ -61,7 +61,7 @@ local function NewInstance(width, height, useFauxScroll)
 	lib.num_frames = lib.num_frames + 1
 
 	local frameName = ("%s_CopyFrame%d"):format(MAJOR, lib.num_frames)
-	local copyFrame = _G.CreateFrame("Frame", frameName, _G.UIParent, "ButtonFrameTemplate")
+	local copyFrame = _G.CreateFrame("Frame", frameName, _G.UIParent, "UIPanelDialogTemplate")
 	copyFrame:SetSize(width, height)
 	copyFrame:SetPoint("CENTER", _G.UIParent, "CENTER")
 	copyFrame:SetFrameStrata("DIALOG")
@@ -69,16 +69,12 @@ local function NewInstance(width, height, useFauxScroll)
 	copyFrame:SetMovable(true)
 	copyFrame:SetToplevel(true)
 
-	_G.ButtonFrameTemplate_HidePortrait(copyFrame)
-	_G.ButtonFrameTemplate_HideAttic(copyFrame)
-	_G.ButtonFrameTemplate_HideButtonBar(copyFrame)
-
 	table.insert(_G.UISpecialFrames, frameName)
 	_G.HideUIPanel(copyFrame)
 
-	copyFrame.title = copyFrame.TitleText
+	copyFrame.title = copyFrame.Title
 
-	local titleBackground = _G[frameName .. "TitleBg"]
+	local titleBackground = _G[frameName.."TitleBG"]
 	local dragFrame = _G.CreateFrame("Frame", nil, copyFrame)
 	dragFrame:SetPoint("TOPLEFT", titleBackground, 16, 0)
 	dragFrame:SetPoint("BOTTOMRIGHT", titleBackground)
@@ -178,8 +174,9 @@ local function NewInstance(width, height, useFauxScroll)
 		end)
 	end
 
-	scrollArea:SetPoint("TOPLEFT", copyFrame.Inset, 5, -5)
-	scrollArea:SetPoint("BOTTOMRIGHT", copyFrame.Inset, -27, 6)
+	local dialogBackground = _G[frameName.."DialogBG"]
+	scrollArea:SetPoint("TOPLEFT", dialogBackground, 5, -7)
+	scrollArea:SetPoint("BOTTOMRIGHT", dialogBackground, -25, 5)
 
 	copyFrame.scrollArea = scrollArea
 
@@ -259,32 +256,28 @@ end
 -- @return A handle for the dump frame.
 function lib:New(frameTitle, width, height, save)
 	local titleType = type(frameTitle)
-
 	if titleType ~= "nil" and titleType ~= "string" then
 		error(METHOD_USAGE_FORMAT:format("New", "frame title must be nil or a string."), 2)
 	end
 
 	local widthType = type(width)
-
 	if widthType ~= "nil" and widthType ~= "number" then
 		error(METHOD_USAGE_FORMAT:format("New", "frame width must be nil or a number."))
 	end
 
 	local heightType = type(height)
-
 	if heightType ~= "nil" and heightType ~= "number" then
 		error(METHOD_USAGE_FORMAT:format("New", "frame height must be nil or a number."))
 	end
 
 	local saveType = type(save)
-
 	if saveType ~= "nil" and saveType ~= "function" then
 		error(METHOD_USAGE_FORMAT:format("New", "save must be nil or a function."))
 	end
 
 	local instance = NewInstance(width or DEFAULT_FRAME_WIDTH, height or DEFAULT_FRAME_HEIGHT, not not save)
 	local frame = frames[instance]
-	frame.TitleText:SetText(frameTitle)
+	frame.title:SetText(frameTitle)
 
 	if save then
 		frame:SetScript("OnEvent", function(event, ...)
