@@ -25,7 +25,7 @@ Archy.version = _G.GetAddOnMetadata(FOLDER_NAME, "Version")
 _G["Archy"] = Archy
 
 local Dialog = LibStub("LibDialog-1.0")
-local HereBeDragons = LibStub("HereBeDragons-1.0")
+local HereBeDragons = LibStub("HereBeDragons-2.0")
 local L = LibStub("AceLocale-3.0"):GetLocale("Archy", false)
 local LDBI = LibStub("LibDBIcon-1.0")
 

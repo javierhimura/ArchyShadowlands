@@ -19,7 +19,7 @@ local L = LibStub("AceLocale-3.0"):GetLocale("Archy", false)
 local Archy = LibStub("AceAddon-3.0"):GetAddon("Archy")
 local LSM = LibStub("LibSharedMedia-3.0")
 
-local HereBeDragons = LibStub("HereBeDragons-1.0")
+local HereBeDragons = LibStub("HereBeDragons-2.0")
 
 -- ----------------------------------------------------------------------------
 -- Constants.
