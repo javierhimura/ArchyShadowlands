@@ -1,0 +1,18 @@
+tag 700b605e8f39ad8d5eab944644f664d9387c2ea6 7.3.2.1
+Author:	James D. Callahan III <jcallahan@curse.com>
+Date:	Tue Jan 9 18:44:53 2018 -0600
+
+Localization update.
+
+commit 5baa7674419d836d3210278fbfac5b54237cc026
+Author: James D. Callahan III <jcallahan@curse.com>
+Date:   Fri Oct 27 03:47:01 2017 -0500
+
+    Remove sound string from solve confirmation dialog - fixes https://www.wowace.com/projects/archy/issues/674
+
+commit c8a061f4569e6b7fc2cdb60156797062616f84c6
+Author: James D. Callahan III <jcallahan@curse.com>
+Date:   Thu Sep 21 11:01:21 2017 -0500
+
+    Corrected lookup key for Digsite: Nor'Danil Wellspring.
+
