@@ -17,7 +17,7 @@ local MAJOR = "LibTextDump-1.0"
 
 _G.assert(LibStub, MAJOR .. " requires LibStub")
 
-local MINOR = 3 -- Should be manually increased
+local MINOR = 4 -- Should be manually increased
 local lib, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not lib then
@@ -68,9 +68,7 @@ local function NewInstance(width, height, useFauxScroll)
 	copyFrame:EnableMouse(true)
 	copyFrame:SetMovable(true)
 	copyFrame:SetToplevel(true)
-
-	table.insert(_G.UISpecialFrames, frameName)
-	_G.HideUIPanel(copyFrame)
+	copyFrame:Hide()
 
 	copyFrame.title = copyFrame.Title
 
@@ -189,7 +187,7 @@ local function NewInstance(width, height, useFauxScroll)
 	editBox:SetFontObject("ChatFontNormal")
 
 	editBox:SetScript("OnEscapePressed", function()
-		_G.HideUIPanel(copyFrame)
+		copyFrame:Hide()
 	end)
 
 	copyFrame.edit_box = editBox
@@ -322,7 +320,7 @@ function prototype:Display(separator)
 		frame.edit_box:SetCursorPosition(0)
 	end
 
-	_G.ShowUIPanel(frame)
+	frame:Show()
 end
 
 function prototype:InsertLine(position, text, dateFormat)

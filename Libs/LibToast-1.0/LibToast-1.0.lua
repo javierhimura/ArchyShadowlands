@@ -403,7 +403,7 @@ local function _acquireToast(addonName)
     local toast = table.remove(ToastHeap)
 
     if not toast then
-        toast = _G.CreateFrame("Button", nil, _G.UIParent)
+        toast = _G.CreateFrame("Button", nil, _G.UIParent, _G.BackdropTemplateMixin and "BackdropTemplate")
         toast:SetFrameStrata("DIALOG")
         toast:Hide()
 

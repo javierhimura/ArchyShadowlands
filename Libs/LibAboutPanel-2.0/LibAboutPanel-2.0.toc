@@ -1,30 +1,21 @@
-## Interface: 70000
+## Interface: 90200
 ## Title: Lib: AboutPanel-2.0
-## Notes: Parses ToC and adds About panel to Interface options
-## Notes-ruRU: Parses ToC and adds About panel to Interface options
-## Notes-deDE: Parses ToC and adds About panel to Interface options
-## Notes-koKR: Parses ToC and adds About panel to Interface options
-## Notes-esMX: Parses ToC and adds About panel to Interface options
-## Notes-esES: Parses ToC and adds About panel to Interface options
-## Notes-ptBR: Parses ToC and adds About panel to Interface options
-## Notes-zhCN: Parses ToC and adds About panel to Interface options
-## Notes-zhTW: Parses ToC and adds About panel to Interface options
-## Notes-itIT: Parses ToC and adds About panel to Interface options
-## Notes-frFR: Parses ToC and adds About panel to Interface options
-## X-Curse-Packaged-Version: r2
-## X-Curse-Project-Name: LibAboutPanel-2.0
-## X-Curse-Project-ID: libaboutpanel-2-0
-## X-Curse-Repository-ID: wow/libaboutpanel-2-0/mainline
+## Notes: Adds an AddOn's ToC fields to its options table
+## Notes-zhCN: 添加插件 ToC 表格到选项栏
+## Notes-zhTW: 將插件 ToC 檔裡頭的欄位資料填到插件的選項表裡
+## Notes-ruRU: Добавляет поля ToC файла в таблицу опций аддона
+## Version: 1.0.32
 
-## Version: r2
-## X-Revision: 2
-## X-Date: 2016-09-11T06:20:19Z
-## Author: Paul "Myrroddin" Vandersypen
-## X-Copyright: Public Domain
+## X-Curse-Project-ID: 102269
+## X-WoWI-ID: 25392
+## X-Wago-ID: ZQ6aya6W
+
+## Author: Paul Vandersypen, Artur91425
+## X-License: MIT License
 ## X-Category: Library
 ## LoadOnDemand: 1
-## OptionalDeps: LibStub, Ace3
 
 LibStub\LibStub.lua
-
+CallbackHandler-1.0\CallbackHandler-1.0.lua
+AceConfig-3.0\AceConfig-3.0.xml
 lib.xml
