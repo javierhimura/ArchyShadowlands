@@ -66,6 +66,8 @@ local RaceTextureIDToRaceLabel = {
 	[1445573] = "ArchRaceDemons",
 	[1445575] = "ArchRaceHighborneNightElves",
 	[1445577] = "ArchRaceHighmountainTauren",
+	[2060049] = "ArchRaceZandalari",
+	[2060051] = "ArchRaceDrust",
 }
 
 -- ----------------------------------------------------------------------------
@@ -116,6 +118,8 @@ function private.InitializeRaces()
 	CurrencyNameFromRaceID[RaceID.ArchRaceTolvir] = _G.GetCurrencyInfo(401)
 	CurrencyNameFromRaceID[RaceID.ArchRaceTroll] = _G.GetCurrencyInfo(385)
 	CurrencyNameFromRaceID[RaceID.ArchRaceVrykul] = _G.GetCurrencyInfo(399)
+	CurrencyNameFromRaceID[RaceID.ArchRaceZandalari] = GetCurrencyInfo(1534)
+	CurrencyNameFromRaceID[RaceID.ArchRaceDrust] = GetCurrencyInfo(1535)
 
 	for raceID, currencyName in pairs(CurrencyNameFromRaceID) do
 		Races[raceID].currencyName = currencyName
