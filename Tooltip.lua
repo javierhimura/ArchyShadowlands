@@ -244,7 +244,7 @@ local function GetArtifactsDelta(race, missing_data)
 		end
 
 		while artifactName do
-			artifactName, _, _, _, _, _, _, _, completionCount = _G.GetArtifactInfoByRace(race.ID, artifact_index)
+			artifactName, _, _, _, _, _, _, _, _, completionCount = _G.GetArtifactInfoByRace(race.ID, artifact_index)
 			if artifactName and completionCount > 0 and missing_data[artifactName] then
 				missing_data[artifactName] = nil
 			end

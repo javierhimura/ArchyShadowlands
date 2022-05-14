@@ -120,7 +120,7 @@ function private.InitializeRaces()
 	CurrencyNameFromRaceID[RaceID.ArchRaceVrykul] = C_CurrencyInfo.GetCurrencyInfo(399)
 	CurrencyNameFromRaceID[RaceID.ArchRaceZandalari] = C_CurrencyInfo.GetCurrencyInfo(1534)
 	CurrencyNameFromRaceID[RaceID.ArchRaceDrust] = C_CurrencyInfo.GetCurrencyInfo(1535)
-
+	
 	for raceID, currencyName in pairs(CurrencyNameFromRaceID) do
 		Races[raceID].currencyName = currencyName
 	end
@@ -168,7 +168,7 @@ function private.AddRace(raceID)
 	end
 
 	for artifactIndex = 1, race.numArtifacts do
-		local artifactName, artifactDescription, artifactRarity, artifactIcon, hoverDescription, keystoneCount, bgTexture, firstCompletionTime, completionCount = _G.GetArtifactInfoByRace(raceID, artifactIndex)
+		local artifactName, _, artifactRarity, artifactIcon, _, _, _, _, _, completionCount = _G.GetArtifactInfoByRace(raceID, artifactIndex)
 		local artifact = {
 			ID = artifactIndex,
 			completionCount = completionCount or 0,
@@ -219,7 +219,7 @@ function Race:GetArtifactCompletionCountByName(targetArtifactName)
 	end
 
 	for artifactIndex = 1, self.numArtifacts do
-		local artifactName, _, _, _, _, _, _, _, completionCount = _G.GetArtifactInfoByRace(self.ID, artifactIndex)
+		local artifactName, _, _, _, _, _, _, _, _, completionCount = _G.GetArtifactInfoByRace(self.ID, artifactIndex)
 		if artifactName == targetArtifactName then
 			return completionCount or 0
 		end
@@ -258,8 +258,8 @@ function Race:UpdateCurrentProject()
 	end
 
 	_G.SetSelectedArtifact(self.ID)
+	local artifactName, artifactDescription, rarity, icon, spellDescription, numSockets, _, _ = _G.GetSelectedArtifactInfo()
 
-	local artifactName, artifactDescription, rarity, icon, spellDescription, numSockets = _G.GetSelectedArtifactInfo()
 	local artifact = self.Artifacts[artifactName:lower()]
 	if not artifact then
 		private.Debug("Missing data for %s artifact \"%s\"", self.name, artifactName)
