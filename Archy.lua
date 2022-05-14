@@ -592,10 +592,10 @@ function Archy:OnInitialize()
 	self.db.RegisterCallback(self, "OnProfileCopied", "OnProfileUpdate")
 	self.db.RegisterCallback(self, "OnProfileReset", "OnProfileUpdate")
 
-	local about_panel = LibStub:GetLibrary("LibAboutPanel", true)
+	local about_panel = LibStub:GetLibrary("LibAboutPanel-2.0", true)
 
 	if about_panel then
-		self.optionsFrame = about_panel.new(nil, "Archy")
+		self.optionsFrame = about_panel:CreateAboutPanel("Archy")
 	end
 	self:DefineSinkToast(FOLDER_NAME, [[Interface\Archeology\Arch-Icon-Marker]])
 	self:SetSinkStorage(self.db.profile.general.sinkOptions)
