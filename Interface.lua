@@ -335,6 +335,8 @@ do
 			return
 		end
 
+		Mixin(self, BackdropTemplateMixin)
+
 		local artifactSettings = private.ProfileSettings.artifact
 
 		local generalSettings = private.ProfileSettings.general
@@ -504,6 +506,8 @@ do
 		end
 
 		local digsiteSettings = private.ProfileSettings.digsite
+
+		Mixin(self, BackdropTemplateMixin)
 
 		self:SetScale(digsiteSettings.scale)
 		self:SetAlpha(digsiteSettings.alpha)
