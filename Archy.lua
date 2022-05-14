@@ -417,7 +417,7 @@ local CONFIG_UPDATE_FUNCTIONS = {
 	end,
 	tomtom = function(option)
 		local tomtomSettings = private.ProfileSettings.tomtom
-		TomTomHandler.hasTomTom = (_G.TomTom and _G.TomTom.AddZWaypoint and _G.TomTom.RemoveWaypoint) and true or false
+		TomTomHandler.hasTomTom = IsAddOnLoaded("TomTom")
 
 		if TomTomHandler.hasTomTom and tomtomSettings.enabled and _G.TomTom.profile then
 			_G.TomTom.profile.arrow.arrival = tomtomSettings.distance
@@ -806,7 +806,7 @@ function Archy:OnEnable()
 
 	TomTomHandler = private.TomTomHandler
 	TomTomHandler.isActive = true
-	TomTomHandler.hasTomTom = (_G.TomTom and _G.TomTom.AddZWaypoint and _G.TomTom.RemoveWaypoint) and true or false
+	TomTomHandler.hasTomTom = IsAddOnLoaded("TomTom")
 	TomTomHandler.hasPOIIntegration = TomTomHandler.hasTomTom and (_G.TomTom.profile and _G.TomTom.profile.poi and _G.TomTom.EnableDisablePOIIntegration) and true or false
 
 	private.InitializeRaces()
