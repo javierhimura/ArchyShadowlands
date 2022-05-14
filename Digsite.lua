@@ -105,7 +105,7 @@ end
 -- Helpers.
 -- ----------------------------------------------------------------------------
 local function CreateSurveyNode(digsite, savedNode, nodeIndex)
-	local node = _G.CreateFrame("Frame", ("ArchyMinimap_Digsite%sSurveyNode%d"):format(digsite.blobID, nodeIndex), _G.Minimap)
+	local node = _G.CreateFrame("Frame", ("ArchyMinimap_Digsite%sSurveyNode%d"):format(digsite.siteID, nodeIndex), _G.Minimap)
 	node:SetSize(8, 8)
 	node:Hide()
 	node:SetScript("OnEnter", MapIcon_OnEnter)
@@ -140,34 +140,31 @@ local function MapIconFrameGetDistance(self)
 end
 
 function private.AddDigsite(digsiteTemplate, landmarkName, coordX, coordY)
-	local existingDigsite = Digsite[digsiteTemplate.blobID]
+	local existingDigsite = Digsite[digsiteTemplate.siteID]
 	if existingDigsite then
 		-- TODO: Debug output
 		return
 	end
 
-	local continentID, zoneID = HereBeDragons:GetCZFromMapID(digsiteTemplate.mapID)
-
 	local digsite = _G.setmetatable({
-		blobID = digsiteTemplate.blobID,
+		siteID = digsiteTemplate.siteID,
 		coordX = coordX,
 		coordY = coordY,
-		continentID = continentID,
+		continentID = digsiteTemplate.UIMapID,
 		distance = nil,
-		level = 0,
-		mapID = digsiteTemplate.mapID,
+		UIMapID = digsiteTemplate.UIMapID,
 		maxFindCount = digsiteTemplate.maxFindCount,
 		name = landmarkName,
-		race = private.Races[digsiteTemplate.typeID],
-		stats = Archy.db.char.digsites.stats[digsiteTemplate.blobID],
+		race = private.Races[digsiteTemplate.raceID],
+		stats = Archy.db.char.digsites.stats[digsiteTemplate.siteID],
 		surveyNodes = {},
-		zoneID = zoneID,
-		zoneName = HereBeDragons:GetLocalizedMap(digsiteTemplate.mapID) or ("%s %s"):format(_G.UNKNOWN, _G.PARENS_TEMPLATE:format(zoneID)),
+		zoneID = digsiteTemplate.UIMapID,
+		zoneName = HereBeDragons:GetLocalizedMap(digsiteTemplate.UIMapID) or ("%s"):format(_G.UNKNOWN),
 	}, digsiteMetatable)
 
-	Digsites[digsite.blobID] = digsite
+	Digsites[digsite.siteID] = digsite
 
-	local mapIconFrame = _G.CreateFrame("Frame", ("ArchyMinimap_Digsite%sPOI"):format(digsite.blobID), _G.Minimap)
+	local mapIconFrame = _G.CreateFrame("Frame", ("ArchyMinimap_Digsite%sPOI"):format(digsite.siteID), _G.Minimap)
 	mapIconFrame:SetSize(10, 10)
 	mapIconFrame:Hide()
 	mapIconFrame:SetScript("OnEnter", MapIcon_OnEnter)
@@ -195,7 +192,7 @@ function private.AddDigsite(digsiteTemplate, landmarkName, coordX, coordY)
 
 	mapIconFrame.arrow = mapIconArrow
 
-	local surveyNodes = Archy.db.global.surveyNodes[digsite.blobID]
+	local surveyNodes = Archy.db.global.surveyNodes[digsite.siteID]
 	if surveyNodes then
 		for nodeIndex = 1, #surveyNodes do
 			digsite.surveyNodes[nodeIndex] = CreateSurveyNode(digsite, surveyNodes[nodeIndex], nodeIndex)
@@ -208,16 +205,16 @@ end
 -- ----------------------------------------------------------------------------
 -- Digsite methods.
 -- ----------------------------------------------------------------------------
-function Digsite:AddSurveyNode(mapID, mapLevel, coordX, coordY)
-	local surveyNodes = Archy.db.global.surveyNodes[self.blobID]
+function Digsite:AddSurveyNode(UIMapID, coordX, coordY)
+	local surveyNodes = Archy.db.global.surveyNodes[self.siteID]
 	if not surveyNodes then
 		surveyNodes = {}
-		Archy.db.global.surveyNodes[self.blobID] = surveyNodes
+		Archy.db.global.surveyNodes[self.siteID] = surveyNodes
 	end
 
 	for nodeIndex = 1, #surveyNodes do
 		local node = surveyNodes[nodeIndex]
-		local distance = HereBeDragons:GetZoneDistance(mapID, mapLevel, coordX, coordY, node.m, node.f, node.x, node.y)
+		local distance = HereBeDragons:GetZoneDistance(node.m, node.x, node.y, UIMapID ,coordX, coordY)
 		if not distance or _G.IsInInstance() then
 			distance = 0
 		end
@@ -230,8 +227,7 @@ function Digsite:AddSurveyNode(mapID, mapLevel, coordX, coordY)
 
 	-- Didn't find a match in the loop, or we wouldn't be here.
 	local newSavedNode = {
-		m = mapID,
-		f = mapLevel,
+		m = UIMapID,
 		x = coordX,
 		y = coordY
 	}
@@ -266,8 +262,11 @@ function Digsite:EnableMapIcon(tooltipText)
 		mapIcon.isEnabled = true
 		mapIcon.tooltip = tooltipText or ("%s %s\n%s"):format(self.name, _G.PARENS_TEMPLATE:format(self.race.name), self.zoneName)
 		mapIcon:Show()
-
-		HereBeDragonsPins:AddMinimapIconMF(self, self.mapIconFrame, self.mapID, self.level, self.coordX, self.coordY, true)
+        if self.UIMapID == nil or self.coordX == nil or self.coordY == nil then
+            return
+        end
+		HereBeDragonsPins:AddMinimapIconWorld(self, mapIcon, self.UIMapID, self.coordX, self.coordY, true)
+		--HereBeDragonsPins:AddMinimapIconMap(self, mapIcon, self.UIMapID, self.coordX, self.coordY, true, true)
 
 		MapIcon_OnUpdate(mapIcon, 5)
 	end
@@ -281,7 +280,7 @@ function Digsite:EnableSurveyNodes()
 			node:Show()
 
 			local savedData = node.savedData
-			HereBeDragonsPins:AddMinimapIconMF(self, node, savedData.m, savedData.f, savedData.x, savedData.y)
+			HereBeDragonsPins:AddMinimapIconMap(self, node, savedData.m, savedData.x, savedData.y, true)
 
 			MapIcon_OnUpdate(node, 5)
 		end
@@ -289,16 +288,16 @@ function Digsite:EnableSurveyNodes()
 end
 
 function Digsite:IsBlacklisted()
-	return Archy.db.char.digsites.blacklist[self.blobID] or self.race:IsOnDigSiteBlacklist()
+	return Archy.db.char.digsites.blacklist[self.siteID] or self.race:IsOnDigSiteBlacklist()
 end
 
 function Digsite:ToggleBlacklistStatus()
 	local blacklist = Archy.db.char.digsites.blacklist
 
-	if blacklist[self.blobID] then
-		blacklist[self.blobID] = nil
+	if blacklist[self.siteID] then
+		blacklist[self.siteID] = nil
 	else
-		blacklist[self.blobID] = true
+		blacklist[self.siteID] = true
 	end
 end
 

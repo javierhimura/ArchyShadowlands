@@ -135,7 +135,7 @@ do
 		for _, child in pairs(self.children) do
 			child:Hide()
 		end
-
+		
 		local currentContinentRaces = private.CONTINENT_RACES[private.CurrentContinentID]
 
 		for raceID, race in pairs(private.Races) do
@@ -618,12 +618,12 @@ do
 		self:Toggle()
 	end
 
-	local function DistanceIndicatorFrame_Update(self, mapID, mapLevel, mapX, mapY, surveyMapID, surveyMapLevel, surveyMapX, surveyMapY)
+	local function DistanceIndicatorFrame_Update(self, UIMapID, mapX, mapY, surveyUIMapID, surveyMapX, surveyMapY)
 		if surveyMapX == 0 and surveyMapY == 0 or _G.IsInInstance() then
 			return
 		end
 
-		local distance = HereBeDragons:GetZoneDistance(mapID, mapLevel, mapX, mapY, surveyMapID, surveyMapLevel, surveyMapX, surveyMapY) or 0
+		local distance = HereBeDragons:GetZoneDistance(UIMapID, mapX, mapY, surveyUIMapID, surveyMapX, surveyMapY) or 0
 		local greenMin, greenMax = 0, private.ProfileSettings.digsite.distanceIndicator.green
 		local yellowMin, yellowMax = greenMax, private.ProfileSettings.digsite.distanceIndicator.yellow
 		local redMin, redMax = yellowMax, 500
@@ -940,6 +940,8 @@ function Archy:ResizeGraphicalDigSiteDisplay()
 	end
 end
 
+local DRAENOR_CONTINENTID = 572
+
 function Archy:RefreshDigSiteDisplay()
 	if FramesShouldBeHidden() then
 		return
@@ -951,7 +953,7 @@ function Archy:RefreshDigSiteDisplay()
 		return
 	end
 
-	local maxFindCount = (continentID >= _G.WORLDMAP_DRAENOR_ID) and NUM_DIGSITE_FINDS_DRAENOR or NUM_DIGSITE_FINDS_DEFAULT
+	local maxFindCount = (continentID >= DRAENOR_CONTINENTID) and NUM_DIGSITE_FINDS_DRAENOR or NUM_DIGSITE_FINDS_DEFAULT
 
 	for index = 1, #DigSiteFrame.children do
 		DigSiteFrame.children[index]:Hide()
@@ -980,7 +982,7 @@ function Archy:RefreshDigSiteDisplay()
 			childFrame.siteButton.digsite = digsite
 			childFrame.siteButton.zoneID = digsite.zoneID
 			childFrame.zone.name:SetText(digsite.zoneName)
-			childFrame:SetID(digsite.blobID)
+			childFrame:SetID(digsite.siteID)
 
 			local race = digsite.race
 			childFrame.crest.icon:SetTexture(race.texture)

@@ -548,12 +548,12 @@
                                     HideUIPanel(WorldMapFrame)
                                     self.oldzoneID = nil
                                 else
-                                    SetMapZoom(GetCurrentMapContinent(), self.zoneID)
+                                    WorldMapFrame:SetMapID(Archy:GetContinentFromMap(WorldMapFrame:GetMapID()), self.zoneID)
                                     self.oldzoneID = self.zoneID
                                 end
                             else
                                 ShowUIPanel(WorldMapFrame)
-                                SetMapZoom(GetCurrentMapContinent(), self.zoneID)
+                                WorldMapFrame:SetMapID(Archy:GetContinentFromMap(WorldMapFrame:GetMapID()), self.zoneID)
                                 self.oldzoneID = self.zoneID
                             end
                         elseif button == "RightButton" and not self.digsite.race:IsOnDigSiteBlacklist() then
@@ -1175,12 +1175,12 @@
                                     HideUIPanel(WorldMapFrame)
                                     self.oldzoneID = nil
                                 else
-                                    SetMapZoom(GetCurrentMapContinent(), self.zoneID)
+                                    WorldMapFrame:SetMapID(Archy:GetContinentFromMap(WorldMapFrame:GetMapID()), self.zoneID)
                                     self.oldzoneID = self.zoneID
                                 end
                             else
                                 ShowUIPanel(WorldMapFrame)
-                                SetMapZoom(GetCurrentMapContinent(), self.zoneID)
+                                WorldMapFrame:SetMapID(Archy:GetContinentFromMap(WorldMapFrame:GetMapID()), self.zoneID)
                                 self.oldzoneID = self.zoneID
                             end
                         elseif button == "RightButton" and not self.digsite.race:IsOnDigSiteBlacklist() then
