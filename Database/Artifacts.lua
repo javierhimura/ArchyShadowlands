@@ -322,6 +322,61 @@ function private.InitializeArtifactTemplates()
 				spellID = 168292,
 			},
 		},
+		
+		-- ----------------------------------------------------------------------------
+		-- Drust
+		-- ----------------------------------------------------------------------------
+		[RaceID.ArchRaceDrust] = {
+
+			[154921] = {
+				-- Ceremonial Bonesaw
+				itemID = 154921,
+				spellID = 257715,
+			},
+			[154922] = {
+				-- Ancient Runebound Tome
+				itemID = 154922,
+				spellID = 257716,
+			},
+			[154923] = {
+				-- Disembowling Sickle
+				itemID = 154923,
+				spellID = 257717,
+			},
+			[154924] = {
+				-- Jagged Blade of the Drust
+				itemID = 154924,
+				spellID = 257718,
+			},
+			[154925] = {
+				-- Ritual Fetish
+				itemID = 154925,
+				spellID = 257719,
+			},
+			[160741] = {
+				-- Soul Coffer
+				itemID = 160741,
+				spellID = 273851,
+			},
+			[160751] = {
+				-- Dance of the Dead
+				isRare = true,
+				itemID = 160751,
+				spellID = 273852,
+			},
+			[161089] = {
+				-- Pile of Bones
+				isRare = true,
+				itemID = 161089,
+				spellID = 273854,
+			},
+			[160833] = {
+				-- Fetish of the Tormented Mind
+				isRare = true,
+				itemID = 160833,
+				spellID = 273855,
+			},
+		},
 
 		-- ----------------------------------------------------------------------------
 		-- Dwarf
@@ -1417,6 +1472,60 @@ function private.InitializeArtifactTemplates()
 				itemID = 69775,
 				spellID = 98569,
 				usesItemForProjectName = true,
+			},
+		},
+
+		-- ----------------------------------------------------------------------------
+		-- Zandalari
+		-- ----------------------------------------------------------------------------
+		[RaceID.ArchRaceZandalari] = {		
+			[154913] = {
+				-- Akun'Jar Vase
+				itemID = 154913,
+				spellID = 257720,
+			},
+			[154914] = {
+				-- Urn of Passage
+				itemID = 154914,
+				spellID = 257721,
+			},
+			[154915] = {
+				-- Rezan Idol
+				itemID = 154915,
+				spellID = 257722,
+			},
+			[154916] = {
+				-- High Apothecary's Hood
+				itemID = 154916,
+				spellID = 257723,
+			},
+			[154917] = {
+				-- Bwonsamdi Voodoo Mask
+				itemID = 154917,
+				spellID = 257724,
+			},
+			[160740] = {
+				-- Croak Crock
+				isRare = true,
+				itemID = 160740,
+				spellID = 273815,
+			},
+			[160743] = {
+				-- Blowgun of the Sethra
+				itemID = 160743,
+				spellID = 273812,
+			},
+			[160753] = {
+				-- Sanguinating Totem
+				isRare = true,
+				itemID = 160753,
+				spellID = 273819,
+			},
+			[161080] = {
+				-- Intact Direhorn Hatchling
+				isRare = true,
+				itemID = 161080,
+				spellID = 273817,
 			},
 		},
 	}
