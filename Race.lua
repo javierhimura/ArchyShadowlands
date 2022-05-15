@@ -100,26 +100,26 @@ function private.InitializeRaces()
 		keystonesInInventory = 0,
 	}, raceMetatable)
 
-	CurrencyNameFromRaceID[RaceID.ArchRaceArakkoa] = C_CurrencyInfo.GetCurrencyInfo(829)
-	CurrencyNameFromRaceID[RaceID.ArchRaceDemons] = C_CurrencyInfo.GetCurrencyInfo(1174)
-	CurrencyNameFromRaceID[RaceID.ArchRaceDraenei] = C_CurrencyInfo.GetCurrencyInfo(398)
-	CurrencyNameFromRaceID[RaceID.ArchRaceDraenorOrc] = C_CurrencyInfo.GetCurrencyInfo(821)
-	CurrencyNameFromRaceID[RaceID.ArchRaceDwarf] = C_CurrencyInfo.GetCurrencyInfo(384)
-	CurrencyNameFromRaceID[RaceID.ArchRaceFossil] = C_CurrencyInfo.GetCurrencyInfo(393)
-	CurrencyNameFromRaceID[RaceID.ArchRaceHighborneNightElves] = C_CurrencyInfo.GetCurrencyInfo(1172)
-	CurrencyNameFromRaceID[RaceID.ArchRaceHighmountainTauren] = C_CurrencyInfo.GetCurrencyInfo(1173)
-	CurrencyNameFromRaceID[RaceID.ArchRaceMantid] = C_CurrencyInfo.GetCurrencyInfo(754)
-	CurrencyNameFromRaceID[RaceID.ArchRaceMogu] = C_CurrencyInfo.GetCurrencyInfo(677)
-	CurrencyNameFromRaceID[RaceID.ArchRaceNightElf] = C_CurrencyInfo.GetCurrencyInfo(394)
-	CurrencyNameFromRaceID[RaceID.ArchRaceNerubian] = C_CurrencyInfo.GetCurrencyInfo(400)
-	CurrencyNameFromRaceID[RaceID.ArchRaceOgre] = C_CurrencyInfo.GetCurrencyInfo(828)
-	CurrencyNameFromRaceID[RaceID.ArchRaceOrc] = C_CurrencyInfo.GetCurrencyInfo(397)
-	CurrencyNameFromRaceID[RaceID.ArchRacePandaren] = C_CurrencyInfo.GetCurrencyInfo(676)
-	CurrencyNameFromRaceID[RaceID.ArchRaceTolvir] = C_CurrencyInfo.GetCurrencyInfo(401)
-	CurrencyNameFromRaceID[RaceID.ArchRaceTroll] = C_CurrencyInfo.GetCurrencyInfo(385)
-	CurrencyNameFromRaceID[RaceID.ArchRaceVrykul] = C_CurrencyInfo.GetCurrencyInfo(399)
-	CurrencyNameFromRaceID[RaceID.ArchRaceZandalari] = C_CurrencyInfo.GetCurrencyInfo(1534)
-	CurrencyNameFromRaceID[RaceID.ArchRaceDrust] = C_CurrencyInfo.GetCurrencyInfo(1535)
+	CurrencyNameFromRaceID[RaceID.ArchRaceArakkoa] = C_CurrencyInfo.GetCurrencyInfo(829).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceDemons] = C_CurrencyInfo.GetCurrencyInfo(1174).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceDraenei] = C_CurrencyInfo.GetCurrencyInfo(398).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceDraenorOrc] = C_CurrencyInfo.GetCurrencyInfo(821).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceDrust] = C_CurrencyInfo.GetCurrencyInfo(1535).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceDwarf] = C_CurrencyInfo.GetCurrencyInfo(384).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceFossil] = C_CurrencyInfo.GetCurrencyInfo(393).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceHighborneNightElves] = C_CurrencyInfo.GetCurrencyInfo(1172).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceHighmountainTauren] = C_CurrencyInfo.GetCurrencyInfo(1173).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceMantid] = C_CurrencyInfo.GetCurrencyInfo(754).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceMogu] = C_CurrencyInfo.GetCurrencyInfo(677).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceNightElf] = C_CurrencyInfo.GetCurrencyInfo(394).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceNerubian] = C_CurrencyInfo.GetCurrencyInfo(400).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceOgre] = C_CurrencyInfo.GetCurrencyInfo(828).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceOrc] = C_CurrencyInfo.GetCurrencyInfo(397).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRacePandaren] = C_CurrencyInfo.GetCurrencyInfo(676).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceTolvir] = C_CurrencyInfo.GetCurrencyInfo(401).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceTroll] = C_CurrencyInfo.GetCurrencyInfo(385).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceVrykul] = C_CurrencyInfo.GetCurrencyInfo(399).quantity
+	CurrencyNameFromRaceID[RaceID.ArchRaceZandalari] = C_CurrencyInfo.GetCurrencyInfo(1534).quantity
 	
 	for raceID, currencyName in pairs(CurrencyNameFromRaceID) do
 		Races[raceID].currencyName = currencyName
