@@ -1173,21 +1173,33 @@ function Archy:UpdateSkillBar()
 	ArtifactFrame.skillBar.text:SetFormattedText("%s : %d/%d", _G.GetArchaeologyInfo(), rank, maxRank)
 end
 
+local CONTINENT_FROM_MAP = {}
+
 function Archy:GetContinentFromMap(UIMapID)
+    if CONTINENT_FROM_MAP[UIMapID] then
+        if CONTINENT_FROM_MAP[UIMapID] == 0 then
+            return
+        end
+        return CONTINENT_FROM_MAP[UIMapID]
+    end
 	local info = C_Map.GetMapInfo(UIMapID)
 	if not info or info.mapType == Enum.UIMapType.Orphan then
+        CONTINENT_FROM_MAP[UIMapID] = 0
 		return
 	end
 	if info.mapType == Enum.UIMapType.Continent then
+        CONTINENT_FROM_MAP[UIMapID] = info.mapID
 		return info.mapID
 	end
 	while info.parentMapID > 0 and info.mapType ~= Enum.UIMapType.Continent do
 		info = C_Map.GetMapInfo(info.parentMapID)
 		if not info or info.mapType == Enum.UIMapType.Orphan then
+            CONTINENT_FROM_MAP[UIMapID] = 0
 			return
 		end
 	end
 	if info.mapType == Enum.UIMapType.Continent then
+        CONTINENT_FROM_MAP[UIMapID] = info.mapID
 		return info.mapID
 	end
 end
