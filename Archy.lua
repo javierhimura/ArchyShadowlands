@@ -1506,10 +1506,13 @@ do
 	local STANDING_ON_IT_SPELL_ID = 210837
 
 	function Archy:COMBAT_LOG_EVENT_UNFILTERED(event)
+		local digsiteSettings = private.ProfileSettings.digsite
 		local _, subEvent, _, sourceGUID, _, _, _, _, _, _, _, spellID, spellDescription, _ = CombatLogGetCurrentEventInfo()
 		if subEvent == "SPELL_CAST_SUCCESS" and sourceGUID == private.PlayerGUID and spellID == STANDING_ON_IT_SPELL_ID then
 			self:Pour(spellDescription)
-			_G.PlaySoundFile([[Interface\AddOns\Archy\Media\dingding.mp3]])
+            if digsiteSettings.ping then
+                _G.PlaySoundFile([[Interface\AddOns\Archy\Media\dingding.mp3]])
+            end
 		end
 	end
 end

@@ -880,6 +880,17 @@ local function GetDigSiteOptions()
 								Archy:ConfigUpdated("digsite")
 							end,
 						},
+                        standingPing = {
+                            order = 1.5,
+                            type = "toggle",
+                            name = "Play a sound when standing over a survey",
+                            desc = "When you standing over a survey a sound can be played to indicate this.  You can enable or disable this sound using this setting.",
+                            width = "double",
+                            get = function() return digsiteSettings.ping end,
+                            set = function(_, value)
+                                digsiteSettings.ping = value
+                            end,
+                        },
 						showOptions = {
 							name = _G.DISPLAY_OPTIONS,
 							order = 2,
