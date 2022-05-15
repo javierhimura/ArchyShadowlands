@@ -1,12 +1,12 @@
-## Interface: 70300
+## Interface: 90200
 ## Title: Archy - Archaeology Assistant
 ## Title-zhCN: Archy - 考古学助手
 ## Title-zhTW: Archy - 考古學助手
-## Version: 7.3.2.1
+## Version: 9.0.2.0
 ## Notes: Archaeology assistant
 ## Notes-zhCN: 考古学助手
 ## Notes-zhTW: 考古學助手
-## Author: Torhal
+## Author: Torhal, javier_himura
 ## X-Credits: daihenka, Dridzt
 ## X-Category: Archaeology
 ## SavedVariables: ArchyDB, TargetLogData
