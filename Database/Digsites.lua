@@ -2343,6 +2343,195 @@ function private.InitializeDigsiteTemplates()
 			mapID = 641, -- Val'sharah
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
+        
+		-- ----------------------------------------------------------------------------
+		-- Kul Tiras
+		-- ----------------------------------------------------------------------------
+
+		["2401"] = {
+			siteID = 2401, -- Digsite: Brokenbough Roost
+			mapID = 895, -- Drustvar
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2405"] = {
+			siteID = 2405, -- Digsite: Rockslip Woodlands
+			mapID = 895, -- Tiragarde Sound
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2409"] = {
+			siteID = 2409, -- Digsite: Placid Springs
+			mapID = 895, -- Tiragarde Sound
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2411"] = {
+			siteID = 2411, -- Digsite: Stagheart Cliffs
+			mapID = 895, -- Tiragarde Sound
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2413"] = {
+			siteID = 2413, -- Digsite: Deathmist Hills
+			mapID = 895, -- Tiragarde Sound
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2415"] = {
+			siteID = 2415, -- Digsite: Gol Koval
+			mapID = 896, -- Drustvar
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2421"] = {
+			siteID = 2421, -- Digsite: Arom's Crossing
+			mapID = 896, -- Drustvar
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2423"] = {
+			siteID = 2423, -- Digsite: Corlain
+			mapID = 896, -- Drustvar
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2425"] = {
+			siteID = 2425, -- Digsite: Whitegrove Chapel
+			mapID = 896, -- Drustvar
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2427"] = {
+			siteID = 2427, -- Digsite: Crimson Forest
+			mapID = 896, -- Drustvar
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2429"] = {
+			siteID = 2429, -- Digsite: Iceveil Glacier
+			mapID = 896, -- Drustvar
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2431"] = {
+			siteID = 2431, -- Digsite: Seabreeze Shallows
+			mapID = 942, -- Stormsong Valley
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2433"] = {
+			siteID = 2433, -- Digsite: Millstone Hills
+			mapID = 942, -- Stormsong Valley
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2435"] = {
+			siteID = 2435, -- Digsite: Goldfield Farmstead
+			mapID = 942, -- Stormsong Valley
+			raceID = RaceID.ArchRaceDrust,
+		},		
+		["2437"] = {
+			siteID = 2437, -- Digsite: Roaming Hills
+			mapID = 942, -- Stormsong Valley
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2439"] = {
+			siteID = 2439, -- Digsite: Dire Hills
+			mapID = 942, -- Stormsong Valley
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2441"] = {
+			siteID = 2441, -- Digsite: Drowned Lands
+			mapID = 942, -- Stormsong Valley
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2443"] = {
+			siteID = 2443, -- Digsite: Briny Flats
+			mapID = 942, -- Stormsong Valley
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["2445"] = {
+			siteID = 2445, -- Digsite: Windwhisper Summit
+			mapID = 942, -- Stormsong Valley
+			raceID = RaceID.ArchRaceDrust,
+		},
+		-- ----------------------------------------------------------------------------
+		-- Zandalar
+		-- ----------------------------------------------------------------------------
+
+		["2453"] = {
+			siteID = 2453, -- Digsite: Atal'Gral
+			mapID = 862, -- Zuldazar
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2455"] = {
+			siteID = 2455, -- Digsite: Savagelands
+			mapID = 862, -- Zuldazar
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2457"] = {
+			siteID = 2457, -- Digsite: Old Merchant Road
+			mapID = 862, -- Zuldazar
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2459"] = {
+			siteID = 2459, -- Digsite: Zeb'ahari
+			mapID = 862, -- Zuldazar
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2461"] = {
+			siteID = 2461, -- Digsite: The Rivermarsh
+			mapID = 863, -- Nazmir
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2467"] = {
+			siteID = 2467, -- Digsite: The Far Reach
+			mapID = 863, -- Nazmir
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2471"] = {
+			siteID = 2471, -- Digsite: Razorjaw River
+			mapID = 863, -- Nazmir
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2473"] = {
+			siteID = 2473, -- Digsite: Upper Frogmarsh
+			mapID = 863, -- Nazmir
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2475"] = {
+			siteID = 2475, -- Digsite: Xal'vor
+			mapID = 863, --Nazmir
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2477"] = {
+			siteID = 2477, -- Digsite: Verdant Plateau
+			mapID = 864, -- Vol'dun
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2479"] = {
+			siteID = 2479, -- Digsite: Arid Basin
+			mapID = 864, --Vol'dun
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2481"] = {
+			siteID = 2481, -- Digsite: The Eternal Spring
+			mapID = 864, -- Vol'dun
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2483"] = {
+			siteID = 2483, -- Digsite: Whistlebloom Oasis
+			mapID = 864, -- Vol'dun
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2485"] = {
+			siteID = 2485, -- Digsite: Port of Zem'lan
+			mapID = 864, -- Vol'dun
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2487"] = {
+			siteID = 2487, -- Digsite: The Cracked Coast
+			mapID = 864, -- Vol'dun
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2489"] = {
+			siteID = 2489, -- Digsite: Court of Zak'rajan
+			mapID = 864, -- Vol'dun
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["2491"] = { 
+			siteID = 2491, -- Digsite: Terrace of the Fang
+			mapID = 864, -- Vol'dun
+			raceID = RaceID.ArchRaceZandalari,
+		},
 	}
     
 	local CONTINENT_RACES = {}
