@@ -610,7 +610,7 @@ function Archy:SearchDigsiteTemplate(continentID, zone, zoneSite, mapPositionX, 
     end
     
     if digsiteTemplate then
-        if not digsiteTemplate.id then
+        if not digsiteTemplate.siteID then
             Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, digsiteTemplate.raceID)
         end
     end
