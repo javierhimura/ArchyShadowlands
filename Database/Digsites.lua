@@ -2250,7 +2250,12 @@ function private.InitializeDigsiteTemplates()
 	local CONTINENT_RACES = {}
 	private.CONTINENT_RACES = CONTINENT_RACES
 
+	local DIGSITE_TEMPLATES_BY_ID = {}
+
 	for siteKey, site in pairs(DIGSITE_TEMPLATES) do
+        if site.siteID and site.siteID ~= siteKey and not DIGSITE_TEMPLATES_BY_ID[site.siteID] then
+            DIGSITE_TEMPLATES_BY_ID[site.siteID] = siteKey
+        end
 		if site.raceID ~= RaceID.Unknown then
 			local continentID = tonumber(((":"):split(siteKey)))
 			CONTINENT_RACES[continentID] = CONTINENT_RACES[continentID] or {}
@@ -2258,6 +2263,6 @@ function private.InitializeDigsiteTemplates()
 		end
 	end
 
-
+	private.DIGSITE_TEMPLATES_BY_ID = DIGSITE_TEMPLATES_BY_ID
 	private.DIGSITE_TEMPLATES = DIGSITE_TEMPLATES
 end
