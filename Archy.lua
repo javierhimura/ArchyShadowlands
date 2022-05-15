@@ -1143,6 +1143,13 @@ function Archy:UpdatePlayerPosition(force)
 		UpdateAllSites()
 	end
 
+	if C_Map.GetBestMapForUnit("player") == -1 then
+		self:UpdateSiteDistances()
+		DigSiteFrame:UpdateChrome()
+		self:RefreshDigSiteDisplay()
+		return
+	end
+
 	if force or playerLocation.x ~= mapX or playerLocation.y ~= mapY or playerLocation.UIMapID ~= UIMapID then
 		playerLocation.x, playerLocation.y, playerLocation.UIMapID, playerLocation.UIMapType = mapX, mapY, UIMapID, UIMapType
 
