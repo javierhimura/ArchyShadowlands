@@ -760,169 +760,169 @@ function private.InitializeDigsiteTemplates()
 		-- ----------------------------------------------------------------------------
 		-- Outland
 		-- ----------------------------------------------------------------------------
-		["466:0.238263:0.685266"] = {
+		["101:0.238263:0.685266"] = {
 			-- Ancestral Grounds Digsite
 			blobID = 56412,
 			mapID = 107, -- Nagrand
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.560123:0.262942"] = {
+		["101:0.560123:0.262942"] = {
 			-- Arklon Ruins Digsite
 			blobID = 56408,
 			mapID = 109, -- Netherstorm
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.400138:0.781807"] = {
+		["101:0.400138:0.781807"] = {
 			-- Bleeding Hollow Ruins Digsite
 			blobID = 56428,
 			mapID = 108, -- Terokkar Forest
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.329479:0.525166"] = {
+		["101:0.329479:0.525166"] = {
 			-- Boha'mu Ruins Digsite
 			blobID = 56402,
 			mapID = 102, -- Zangarmarsh
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.485685:0.768494"] = {
+		["101:0.485685:0.768494"] = {
 			-- Bone Wastes Digsite
 			blobID = 56432,
 			mapID = 108, -- Terokkar Forest
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.543174:0.749856"] = {
+		["101:0.543174:0.749856"] = {
 			-- Bonechewer Ruins Digsite
 			blobID = 56430,
 			mapID = 108, -- Terokkar Forest
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.387369:0.716616"] = {
+		["101:0.387369:0.716616"] = {
 			-- Burning Blade Digsite
 			blobID = 56420,
 			mapID = 107, -- Nagrand
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.647274:0.756383"] = {
+		["101:0.647274:0.756383"] = {
 			-- Coilskar Point Digsite
 			blobID = 56441,
 			mapID = 104, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.721254:0.860569"] = {
+		["101:0.721254:0.860569"] = {
 			-- Dragonmaw Fortress
 			blobID = 56455,
 			mapID = 104, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.470110:0.786789"] = {
+		["101:0.470110:0.786789"] = {
 			-- East Auchindoun Digsite
 			blobID = 56434,
 			mapID = 108, -- Terokkar Forest
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.647961:0.882814"] = {
+		["101:0.647961:0.882814"] = {
 			-- Eclipse Point Digsite
 			blobID = 56448,
 			mapID = 104, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.559035:0.593964"] = {
+		["101:0.559035:0.593964"] = {
 			-- Gor'gaz Outpost Digsite
 			blobID = 56392,
 			mapID = 100, -- Hellfire Peninsula
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.460261:0.709917"] = {
+		["101:0.460261:0.709917"] = {
 			-- Grangol'var Village Digsite
 			blobID = 56424,
 			mapID = 108, -- Terokkar Forest
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.288995:0.635278"] = {
+		["101:0.288995:0.635278"] = {
 			-- Halaa Digsite
 			blobID = 56422,
 			mapID = 107, -- Nagrand
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.561154:0.525767"] = {
+		["101:0.561154:0.525767"] = {
 			-- Hellfire Basin Digsite
 			blobID = 56396,
 			mapID = 100, -- Hellfire Peninsula
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.575068:0.527914"] = {
+		["101:0.575068:0.527914"] = {
 			-- Hellfire Citadel Digsite
 			blobID = 56398,
 			mapID = 100, -- Hellfire Peninsula
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.597114:0.834630"] = {
+		["101:0.597114:0.834630"] = {
 			-- Illidari Point Digsite
 			blobID = 56439,
 			mapID = 104, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.298501:0.565363"] = {
+		["101:0.298501:0.565363"] = {
 			-- Laughing Skull Digsite
 			blobID = 56418,
 			mapID = 107, -- Nagrand
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.682718:0.783782"] = {
+		["101:0.682718:0.783782"] = {
 			-- Ruins of Baa'ri Digsite
 			blobID = 56446,
 			mapID = 104, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.539567:0.202217"] = {
+		["101:0.539567:0.202217"] = {
 			-- Ruins of Enkaat Digsite
 			blobID = 56406,
 			mapID = 109, -- Netherstorm
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.600377:0.100351"] = {
+		["101:0.600377:0.100351"] = {
 			-- Ruins of Farahlon Digsite
 			blobID = 56410,
 			mapID = 109, -- Netherstorm
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.468278:0.545093"] = {
+		["101:0.468278:0.545093"] = {
 			-- Sha'naar Digsite
 			blobID = 56400,
 			mapID = 100, -- Hellfire Peninsula
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.255040:0.631928"] = {
+		["101:0.255040:0.631928"] = {
 			-- Sunspring Post Digsite
 			blobID = 56416,
 			mapID = 107, -- Nagrand
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.504008:0.680456"] = {
+		["101:0.504008:0.680456"] = {
 			-- Tuurem Digsite
 			blobID = 56426,
 			mapID = 108, -- Terokkar Forest
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.338583:0.482822"] = {
+		["101:0.338583:0.482822"] = {
 			-- Twin Spire Ruins Digsite
 			blobID = 56404,
 			mapID = 102, -- Zangarmarsh
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.688788:0.819857"] = {
+		["101:0.688788:0.819857"] = {
 			-- Warden's Cage Digsite
 			blobID = 56450,
 			mapID = 104, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceOrc,
 		},
-		["466:0.452130:0.788678"] = {
+		["101:0.452130:0.788678"] = {
 			-- West Auchindoun Digsite
 			blobID = 56437,
 			mapID = 108, -- Terokkar Forest
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["466:0.624713:0.584688"] = {
+		["101:0.624713:0.584688"] = {
 			-- Zeth'Gor Digsite
 			blobID = 56394,
 			mapID = 100, -- Hellfire Peninsula
@@ -932,181 +932,181 @@ function private.InitializeDigsiteTemplates()
 		-- ----------------------------------------------------------------------------
 		-- Northrend
 		-- ----------------------------------------------------------------------------
-		["485:0.760625:0.411718"] = {
+		["113:0.760625:0.411718"] = {
 			-- Altar of Quetz'lun Digsite
 			blobID = 56539,
 			mapID = 121, -- Zul'Drak
 			raceID = RaceID.ArchRaceTroll,
 		},
-		["485:0.665477:0.371495"] = {
+		["113:0.665477:0.371495"] = {
 			-- Altar of Sseratus Digsite
 			blobID = 56533,
 			mapID = 121, -- Zul'Drak
 			raceID = RaceID.ArchRaceTroll,
 		},
-		["485:0.816113:0.768901"] = {
+		["113:0.816113:0.768901"] = {
 			-- Baleheim Digsite
 			blobID = 56512,
 			mapID = 117, -- Howling Fjord
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.611679:0.306430"] = {
+		["113:0.611679:0.306430"] = {
 			-- Brunnhildar Village Digsite
 			blobID = 56549,
 			mapID = 120, -- The Storm Peaks
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.793467:0.505175"] = {
+		["113:0.793467:0.505175"] = {
 			-- Drakil'Jin Ruins Digsite
 			blobID = 56547,
 			mapID = 116, -- Grizzly Hills
 			raceID = RaceID.ArchRaceTroll,
 		},
-		["485:0.315702:0.564494"] = {
+		["113:0.315702:0.564494"] = {
 			-- En'kilah Digsite
 			blobID = 56522,
 			mapID = 114, -- Borean Tundra
 			raceID = RaceID.ArchRaceNerubian,
 		},
-		["485:0.720065:0.671641"] = {
+		["113:0.720065:0.671641"] = {
 			-- Gjalerbron Digsite
 			blobID = 56516,
 			mapID = 117, -- Howling Fjord
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.769018:0.816474"] = {
+		["113:0.769018:0.816474"] = {
 			-- Halgrind Digsite
 			blobID = 56506,
 			mapID = 117, -- Howling Fjord
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.282578:0.301614"] = {
+		["113:0.282578:0.301614"] = {
 			-- Jotunheim Digsite
 			blobID = 56562,
 			mapID = 118, -- Icecrown
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.722093:0.468586"] = {
+		["113:0.722093:0.468586"] = {
 			-- Kolramas Digsite
 			blobID = 56524,
 			mapID = 121, -- Zul'Drak
 			raceID = RaceID.ArchRaceNerubian,
 		},
-		["485:0.385894:0.611983"] = {
+		["113:0.385894:0.611983"] = {
 			-- Moonrest Gardens Digsite
 			blobID = 56520,
 			mapID = 115, -- Dragonblight
 			raceID = RaceID.ArchRaceNightElf,
 		},
-		["485:0.830704:0.815545"] = {
+		["113:0.830704:0.815545"] = {
 			-- Nifflevar Digsite
 			blobID = 56514,
 			mapID = 117, -- Howling Fjord
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.315082:0.237731"] = {
+		["113:0.315082:0.237731"] = {
 			-- Njorndar Village Digsite
 			blobID = 56564,
 			mapID = 118, -- Icecrown
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.482337:0.286066"] = {
+		["113:0.482337:0.286066"] = {
 			-- Pit of Fiends Digsite
 			blobID = 60367,
 			mapID = 118, -- Icecrown
 			raceID = RaceID.ArchRaceNerubian,
 		},
-		["485:0.398569:0.584352"] = {
+		["113:0.398569:0.584352"] = {
 			-- Pit of Narjun Digsite
 			blobID = 56518,
 			mapID = 115, -- Dragonblight
 			raceID = RaceID.ArchRaceNerubian,
 		},
-		["485:0.194416:0.775830"] = {
+		["113:0.194416:0.775830"] = {
 			-- Riplash Ruins Digsite
 			blobID = 56526,
 			mapID = 114, -- Borean Tundra
 			raceID = RaceID.ArchRaceNightElf,
 		},
-		["485:0.562049:0.441800"] = {
+		["113:0.562049:0.441800"] = {
 			-- Ruins of Shandaral Digsite
 			blobID = 56530,
 			mapID = 127, -- Crystalsong Forest
 			raceID = RaceID.ArchRaceNightElf,
 		},
-		["485:0.207485:0.701216"] = {
+		["113:0.207485:0.701216"] = {
 			-- Sands of Nasam
 			blobID = 60369,
 			mapID = 114, -- Borean Tundra
 			raceID = RaceID.ArchRaceNerubian,
 		},
-		["485:0.485548:0.323499"] = {
+		["113:0.485548:0.323499"] = {
 			-- Scourgeholme Digsite
 			blobID = 56555,
 			mapID = 118, -- Icecrown
 			raceID = RaceID.ArchRaceNerubian,
 		},
-		["485:0.800847:0.902242"] = {
+		["113:0.800847:0.902242"] = {
 			-- Shield Hill Digsite
 			blobID = 56510,
 			mapID = 117, -- Howling Fjord
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.577766:0.319359"] = {
+		["113:0.577766:0.319359"] = {
 			-- Sifreldar Village Digsite
 			blobID = 56551,
 			mapID = 120, -- The Storm Peaks
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.751386:0.735270"] = {
+		["113:0.751386:0.735270"] = {
 			-- Skorn Digsite
 			blobID = 56504,
 			mapID = 117, -- Howling Fjord
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.261171:0.528075"] = {
+		["113:0.261171:0.528075"] = {
 			-- Talramas Digsite
 			blobID = 56541,
 			mapID = 114, -- Borean Tundra
 			raceID = RaceID.ArchRaceNerubian,
 		},
-		["485:0.514109:0.272545"] = {
+		["113:0.514109:0.272545"] = {
 			-- Valkyrion Digsite
 			blobID = 56553,
 			mapID = 120, -- The Storm Peaks
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.462113:0.410957"] = {
+		["113:0.462113:0.410957"] = {
 			-- Violet Stand Digsite
 			blobID = 56528,
 			mapID = 127, -- Crystalsong Forest
 			raceID = RaceID.ArchRaceNightElf,
 		},
-		["485:0.666998:0.651107"] = {
+		["113:0.666998:0.651107"] = {
 			-- Voldrune Digsite
 			blobID = 56543,
 			mapID = 116, -- Grizzly Hills
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.796509:0.809038"] = {
+		["113:0.796509:0.809038"] = {
 			-- Wyrmskull Digsite
 			blobID = 56508,
 			mapID = 117, -- Howling Fjord
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.413722:0.301191"] = {
+		["113:0.413722:0.301191"] = {
 			-- Ymirheim Digsite
 			blobID = 56560,
 			mapID = 118, -- Icecrown
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["485:0.719783:0.370312"] = {
+		["113:0.719783:0.370312"] = {
 			-- Zim'Rhuk Digsite
 			blobID = 56535,
 			mapID = 121, -- Zul'Drak
 			raceID = RaceID.ArchRaceTroll,
 		},
-		["485:0.771722:0.348849"] = {
+		["113:0.771722:0.348849"] = {
 			-- Zol'Heb Digsite
 			blobID = 56537,
 			mapID = 121, -- Zul'Drak
@@ -1116,505 +1116,505 @@ function private.InitializeDigsiteTemplates()
 		-- ----------------------------------------------------------------------------
 		-- Pandaria
 		-- ----------------------------------------------------------------------------
-		["862:0.270692:0.822365"] = {
+		["424::0.270692:0.822365"] = {
 			-- Amber Quarry Digsite
 			blobID = 177517,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.491570:0.453632"] = {
+		["424::0.491570:0.453632"] = {
 			-- Chow Farmstead Digsite
 			blobID = 66987,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.764011:0.661878"] = {
+		["424::0.764011:0.661878"] = {
 			-- Den of Sorrow Digsite
 			blobID = 67035,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.542101:0.327176"] = {
+		["424::0.542101:0.327176"] = {
 			-- Destroyed Village Digsite
 			blobID = 66979,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.411391:0.317218"] = {
+		["424::0.411391:0.317218"] = {
 			-- East Snow Covered Hills Digsite
 			blobID = 66971,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.199987:0.382090"] = {
+		["424::0.199987:0.382090"] = {
 			-- East Sra'vess Digsite
 			blobID = 177495,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.551060:0.536969"] = {
+		["424::0.551060:0.536969"] = {
 			-- East Summer Fields Digsite
 			blobID = 92166,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.483578:0.549441"] = {
+		["424::0.483578:0.549441"] = {
 			-- Emperor's Approach Digsite
 			blobID = 92156,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.699043:0.406936"] = {
+		["424::0.699043:0.406936"] = {
 			-- Emperor's Omen Digsite
 			blobID = 66817,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.461858:0.762617"] = {
+		["424::0.461858:0.762617"] = {
 			-- Fallsong Village Digsite
 			blobID = 66943,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.348808:0.361787"] = {
+		["424::0.348808:0.361787"] = {
 			-- Fire Camp Osul Digsite
 			blobID = 92178,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.431952:0.535132"] = {
+		["424::0.431952:0.535132"] = {
 			-- Five Sisters Digsite
 			blobID = 92026,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.677516:0.454985"] = {
+		["424::0.677516:0.454985"] = {
 			-- Forest Heart Digsite
 			blobID = 67021,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.476553:0.470454"] = {
+		["424::0.476553:0.470454"] = {
 			-- Gate to Golden Valley Digsite
 			blobID = 66967,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.648512:0.473161"] = {
+		["424::0.648512:0.473161"] = {
 			-- Gong of Hope Digsite
 			blobID = 67023,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.699365:0.539386"] = {
+		["424::0.699365:0.539386"] = {
 			-- Great Bridge Digsite
 			blobID = 67025,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.533722:0.384700"] = {
+		["424::0.533722:0.384700"] = {
 			-- Grumblepaw Ranch Digsite
 			blobID = 66985,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.401724:0.458466"] = {
+		["424::0.401724:0.458466"] = {
 			-- Hatred's Vice Digsite
 			blobID = 92180,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.173239:0.353570"] = {
+		["424::0.173239:0.353570"] = {
 			-- Ikz'ka Ridge Digsite
 			blobID = 177501,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.713803:0.558142"] = {
+		["424::0.713803:0.558142"] = {
 			-- Jade Temple Grounds Digsite
 			blobID = 67031,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.327668:0.556981"] = {
+		["424::0.327668:0.556981"] = {
 			-- Kor'vess Digsite
 			blobID = 177485,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.508972:0.783500"] = {
+		["424::0.508972:0.783500"] = {
 			-- Krasarang Wilds Digsite
 			blobID = 66949,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.427118:0.300203"] = {
+		["424::0.427118:0.300203"] = {
 			-- Kun-Lai Peak Digsite
 			blobID = 67005,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.386190:0.573030"] = {
+		["424::0.386190:0.573030"] = {
 			-- Kypari Vor Digsite
 			blobID = 177529,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.348228:0.689528"] = {
+		["424::0.348228:0.689528"] = {
 			-- Kypari'ik Digsite
 			blobID = 177511,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.368079:0.720659"] = {
+		["424::0.368079:0.720659"] = {
 			-- Kypari'zar Digsite
 			blobID = 177523,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.201470:0.411287"] = {
+		["424::0.201470:0.411287"] = {
 			-- Kzzok Warcamp Digsite
 			blobID = 177493,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.387673:0.691752"] = {
+		["424::0.387673:0.691752"] = {
 			-- Lake of Stars Digsite
 			blobID = 177525,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.400886:0.725589"] = {
+		["424::0.400886:0.725589"] = {
 			-- Lake of Stars Digsite
 			blobID = 92200,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.578517:0.720755"] = {
+		["424::0.578517:0.720755"] = {
 			-- Lost Dynasty Digsite
 			blobID = 66951,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.465918:0.571773"] = {
+		["424::0.465918:0.571773"] = {
 			-- Mistfall Village Digsite
 			blobID = 92022,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.240334:0.430719"] = {
+		["424::0.240334:0.430719"] = {
 			-- Niuzao Temple Digsite
 			blobID = 92174,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.481258:0.635775"] = {
+		["424::0.481258:0.635775"] = {
 			-- North Fruited Fields Digsite
 			blobID = 66935,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.416677:0.658881"] = {
+		["424::0.416677:0.658881"] = {
 			-- North Great Wall Digsite
 			blobID = 66919,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.542874:0.753626"] = {
+		["424::0.542874:0.753626"] = {
 			-- North Ruins of Dojan Digsite
 			blobID = 92212,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.457153:0.499651"] = {
+		["424::0.457153:0.499651"] = {
 			-- North Ruins of Guo-Lai Digsite
 			blobID = 92030,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.268307:0.503905"] = {
+		["424::0.268307:0.503905"] = {
 			-- North Sik'vess Digsite
 			blobID = 177507,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.543326:0.520630"] = {
+		["424::0.543326:0.520630"] = {
 			-- North Summer Fields Digsite
 			blobID = 92162,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.502334:0.809603"] = {
+		["424::0.502334:0.809603"] = {
 			-- North Temple of the Red Crane Digsite
 			blobID = 66957,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.537138:0.465717"] = {
+		["424::0.537138:0.465717"] = {
 			-- Old Village Digsite
 			blobID = 66983,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.723793:0.507965"] = {
+		["424::0.723793:0.507965"] = {
 			-- Orchard Digsite
 			blobID = 67027,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.432596:0.623013"] = {
+		["424::0.432596:0.623013"] = {
 			-- Paoquan Hollow Digsite
 			blobID = 66933,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.552929:0.604934"] = {
+		["424::0.552929:0.604934"] = {
 			-- Pools of Purity Digsite
 			blobID = 66941,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.503365:0.234751"] = {
+		["424::0.503365:0.234751"] = {
 			-- Remote Village Digsite
 			blobID = 66973,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.669073:0.360724"] = {
+		["424::0.669073:0.360724"] = {
 			-- Ruins of Gan Shi Digsite
 			blobID = 66795,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.444907:0.792974"] = {
+		["424::0.444907:0.792974"] = {
 			-- Ruins of Korja Digsite
 			blobID = 66945,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:Setting Sun Garrison Digsite"] = {
+		["424::Setting Sun Garrison Digsite"] = {
 			-- NEEDS UPDATE
 			blobID = 92020,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.225768:0.253507"] = {
+		["424::0.225768:0.253507"] = {
 			-- Shanze'Dao Digsite
 			blobID = 92196,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:Shrine Meadow Digsite"] = {
+		["424::Shrine Meadow Digsite"] = {
 			-- NEEDS UPDATE
 			blobID = 67037,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.709484:0.457596"] = {
+		["424::0.709484:0.457596"] = {
 			-- Shrine of the Dawn Digsite
 			blobID = 66789,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.283582:0.508255"] = {
+		["424::0.283582:0.508255"] = {
 			-- Sik'vess Digsite
 			blobID = 177503,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.454188:0.654820"] = {
+		["424::0.454188:0.654820"] = {
 			-- Singing Marshes Digsite
 			blobID = 66917,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.376523:0.352313"] = {
+		["424::0.376523:0.352313"] = {
 			-- Small Gate Digsite
 			blobID = 66991,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.398888:0.323212"] = {
+		["424::0.398888:0.323212"] = {
 			-- Snow Covered Hills Digsite
 			blobID = 66969,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.473330:0.672319"] = {
+		["424::0.473330:0.672319"] = {
 			-- South Fruited Fields Digsite
 			blobID = 66939,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.414292:0.711184"] = {
+		["424::0.414292:0.711184"] = {
 			-- South Great Wall Digsite
 			blobID = 66923,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.673584:0.621660"] = {
+		["424::0.673584:0.621660"] = {
 			-- South Orchard Digsite
 			blobID = 67033,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.539201:0.771318"] = {
+		["424::0.539201:0.771318"] = {
 			-- South Ruins of Dojan Digsite
 			blobID = 92210,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.441168:0.523821"] = {
+		["424::0.441168:0.523821"] = {
 			-- South Ruins of Guo-Lai Digsite
 			blobID = 92032,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.266695:0.405293"] = {
+		["424::0.266695:0.405293"] = {
 			-- Sra'thik Digsite
 			blobID = 92172,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.201792:0.347865"] = {
+		["424::0.201792:0.347865"] = {
 			-- Sra'thik Swarmdock Digsite
 			blobID = 177487,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.422993:0.580378"] = {
+		["424::0.422993:0.580378"] = {
 			-- Terrace of Gurthan Digsite
 			blobID = 92202,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.707937:0.493077"] = {
+		["424::0.707937:0.493077"] = {
 			-- The Arboretum Digsite
 			blobID = 66854,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.303305:0.752369"] = {
+		["424::0.303305:0.752369"] = {
 			-- The Briny Muck Digsite
 			blobID = 177519,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.333984:0.637128"] = {
+		["424::0.333984:0.637128"] = {
 			-- The Clutches of Shek'zeer Digsite
 			blobID = 177509,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.179233:0.413704"] = {
+		["424::0.179233:0.413704"] = {
 			-- The Feeding Pits Digsite
 			blobID = 177491,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.574327:0.555338"] = {
+		["424::0.574327:0.555338"] = {
 			-- The Spring Road Digsite
 			blobID = 66929,
 			mapID = 433, -- The Veiled Stair
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.328699:0.412060"] = {
+		["424::0.328699:0.412060"] = {
 			-- The Underbough Digsite
 			blobID = 177497,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.651284:0.629684"] = {
+		["424::0.651284:0.629684"] = {
 			-- Thunderwood Digsite
 			blobID = 66890,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.655344:0.401909"] = {
+		["424::0.655344:0.401909"] = {
 			-- Tian Digsite
 			blobID = 66784,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.611130:0.476351"] = {
+		["424::0.611130:0.476351"] = {
 			-- Tiger's Wood Digsite
 			blobID = 66767,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.439686:0.734000"] = {
+		["424::0.439686:0.734000"] = {
 			-- Torjari Pit Digsite
 			blobID = 66925,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.484545:0.569260"] = {
+		["424::0.484545:0.569260"] = {
 			-- Tu Shen Digsite
 			blobID = 92038,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.479647:0.294692"] = {
+		["424::0.479647:0.294692"] = {
 			-- Valley of Kings Digsite
 			blobID = 66965,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.261346:0.655980"] = {
+		["424::0.261346:0.655980"] = {
 			-- Venomous Ledge Digsite
 			blobID = 177515,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:Veridian Grove Digsite"] = {
+		["424::Veridian Grove Digsite"] = {
 			-- NEEDS UPDATE
 			blobID = 67039,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:West Old Village Digsite"] = {
+		["424::West Old Village Digsite"] = {
 			-- NEEDS UPDATE
 			blobID = 66989,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["862:0.442844:0.504195"] = {
+		["424::0.442844:0.504195"] = {
 			-- West Ruins of Guo-Lai Digsite
 			blobID = 92046,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.261539:0.516763"] = {
+		["424::0.261539:0.516763"] = {
 			-- West Sik'vess Digsite
 			blobID = 177505,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.177107:0.393594"] = {
+		["424::0.177107:0.393594"] = {
 			-- West Sra'vess Digsite
 			blobID = 177489,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.451481:0.551857"] = {
+		["424::0.451481:0.551857"] = {
 			-- Winterbough Digsite
 			blobID = 92150,
 			mapID = 390, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.398952:0.659654"] = {
+		["424::0.398952:0.659654"] = {
 			-- Writhingwood Digsite
 			blobID = 92206,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["862:0.250325:0.757590"] = {
+		["424::0.250325:0.757590"] = {
 			-- Zan'vess Digsite
 			blobID = 177513,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["862:0.601140:0.688851"] = {
+		["424::0.601140:0.688851"] = {
 			-- Zhu Province Digsite
 			blobID = 66961,
 			mapID = 418, -- Krasarang Wilds
@@ -1624,320 +1624,320 @@ function private.InitializeDigsiteTemplates()
 		-- ----------------------------------------------------------------------------
 		-- Draenor
 		-- ----------------------------------------------------------------------------
-		["962:0.225739:0.548585"] = {
+		["572:0.225739:0.548585"] = {
 			-- Ancestral Grounds Digsite
 			blobID = 307987,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.389797:0.665823"] = {
+		["572:0.389797:0.665823"] = {
 			-- Ango'rosh Digsite
 			blobID = 307971,
 			mapID = 535, -- Talador
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.524607:0.664305"] = {
+		["572:0.524607:0.664305"] = {
 			-- Anguish Fortress Digsite
 			blobID = 307928,
 			mapID = 539, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.427447:0.718207"] = {
+		["572:0.427447:0.718207"] = {
 			-- Apexis Excavation Digsite
 			blobID = 307958,
 			mapID = 542, -- Spires of Arak
 			raceID = RaceID.ArchRaceArakkoa,
 		},
-		["962:0.453309:0.823504"] = {
+		["572:0.453309:0.823504"] = {
 			-- Bloodmane Pridelands Digsite
 			blobID = 307950,
 			mapID = 542, -- Spires of Arak
 			raceID = RaceID.ArchRaceArakkoa,
 		},
-		["962:0.464349:0.806878"] = {
+		["572:0.464349:0.806878"] = {
 			-- Bloodmane Valley Digsite
 			blobID = 307954,
 			mapID = 542, -- Spires of Arak
 			raceID = RaceID.ArchRaceArakkoa,
 		},
-		["962:0.568634:0.746906"] = {
+		["572:0.568634:0.746906"] = {
 			-- Burial Fields Digsite
 			blobID = 307926,
 			mapID = 539, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.295101:0.439066"] = {
+		["572:0.295101:0.439066"] = {
 			-- Burning Plateau Digsite
 			blobID = 307997,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.354214:0.244702"] = {
+		["572:0.354214:0.244702"] = {
 			-- Coldsnap Bluffs Digsite
 			blobID = 307922,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.502351:0.612515"] = {
+		["572:0.502351:0.612515"] = {
 			-- Cursed Woods Digsite
 			blobID = 307930,
 			mapID = 539, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.301478:0.231573"] = {
+		["572:0.301478:0.231573"] = {
 			-- Daggermaw Flows Digsite
 			blobID = 264227,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.458060:0.365833"] = {
+		["572:0.458060:0.365833"] = {
 			-- Deadgrin Ruins Digsite
 			blobID = 308005,
 			mapID = 543, -- Gorgrond
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.316213:0.441111"] = {
+		["572:0.316213:0.441111"] = {
 			-- Drowning Plateau Digsite
 			blobID = 307995,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.461974:0.588764"] = {
+		["572:0.461974:0.588764"] = {
 			-- Duskfall Island Digsite
 			blobID = 307964,
 			mapID = 535, -- Talador
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.378317:0.236851"] = {
+		["572:0.378317:0.236851"] = {
 			-- East Coldsnap Bluffs Digsite
 			blobID = 307920,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.370268:0.595823"] = {
+		["572:0.370268:0.595823"] = {
 			-- Forgotten Ogre Ruin Digsite
 			blobID = 307973,
 			mapID = 535, -- Talador
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.242496:0.327765"] = {
+		["572:0.242496:0.327765"] = {
 			-- Frostboar Drifts Digsite
 			blobID = 307916,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.316872:0.343533"] = {
+		["572:0.316872:0.343533"] = {
 			-- Frostwind Crag Digsite
 			blobID = 264237,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.276847:0.342082"] = {
+		["572:0.276847:0.342082"] = {
 			-- Frozen Lake Digsite
 			blobID = 264223,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.559706:0.645238"] = {
+		["572:0.559706:0.645238"] = {
 			-- Gloomshade Digsite
 			blobID = 307940,
 			mapID = 539, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.465053:0.648471"] = {
+		["572:0.465053:0.648471"] = {
 			-- Gordal Fortress Digsite
 			blobID = 307960,
 			mapID = 535, -- Talador
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.363583:0.375729"] = {
+		["572:0.363583:0.375729"] = {
 			-- Grom'gar Digsite
 			blobID = 264233,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.287140:0.497124"] = {
+		["572:0.287140:0.497124"] = {
 			-- Highmaul Watchtower Digsite
 			blobID = 308001,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.327604:0.471064"] = {
+		["572:0.327604:0.471064"] = {
 			-- Howling Plateau Digsite
 			blobID = 307991,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.374623:0.316286"] = {
+		["572:0.374623:0.316286"] = {
 			-- Icewind Drifts Digsite
 			blobID = 307918,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.258154:0.586718"] = {
+		["572:0.258154:0.586718"] = {
 			-- Kag'ah Digsite
 			blobID = 307985,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.275440:0.244834"] = {
+		["572:0.275440:0.244834"] = {
 			-- Lashwind Cleft Digsite
 			blobID = 264229,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.328220:0.587840"] = {
+		["572:0.328220:0.587840"] = {
 			-- Mar'gok's Overwatch Digsite
 			blobID = 308003,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.247247:0.557029"] = {
+		["572:0.247247:0.557029"] = {
 			-- North Spirit Woods Digsite
 			blobID = 307983,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.266863:0.472119"] = {
+		["572:0.266863:0.472119"] = {
 			-- Overgrown Highmaul Road Digsite
 			blobID = 307977,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.500724:0.364250"] = {
+		["572:0.500724:0.364250"] = {
 			-- Overlook Ruins Digsite
 			blobID = 308011,
 			mapID = 543, -- Gorgrond
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.474949:0.867443"] = {
+		["572:0.474949:0.867443"] = {
 			-- Pinchwhistle Point Digsite
 			blobID = 307952,
 			mapID = 542, -- Spires of Arak
 			raceID = RaceID.ArchRaceArakkoa,
 		},
-		["962:0.303194:0.521007"] = {
+		["572:0.303194:0.521007"] = {
 			-- Razed Warsong Outpost Digsite
 			blobID = 307979,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.317620:0.529452"] = {
+		["572:0.317620:0.529452"] = {
 			-- Ring of Trials Sludge Digsite
 			blobID = 307989,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.254680:0.512232"] = {
+		["572:0.254680:0.512232"] = {
 			-- Ruins of Na'gwa Digsite
 			blobID = 307975,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.498524:0.393081"] = {
+		["572:0.498524:0.393081"] = {
 			-- Ruins of the First Bastion Digsite
 			blobID = 308015,
 			mapID = 543, -- Gorgrond
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.329540:0.452525"] = {
+		["572:0.329540:0.452525"] = {
 			-- Rumbling Plateau Digsite
 			blobID = 307993,
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.499360:0.749875"] = {
+		["572:0.499360:0.749875"] = {
 			-- Sethekk Hollow North Digsite
 			blobID = 307944,
 			mapID = 542, -- Spires of Arak
 			raceID = RaceID.ArchRaceArakkoa,
 		},
-		["962:0.513303:0.773231"] = {
+		["572:0.513303:0.773231"] = {
 			-- Sethekk Hollow South Digsite
 			blobID = 307942,
 			mapID = 542, -- Spires of Arak
 			raceID = RaceID.ArchRaceArakkoa,
 		},
-		["962:0.549413:0.767359"] = {
+		["572:0.549413:0.767359"] = {
 			-- Shaz'gul Digsite
 			blobID = 307924,
 			mapID = 539, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.617544:0.762938"] = {
+		["572:0.617544:0.762938"] = {
 			-- Shimmering Moor Digsite
 			blobID = 307936,
 			mapID = 539, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceArakkoa,
 		},
-		["962:0.380517:0.407529"] = {
+		["572:0.380517:0.407529"] = {
 			-- Southwind Cliffs Digsite
 			blobID = 308018,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.291098:0.541459"] = {
+		["572:0.291098:0.541459"] = {
 			-- Stonecrag Excavation Digsite
 			blobID = 307981,
 			mapID = 550, -- Nagrand
 			maxFindCount = 13,
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.474597:0.356333"] = {
+		["572:0.474597:0.356333"] = {
 			-- The Broken Spine Digsite
 			blobID = 308007,
 			mapID = 543, -- Gorgrond
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.357337:0.290951"] = {
+		["572:0.357337:0.290951"] = {
 			-- The Crackling Plains Digsite
 			blobID = 264231,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.597795:0.623269"] = {
+		["572:0.597795:0.623269"] = {
 			-- Umbrafen Digsite
 			blobID = 307934,
 			mapID = 539, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.447328:0.711148"] = {
+		["572:0.447328:0.711148"] = {
 			-- Veil Akraz Digsite
 			blobID = 307946,
 			mapID = 542, -- Spires of Arak
 			raceID = RaceID.ArchRaceArakkoa,
 		},
-		["962:0.483174:0.606907"] = {
+		["572:0.483174:0.606907"] = {
 			-- Veil Shadar Digsite
 			blobID = 307962,
 			mapID = 535, -- Talador
 			raceID = RaceID.ArchRaceArakkoa,
 		},
-		["962:0.492235:0.796520"] = {
+		["572:0.492235:0.796520"] = {
 			-- Veil Zekk Digsite
 			blobID = 307956,
 			mapID = 542, -- Spires of Arak
 			raceID = RaceID.ArchRaceArakkoa,
 		},
-		["962:0.522232:0.293722"] = {
+		["572:0.522232:0.293722"] = {
 			-- Wildwood Wash Dam Digsite
 			blobID = 308013,
 			mapID = 543, -- Gorgrond
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.266599:0.371771"] = {
+		["572:0.266599:0.371771"] = {
 			-- Wor'gol Ridge Digsite
 			blobID = 264225,
 			mapID = 525, -- Frostfire Ridge
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["962:0.418738:0.766039"] = {
+		["572:0.418738:0.766039"] = {
 			-- Writhing Mire Digsite
 			blobID = 307948,
 			mapID = 542, -- Spires of Arak
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["962:0.499096:0.520875"] = {
+		["572:0.499096:0.520875"] = {
 			-- Zangarra Digsite
 			blobID = 307966,
 			mapID = 535, -- Talador
@@ -1947,421 +1947,421 @@ function private.InitializeDigsiteTemplates()
 		-- ----------------------------------------------------------------------------
 		-- Broken Isles
 		-- ----------------------------------------------------------------------------
-		["1007:0.575008:0.301631"] = {
+		["619:0.575008:0.301631"] = {
 			-- Digsite: Aggramar's Vault
 			blobID = 346440,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.574158:0.341444"] = {
+		["619:0.574158:0.341444"] = {
 			-- Digsite: Amberfall Mesa
 			blobID = 353961,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.385605:0.348530"] = {
+		["619:0.385605:0.348530"] = {
 			-- Digsite: Andu'talah
 			blobID = 346508,
 			mapID = 641, -- Val'sharah
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.461090:0.417884"] = {
+		["619:0.461090:0.417884"] = {
 			-- Digsite: Anora Hollow
 			blobID = 363064,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.401371:0.295898"] = {
+		["619:0.401371:0.295898"] = {
 			-- Digsite: Ashmane's Fall
 			blobID = 354089,
 			mapID = 641, -- Val'sharah
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.298442:0.338099"] = {
+		["619:0.298442:0.338099"] = {
 			-- Digsite: Black Rook Hold
 			blobID = 354080,
 			mapID = 641, -- Val'sharah
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.459232:0.148113"] = {
+		["619:0.459232:0.148113"] = {
 			-- Digsite: Bloodhunt Highland
 			blobID = 353983,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.291329:0.359200"] = {
+		["619:0.291329:0.359200"] = {
 			-- Digsite: Bradensbrook
 			blobID = 346502,
 			mapID = 641, -- Val'sharah,
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.658986:0.340886"] = {
+		["619:0.658986:0.340886"] = {
 			-- Digsite: Citrine Bay
 			blobID = 353967,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.593003:0.399809"] = {
+		["619:0.593003:0.399809"] = {
 			-- Digsite: Cliffpaw Ridge
 			blobID = 353970,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.534983:0.435322"] = {
+		["619:0.534983:0.435322"] = {
 			-- Digsite: Crimson Thicket
 			blobID = 363027,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.543476:0.479594"] = {
+		["619:0.543476:0.479594"] = {
 			-- Digsite: Crimson Thicket
 			blobID = 363060,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.473618:0.188563"] = {
+		["619:0.473618:0.188563"] = {
 			-- Digsite: Darkfeather Valley
 			blobID = 353987,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.505627:0.296137"] = {
+		["619:0.505627:0.296137"] = {
 			-- Digsite: Dragon's Falls
 			blobID = 353993,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.371007:0.306647"] = {
+		["619:0.371007:0.306647"] = {
 			-- Digsite: Dreadroot
 			blobID = 354251,
 			mapID = 641, -- Val'sharah,
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.427701:0.432854"] = {
+		["619:0.427701:0.432854"] = {
 			-- Digsite: Eastern Ambervale
 			blobID = 363017,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.631011:0.303383"] = {
+		["619:0.631011:0.303383"] = {
 			-- Digsite: Fallen Kings
 			blobID = 353965,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.399354:0.506587"] = {
+		["619:0.399354:0.506587"] = {
 			-- Digsite: Farondale
 			blobID = 354020,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.405724:0.383008"] = {
+		["619:0.405724:0.383008"] = {
 			-- Digsite: Feathermane Hunting Grounds
 			blobID = 346527,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.440175:0.528006"] = {
+		["619:0.440175:0.528006"] = {
 			-- Digsite: Felsoul Hold
 			blobID = 363056,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.425896:0.184582"] = {
+		["619:0.425896:0.184582"] = {
 			-- Digsite: Fields of An'she
 			blobID = 346475,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.378757:0.617903"] = {
+		["619:0.378757:0.617903"] = {
 			-- Digsite: Garden of Elune
 			blobID = 354033,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.465284:0.449814"] = {
+		["619:0.465284:0.449814"] = {
 			-- Digsite: Gates of the City
 			blobID = 363021,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.640035:0.370825"] = {
+		["619:0.640035:0.370825"] = {
 			-- Digsite: Gates of Valor
 			blobID = 350063,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.305502:0.443922"] = {
+		["619:0.305502:0.443922"] = {
 			-- Digsite: Kal'delar
 			blobID = 346504,
 			mapID = 641, -- Val'sharah
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.403229:0.475374"] = {
+		["619:0.403229:0.475374"] = {
 			-- Digsite: Koralune Estate
 			blobID = 363029,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.308262:0.602774"] = {
+		["619:0.308262:0.602774"] = {
 			-- Digsite: Legion Camp: Chaos
 			blobID = 346517,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.358267:0.435959"] = {
+		["619:0.358267:0.435959"] = {
 			-- Digsite: Lightsong
 			blobID = 346506,
 			mapID = 641, -- Val'sharah
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.366973:0.540268"] = {
+		["619:0.366973:0.540268"] = {
 			-- Digsite: Llothien
 			blobID = 346522,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.329283:0.547355"] = {
+		["619:0.329283:0.547355"] = {
 			-- Digsite: Llothien Highlands
 			blobID = 354018,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.387145:0.642268"] = {
+		["619:0.387145:0.642268"] = {
 			-- Digsite: Makrana
 			blobID = 354031,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.453181:0.482381"] = {
+		["619:0.453181:0.482381"] = {
 			-- Digsite: Meredil
 			blobID = 363025,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.436884:0.467172"] = {
+		["619:0.436884:0.467172"] = {
 			-- Digsite: Meredil
 			blobID = 363036,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.443997:0.390095"] = {
+		["619:0.443997:0.390095"] = {
 			-- Digsite: Moonwhisper Gulch
 			blobID = 346531,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.307094:0.555477"] = {
+		["619:0.307094:0.555477"] = {
 			-- Digsite: Nor'Danil Wellspring
 			blobID = 354049,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.600169:0.284432"] = {
+		["619:0.600169:0.284432"] = {
 			-- Digsite: Northern Helmouth Shallows
 			blobID = 346449,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.396859:0.408170"] = {
+		["619:0.396859:0.408170"] = {
 			-- Digsite: Northern Moonfall Retreat
 			blobID = 363019,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.479245:0.265640"] = {
+		["619:0.479245:0.265640"] = {
 			-- Digsite: Northern Snowblind Mesa
 			blobID = 353991,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.324187:0.693149"] = {
+		["619:0.324187:0.693149"] = {
 			-- Digsite: Northern Watcher Isle
 			blobID = 354027,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.335282:0.621327"] = {
+		["619:0.335282:0.621327"] = {
 			-- Digsite: Old Coast Path
 			blobID = 354041,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.442936:0.203692"] = {
+		["619:0.442936:0.203692"] = {
 			-- Digsite: Pinerock Basin
 			blobID = 353979,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.457852:0.230685"] = {
+		["619:0.457852:0.230685"] = {
 			-- Digsite: Prowler's Scratch
 			blobID = 353977,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.355985:0.475055"] = {
+		["619:0.355985:0.475055"] = {
 			-- Digsite: Rhut'van Passage
 			blobID = 354022,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.371113:0.474498"] = {
+		["619:0.371113:0.474498"] = {
 			-- Digsite: Ruins of Zarkhenar
 			blobID = 354045,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.461780:0.195092"] = {
+		["619:0.461780:0.195092"] = {
 			-- Digsite: Screeching Bend
 			blobID = 346478,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.358957:0.295420"] = {
+		["619:0.358957:0.295420"] = {
 			-- Digsite: Shala'nir
 			blobID = 346512,
 			mapID = 641, -- Val'sharah
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.608344:0.373214"] = {
+		["619:0.608344:0.373214"] = {
 			-- Digsite: Skold-Ashil
 			blobID = 353972,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.495754:0.193739"] = {
+		["619:0.495754:0.193739"] = {
 			-- Digsite: Sky Sepulcher
 			blobID = 353989,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.603089:0.307842"] = {
+		["619:0.603089:0.307842"] = {
 			-- Digsite: Southern Helmouth Shallows
 			blobID = 346447,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.481050:0.247008"] = {
+		["619:0.481050:0.247008"] = {
 			-- Digsite: Southern Snowblind Mesa
 			blobID = 346481,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.428284:0.569650"] = {
+		["619:0.428284:0.569650"] = {
 			-- Digsite: Southern Suramar
 			blobID = 363058,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.365752:0.446868"] = {
+		["619:0.365752:0.446868"] = {
 			-- Digsite: Southern Wash
 			blobID = 354093,
 			mapID = 641, -- Val'sharah
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.340059:0.751514"] = {
+		["619:0.340059:0.751514"] = {
 			-- Digsite: Southern Watcher Isle
 			blobID = 354029,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.611582:0.262217"] = {
+		["619:0.611582:0.262217"] = {
 			-- Digsite: Storm's Reach
 			blobID = 353963,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.582864:0.270020"] = {
+		["619:0.582864:0.270020"] = {
 			-- Digsite: Stormdrake Peak
 			blobID = 346445,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.393408:0.457537"] = {
+		["619:0.393408:0.457537"] = {
 			-- Digsite: Sundered Shoals
 			blobID = 363062,
 			mapID = 680, -- Suramar
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.398611:0.333481"] = {
+		["619:0.398611:0.333481"] = {
 			-- Digsite: Sundersong Glade
 			blobID = 354087,
 			mapID = 641, -- Val'sharah
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.369362:0.683355"] = {
+		["619:0.369362:0.683355"] = {
 			-- Digsite: Temple of a Thousand Lights
 			blobID = 354043,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.331194:0.395509"] = {
+		["619:0.331194:0.395509"] = {
 			-- Digsite: Thas'talah
 			blobID = 354245,
 			mapID = 641, -- Val'sharah,
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.323603:0.347018"] = {
+		["619:0.323603:0.347018"] = {
 			-- Digsite: The Crescent Vale
 			blobID = 346514,
 			mapID = 641, -- Val'sharah,
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.484341:0.153289"] = {
+		["619:0.484341:0.153289"] = {
 			-- Digsite: The Haglands
 			blobID = 353985,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.401902:0.599032"] = {
+		["619:0.401902:0.599032"] = {
 			-- Digsite: The Ruined Sancum
 			blobID = 354037,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.301361:0.459210"] = {
+		["619:0.301361:0.459210"] = {
 			-- Digsite: The Tidal Marsh
 			blobID = 354047,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.360337:0.374966"] = {
+		["619:0.360337:0.374966"] = {
 			-- Digsite: The Wildwood
 			blobID = 354249,
 			mapID = 641, -- Val'sharah
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.442458:0.131551"] = {
+		["619:0.442458:0.131551"] = {
 			-- Digsite: The Witchwood
 			blobID = 353981,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.302635:0.495598"] = {
+		["619:0.302635:0.495598"] = {
 			-- Digsite: Timeworn Strand
 			blobID = 350662,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
-		["1007:0.287507:0.534615"] = {
+		["619:0.287507:0.534615"] = {
 			-- Digsite: Timeworn Strand
 			blobID = 354025,
 			mapID = 630, -- Azsuna
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.575008:0.234029"] = {
+		["619:0.575008:0.234029"] = {
 			-- Digsite: Warden's Bluff
 			blobID = 353957,
 			mapID = 634, -- Stormheim
 			raceID = RaceID.ArchRaceDemons,
 		},
-		["1007:0.434973:0.269303"] = {
+		["619:0.434973:0.269303"] = {
 			-- Digsite: Whitewater Wash
 			blobID = 344517,
 			mapID = 650, -- Highmountain
 			raceID = RaceID.ArchRaceHighmountainTauren,
 		},
-		["1007:0.308634:0.407135"] = {
+		["619:0.308634:0.407135"] = {
 			-- Digsite: Wretched Hollow
 			blobID = 354247,
 			mapID = 641, -- Val'sharah,
