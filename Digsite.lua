@@ -139,27 +139,30 @@ local function MapIconFrameGetDistance(self)
 	return distance
 end
 
-function private.AddDigsite(digsiteTemplate, landmarkName, coordX, coordY)
-	local existingDigsite = Digsite[digsiteTemplate.siteID]
+function private.AddDigsite(digsiteTemplate, siteID, digsiteName, coordX, coordY)
+	local existingDigsite = Digsite[siteID]
 	if existingDigsite then
 		-- TODO: Debug output
 		return
 	end
+		
+	local continentID = private.ZONE_DATA[digsiteTemplate.mapID].continentID
+	local zoneID = digsiteTemplate.mapID
 
 	local digsite = _G.setmetatable({
-		siteID = digsiteTemplate.siteID,
+		siteID = siteID,
 		coordX = coordX,
 		coordY = coordY,
-		continentID = digsiteTemplate.UIMapID,
+		continentID = continentID,
 		distance = nil,
-		UIMapID = digsiteTemplate.UIMapID,
+		UIMapID = digsiteTemplate.mapID,
 		maxFindCount = digsiteTemplate.maxFindCount,
-		name = landmarkName,
+		name = digsiteName,
 		race = private.Races[digsiteTemplate.raceID],
-		stats = Archy.db.char.digsites.stats[digsiteTemplate.siteID],
+		stats = Archy.db.char.digsites.stats[digsiteTemplate.id],
 		surveyNodes = {},
-		zoneID = digsiteTemplate.UIMapID,
-		zoneName = HereBeDragons:GetLocalizedMap(digsiteTemplate.UIMapID) or ("%s"):format(_G.UNKNOWN),
+		zoneID = zoneID,
+		zoneName = HereBeDragons:GetLocalizedMap(digsiteTemplate.mapID) or ("%s %s"):format(_G.UNKNOWN, _G.PARENS_TEMPLATE:format(zoneID)),
 	}, digsiteMetatable)
 
 	Digsites[digsite.siteID] = digsite
@@ -259,15 +262,12 @@ end
 function Digsite:EnableMapIcon(tooltipText)
 	local mapIcon = self.mapIconFrame
 	if not mapIcon.isEnabled then
-        print('HereBeDragonsPins:AddMinimapIconMap '.. self.mapID..' '..self.coordX..' '..self.coordY)
+        print('HereBeDragonsPins:AddMinimapIconMap '.. self.UIMapID..' '..self.coordX..' '..self.coordY)
 		mapIcon.isEnabled = true
 		mapIcon.tooltip = tooltipText or ("%s %s\n%s"):format(self.name, _G.PARENS_TEMPLATE:format(self.race.name), self.zoneName)
 		mapIcon:Show()
-        if self.UIMapID == nil or self.coordX == nil or self.coordY == nil then
-            return
-        end
-		HereBeDragonsPins:AddMinimapIconWorld(self, mapIcon, self.UIMapID, self.coordX, self.coordY, true)
-		--HereBeDragonsPins:AddMinimapIconMap(self, mapIcon, self.UIMapID, self.coordX, self.coordY, true, true)
+
+		HereBeDragonsPins:AddMinimapIconMap(self, self.mapIconFrame, self.UIMapID, self.coordX, self.coordY, true)
 
 		MapIcon_OnUpdate(mapIcon, 5)
 	end
@@ -281,7 +281,7 @@ function Digsite:EnableSurveyNodes()
 			node:Show()
 
 			local savedData = node.savedData
-			HereBeDragonsPins:AddMinimapIconMap(self, node, savedData.m, savedData.x, savedData.y, true)
+			HereBeDragonsPins:AddMinimapIconMap(self, node, savedData.m, savedData.x, savedData.y)
 
 			MapIcon_OnUpdate(node, 5)
 		end

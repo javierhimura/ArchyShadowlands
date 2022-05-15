@@ -496,39 +496,55 @@ local function CompareAndResetDigCounters(digsiteListA, digsiteListB)
 end
 
 function UpdateAllSites()
-	
 
+	local unknownSites = 0
 	for continentID, continentData in pairs(MAP_CONTINENTS) do
-		local mapsites =  C_ResearchInfo.GetDigSitesForMap(continentID)
 		local sites = {}
-		for siteIndex = 1, #mapsites do
-			local mapPositionX = mapsites[siteIndex].position.x
-			local mapPositionY = mapsites[siteIndex].position.y
-			local siteName = mapsites[siteIndex].name
-			local siteKey = ("%d:%.6f:%.6f"):format(continentID, mapPositionX, mapPositionY)
-			local digsiteTemplate = private.DIGSITE_TEMPLATES[siteKey]
-			if digsiteTemplate then
-				local digsite = private.Digsites[digsiteTemplate.siteID]
-				if not digsite then
-                    digsite = private.AddDigsite(digsiteTemplate, siteName, mapPositionX, mapPositionY)
-                    table.insert(sites, digsite)
+        
+        local continentSites = {}
+        for _, continentSite in ipairs(C_ResearchInfo.GetDigSitesForMap(continentID)) do
+            continentSites[continentSite.researchSiteID] = continentSite
+        end
+        
+		for continentZoneIndex = 1, #continentData.zones do
+			local zone = ZONE_DATA[continentData.zones[continentZoneIndex]]
+			for key, zoneSite in pairs(C_ResearchInfo.GetDigSitesForMap(zone.UIMapID)) do
+                if not continentSites[zoneSite.researchSiteID] then
+                    return
+                end
+                local mapPositionX = continentSites[zoneSite.researchSiteID].position.x
+                local mapPositionY = continentSites[zoneSite.researchSiteID].position.y
+				local siteKey = ("%d:%.6f:%.6f"):format(continentID, mapPositionX, mapPositionY)
+				local digsiteTemplate = private.DIGSITE_TEMPLATES[siteKey]
+				if digsiteTemplate then
+					if digsiteTemplate.mapID == zone.UIMapID then
+						local digsite = private.Digsites[zoneSite.researchSiteID]			
+						if not digsite then
+							digsite = private.AddDigsite(digsiteTemplate, zoneSite.researchSiteID, zoneSite.name, zoneSite.position.x, zoneSite.position.y)
+						end
+						table.insert(sites, digsite)
+					end
+				else
+					if unknownSites == 0 then
+						Debug("Missing dig site data:")
+					end
+					unknownSites = unknownSites + 1
+					Debug("\n\t\t["..zoneSite.researchSiteID.."] = {\n\t\t\t\id = "..zoneSite.researchSiteID..", -- "..zoneSite.name.."\n\t\t\tmapID = "..zone.UIMapID..", -- "..zone.name.."\n\t\t\traceID = RaceID.Unknown,\n\t\t},")
 				end
-
-			else
-				local siteID = mapsites[siteIndex].researchSiteID
-				local message = ([[Missing dig site data: ["%s"] = { -- %s siteID = %d, UIMapID = %d, typeID = RaceID.Unknown }]]):format(siteKey, siteName, siteID, continentID)
-
-				Debug(message)
-			end
+			end		
 		end
-
+		
 		if #sites > 0 then
 			if continent_digsites[continentID] then
 				CompareAndResetDigCounters(continent_digsites[continentID], sites)
 				CompareAndResetDigCounters(sites, continent_digsites[continentID])
 			end
-			continent_digsites[continentID] = sites
 		end
+		continent_digsites[continentID] = sites
+	end
+	
+	if unknownSites > 0 then
+		print(unknownSites .. " missing digsites found. Please run /archy debug and report the list")
 	end
 end
 
@@ -1137,7 +1153,7 @@ function Archy:UpdatePlayerPosition(force)
 	if UIMapType == Enum.UIMapType.Orphan then
 		return
 	end
-	
+
 	if UIMapType == Enum.UIMapType.Orphan then
 		return
 	end
