@@ -561,7 +561,11 @@ function Archy:UpdateSiteDistances(force)
 	for index = 1, #continentDigsites do
 		local digsite = continentDigsites[index]
 
-		digsite.distance = HereBeDragons:GetZoneDistance(playerLocation.UIMapID, playerLocation.x, playerLocation.y, digsite.UIMapID ,digsite.coordX, digsite.coordY)
+		if digsite.mapIconFrame:IsShown() then
+			digsite.distance = digsite.mapIconFrame:GetDistance()
+		else
+			digsite.distance = HereBeDragons:GetZoneDistance(playerLocation.UIMapID, playerLocation.x, playerLocation.y, digsite.UIMapID, digsite.coordX, digsite.coordY)
+		end
 
 		if digsite.coordX and digsite.distance and not digsite:IsBlacklisted() and (not closestDistance or digsite.distance < closestDistance) then
 			closestDistance = digsite.distance
