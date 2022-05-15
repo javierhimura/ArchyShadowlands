@@ -515,12 +515,13 @@ function UpdateAllSites()
                 end
                 local mapPositionX = continentSites[zoneSite.researchSiteID].position.x
                 local mapPositionY = continentSites[zoneSite.researchSiteID].position.y
+                local templateKey = ("%d:%.6f:%.6f"):format(continentID, mapPositionX, mapPositionY)
                 local digsiteTemplate = Archy:SearchDigsiteTemplate(continentID, zone, zoneSite, mapPositionX, mapPositionY)
                 if digsiteTemplate then
                     if digsiteTemplate.mapID == zone.UIMapID then
                         local digsite = private.Digsites[zoneSite.researchSiteID]			
                         if not digsite then
-                            digsite = private.AddDigsite(digsiteTemplate, zoneSite.researchSiteID, zoneSite.name, zoneSite.position.x, zoneSite.position.y)
+                            digsite = private.AddDigsite(digsiteTemplate, templateKey, zoneSite.researchSiteID, zoneSite.name, zoneSite.position.x, zoneSite.position.y)
                         end
                         table.insert(sites, digsite)
                     end
@@ -537,7 +538,7 @@ function UpdateAllSites()
 		continent_digsites[continentID] = sites
 	end
 	
-	if MissingDigsites and MissingDigsites.Count > SourceCount then
+	if MissingDigsites and MissingDigsites.Count and MissingDigsites.Count > SourceCount then
 		print(MissingDigsites.Count .. " missing digsites found. Please run /archy debug and report the list")
 	end
 end
@@ -598,8 +599,11 @@ function Archy:SearchDigsiteTemplate(continentID, zone, zoneSite, mapPositionX, 
             digsiteTemplate = private.DIGSITE_TEMPLATES[oldsiteKey]
             private.DIGSITE_TEMPLATES[oldsiteKey] = nil
             private.DIGSITE_TEMPLATES[siteKey] = digsiteTemplate
-            Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, digsiteTemplate.raceID)
         end
+    end
+    
+    if not digsiteTemplate then
+        digsiteTemplate = private.DIGSITE_TEMPLATES[zoneSite.researchSiteID]
     end
 
     if not digsiteTemplate then
@@ -1505,7 +1509,7 @@ do
 		local _, subEvent, _, sourceGUID, _, _, _, _, _, _, _, spellID, spellDescription, _ = CombatLogGetCurrentEventInfo()
 		if subEvent == "SPELL_CAST_SUCCESS" and sourceGUID == private.PlayerGUID and spellID == STANDING_ON_IT_SPELL_ID then
 			self:Pour(spellDescription)
-			G.PlaySoundFile([[Interface\AddOns\Archy\Media\dingding.mp3]])
+			_G.PlaySoundFile([[Interface\AddOns\Archy\Media\dingding.mp3]])
 		end
 	end
 end
@@ -1532,6 +1536,13 @@ function Archy:CURRENCY_DISPLAY_UPDATE()
 				currentDigsite.stats.fragments = currentDigsite.stats.fragments + diff
 
 				currentDigsite:AddSurveyNode(playerLocation.UIMapID, playerLocation.x, playerLocation.y)
+                local RaceID = private.RaceID
+                if currentDigsite.raceID == RaceID.Unknown then
+                    if MissingDigsites and MissingDigsites[currentDigsite.templateKey] then
+                        MissingDigsites[currentDigsite.templateKey].raceID = raceID
+                    end
+                    private.DIGSITE_TEMPLATES[currentDigsite.templateKey].raceID = raceID
+                end
 			end
 
 			surveyLocation.UIMapID = 0
@@ -1539,7 +1550,7 @@ function Archy:CURRENCY_DISPLAY_UPDATE()
 			surveyLocation.y = 0
 
 			UpdateMinimapIcons()
-			self:RefreshDigSiteDisplay()
+			self:RefreshDigSiteDisplay()  
 		end
 	end
 

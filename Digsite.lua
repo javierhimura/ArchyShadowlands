@@ -139,7 +139,7 @@ local function MapIconFrameGetDistance(self)
 	return distance
 end
 
-function private.AddDigsite(digsiteTemplate, siteID, digsiteName, coordX, coordY)
+function private.AddDigsite(digsiteTemplate, templateKey, siteID, digsiteName, coordX, coordY)
 	local existingDigsite = Digsite[siteID]
 	if existingDigsite then
 		-- TODO: Debug output
@@ -150,6 +150,7 @@ function private.AddDigsite(digsiteTemplate, siteID, digsiteName, coordX, coordY
 	local zoneID = digsiteTemplate.mapID
 
 	local digsite = _G.setmetatable({
+        templateKey = templateKey,
 		siteID = siteID,
 		coordX = coordX,
 		coordY = coordY,
@@ -158,6 +159,7 @@ function private.AddDigsite(digsiteTemplate, siteID, digsiteName, coordX, coordY
 		UIMapID = digsiteTemplate.mapID,
 		maxFindCount = digsiteTemplate.maxFindCount,
 		name = digsiteName,
+        raceID = digsiteTemplate.raceID,
 		race = private.Races[digsiteTemplate.raceID],
 		stats = Archy.db.char.digsites.stats[digsiteTemplate.id],
 		surveyNodes = {},
