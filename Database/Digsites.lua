@@ -129,6 +129,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["13:0.574177:0.255976"] = {
 			-- Lake Kel'Theril Digsite
+			siteID = 303,
 			mapID = 83, -- Winterspring
 			raceID = RaceID.ArchRaceNightElf,
 		},
@@ -199,6 +200,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["13:0.390236:0.641127"] = {
 			-- Ravenwind Digsite
+			siteID = 283,
 			mapID = 69, -- Feralas
 			raceID = RaceID.ArchRaceNightElf,
 		},
@@ -261,6 +263,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["13:0.519775:0.341003"] = {
 			-- Sanctuary of Malorne Digsite
+            siteID = 467,
 			mapID = 198, -- Mount Hyjal
 			raceID = RaceID.ArchRaceNightElf,
 		},
@@ -429,6 +432,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["14:0.432240:0.839175"] = {
 			-- Eastern Zul'Kunda Digsite
+            siteID = 225,
 			mapID = 50, -- Northern Stranglethorn
 			raceID = RaceID.ArchRaceTroll,
 		},
@@ -489,6 +493,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["14:0.541932:0.427274"] = {
 			-- Jintha'Alor Upper City Digsite
+			siteID = 26,
 			mapID = 26, -- The Hinterlands
 			raceID = RaceID.ArchRaceTroll,
 		},
@@ -510,6 +515,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["14:0.485699:0.325357"] = {
 			-- Northridge Fossil Field
+			siteID = 249,
 			mapID = 22, -- Western Plaguelands
 			raceID = RaceID.ArchRaceFossil,
 		},
@@ -659,6 +665,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["101:0.560123:0.262942"] = {
 			-- Arklon Ruins Digsite
+			siteID = 355,
 			mapID = 109, -- Netherstorm
 			raceID = RaceID.ArchRaceDraenei,
 		},
@@ -674,6 +681,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["101:0.485685:0.768494"] = {
 			-- Bone Wastes Digsite
+			siteID = 379,
 			mapID = 108, -- Terokkar Forest
 			raceID = RaceID.ArchRaceDraenei,
 		},
@@ -749,8 +757,9 @@ function private.InitializeDigsiteTemplates()
 			mapID = 104, -- Shadowmoon Valley
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["101:0.539567:0.202217"] = {
+		["101:0.539539:0.202190"] = {
 			-- Ruins of Enkaat Digsite
+			siteID = 353,
 			mapID = 109, -- Netherstorm
 			raceID = RaceID.ArchRaceDraenei,
 		},
@@ -775,8 +784,9 @@ function private.InitializeDigsiteTemplates()
 			mapID = 108, -- Terokkar Forest
 			raceID = RaceID.ArchRaceDraenei,
 		},
-		["101:0.338583:0.482822"] = {
+		["101:0.338561:0.482906"] = {
 			-- Twin Spire Ruins Digsite
+			siteID = 351,
 			mapID = 102, -- Zangarmarsh
 			raceID = RaceID.ArchRaceDraenei,
 		},
@@ -903,6 +913,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["113:0.207485:0.701216"] = {
 			-- Sands of Nasam
+			siteID = 589,
 			mapID = 114, -- Borean Tundra
 			raceID = RaceID.ArchRaceNerubian,
 		},
@@ -2234,6 +2245,12 @@ function private.InitializeDigsiteTemplates()
 			mapID = 863, -- Nazmir
 			raceID = RaceID.ArchRaceZandalari,
 		},
+		["875:0.683981:0.754376"] = {
+            --Digsite: Dreadpearl Shallows
+			siteID = 2451,
+			mapID = 862, -- Zuldazar
+			raceID = RaceID.ArchRaceZandalari,
+		},
         
 		-- ----------------------------------------------------------------------------
 		-- Kul Tiras
@@ -2268,6 +2285,7 @@ function private.InitializeDigsiteTemplates()
 			mapID = 895, -- Tiragarde Sound
 			raceID = RaceID.ArchRaceDrust,
 		},
+        
 
         -- DIGSITES WITHOUT COORDINATES
 		-- ----------------------------------------------------------------------------

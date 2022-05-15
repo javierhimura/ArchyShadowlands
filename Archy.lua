@@ -497,8 +497,7 @@ local function CompareAndResetDigCounters(digsiteListA, digsiteListB)
 end
 
 function UpdateAllSites()
-    MissingDigsites = {}
-    
+
     local SourceCount = MissingDigsites.Count or 0
 	for continentID, continentData in pairs(MAP_CONTINENTS) do
 		local sites = {}
