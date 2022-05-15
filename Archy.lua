@@ -203,7 +203,7 @@ local function UpdateMinimapIcons()
 
 	local minimapSettings = private.ProfileSettings.minimap
 	local canShow = private.ProfileSettings.general.show and minimapSettings.show
-    
+
 	for _, digsite in pairs(continentDigsites) do
 		if canShow then
 			if nearestDigsite == digsite or not minimapSettings.nearest then
@@ -496,9 +496,9 @@ local function CompareAndResetDigCounters(digsiteListA, digsiteListB)
 end
 
 function UpdateAllSites()
+	
 
-
-	for continentID, continentName in pairs(MAP_CONTINENTS) do
+	for continentID, continentData in pairs(MAP_CONTINENTS) do
 		local mapsites =  C_ResearchInfo.GetDigSitesForMap(continentID)
 		local sites = {}
 		for siteIndex = 1, #mapsites do
@@ -728,21 +728,17 @@ function Archy:LoadContinentData(continentID)
 	end
 	
 	if info.mapType == Enum.UIMapType.Continent then
-		local continentName = HereBeDragons:GetLocalizedMap(continentID)
-		MAP_CONTINENTS[continentID] = continentName
 
-		ZONE_DATA[continentID] = {
-			continentID = continentID,
-			ID = 0,
-			UIMapID = _UIMapID,
-			name = continentName
-		}
-	
+		local continentName = HereBeDragons:GetLocalizedMap(continentID)
+        local continentZones = {}
+        
+
 		local zoneData = C_Map.GetMapChildrenInfo(continentID, Enum.UIMapType.Zone, true)
-		
+        
 		for zoneDataIndex = 1, #zoneData do
 			local zoneID = zoneData[zoneDataIndex].mapID
 			local zoneName = HereBeDragons:GetLocalizedMap(zoneID)
+            continentZones[zoneDataIndex] = zoneID
 			ZONE_DATA[zoneID] = {
 				continentID = continentID,
 				ID = zoneID,
@@ -750,6 +746,16 @@ function Archy:LoadContinentData(continentID)
 				name = zoneName
 			}
 		end
+        
+        MAP_CONTINENTS[continentID] = 
+        {
+			continentID = continentID,
+			ID = continentID,
+			UIMapID = continentID,
+			name = continentName,
+            zones = continentZones
+        }
+        
 	end
 end
 
