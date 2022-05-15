@@ -1320,6 +1320,7 @@ do
 				break
 			end
 		end
+		self:ScanBags()
 	end
 end
 
