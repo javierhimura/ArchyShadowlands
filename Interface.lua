@@ -135,7 +135,7 @@ do
 		for _, child in pairs(self.children) do
 			child:Hide()
 		end
-		
+
 		local currentContinentRaces = private.CONTINENT_RACES[private.CurrentContinentID]
 
 		for raceID, race in pairs(private.Races) do
@@ -335,8 +335,6 @@ do
 			return
 		end
 
-		Mixin(self, BackdropTemplateMixin)
-
 		local artifactSettings = private.ProfileSettings.artifact
 
 		local generalSettings = private.ProfileSettings.general
@@ -506,8 +504,6 @@ do
 		end
 
 		local digsiteSettings = private.ProfileSettings.digsite
-
-		Mixin(self, BackdropTemplateMixin)
 
 		self:SetScale(digsiteSettings.scale)
 		self:SetAlpha(digsiteSettings.alpha)

@@ -229,8 +229,13 @@
         </BarTexture>
     </StatusBar>
 
-    <Frame name="ArchyDistanceIndicator" movable="true" enableMouse="true" clampedToScreen="true" id="" virtual="true">
+    <Frame name="ArchyDistanceIndicator" movable="true" enableMouse="true" clampedToScreen="true" id="" virtual="true" inherits="BackdropTemplate">
         <Size x="84" y="42"/>
+	<KeyValues>
+            <KeyValue key="backdropInfo" value="BACKDROP_TOOLTIP_16_16_5555" type="global"/>
+            <KeyValue key="backdropBorderColor" value="TOOLTIP_DEFAULT_COLOR" type="global"/>
+            <KeyValue key="backdropBorderColorAlpha" value="0.25" type="number"/>
+    	</KeyValues>
         <Frames>
             <Frame name="$parentCircle" parentKey="circle">
                 <Size x="64" y="64"/>
@@ -409,7 +414,12 @@
         </Scripts>
     </Frame>
 
-    <Frame name="ArchyDigSiteContainer" virtual="true" movable="true" enableMouse="true" clampedToScreen="true">
+    <Frame name="ArchyDigSiteContainer" virtual="true" movable="true" enableMouse="true" clampedToScreen="true" inherits="BackdropTemplate">
+    	<KeyValues>
+            <KeyValue key="backdropInfo" value="BACKDROP_TOOLTIP_16_16_5555" type="global"/>
+            <KeyValue key="backdropBorderColor" value="TOOLTIP_DEFAULT_COLOR" type="global"/>
+            <KeyValue key="backdropBorderColorAlpha" value="0.25" type="number"/>
+    	</KeyValues>
         <Size>
             <AbsDimension x="340" y="200"/>
         </Size>
@@ -548,12 +558,12 @@
                                     HideUIPanel(WorldMapFrame)
                                     self.oldzoneID = nil
                                 else
-                                    WorldMapFrame:SetMapID(Archy:GetContinentFromMap(WorldMapFrame:GetMapID()), self.zoneID)
+                                    WorldMapFrame:SetMapID(self.zoneID)
                                     self.oldzoneID = self.zoneID
                                 end
                             else
                                 ShowUIPanel(WorldMapFrame)
-                                WorldMapFrame:SetMapID(Archy:GetContinentFromMap(WorldMapFrame:GetMapID()), self.zoneID)
+                                WorldMapFrame:SetMapID(self.zoneID)
                                 self.oldzoneID = self.zoneID
                             end
                         elseif button == "RightButton" and not self.digsite.race:IsOnDigSiteBlacklist() then
@@ -665,7 +675,12 @@
     </Frame>
 
 
-    <Frame name="ArchyArtifactContainer" virtual="true" movable="true" enableMouse="true" clampedToScreen="true">
+    <Frame name="ArchyArtifactContainer" virtual="true" movable="true" enableMouse="true" clampedToScreen="true" inherits="BackdropTemplate">
+	<KeyValues>
+            <KeyValue key="backdropInfo" value="BACKDROP_TOOLTIP_16_16_5555" type="global"/>
+            <KeyValue key="backdropBorderColor" value="TOOLTIP_DEFAULT_COLOR" type="global"/>
+            <KeyValue key="backdropBorderColorAlpha" value="0.25" type="number"/>
+    	</KeyValues>
         <Size>
             <AbsDimension x="330" y="900"/>
         </Size>
@@ -862,7 +877,12 @@
         </Frames>
     </Frame>
 
-    <Frame name="ArchyMinArtifactContainer" virtual="true" movable="true" enableMouse="true" clampedToScreen="true">
+    <Frame name="ArchyMinArtifactContainer" virtual="true" movable="true" enableMouse="true" clampedToScreen="true" inherits="BackdropTemplate">
+	<KeyValues>
+            <KeyValue key="backdropInfo" value="BACKDROP_TOOLTIP_16_16_5555" type="global"/>
+            <KeyValue key="backdropBorderColor" value="TOOLTIP_DEFAULT_COLOR" type="global"/>
+            <KeyValue key="backdropBorderColorAlpha" value="0.25" type="number"/>
+    	</KeyValues>
         <Size>
             <AbsDimension x="330" y="100"/>
         </Size>
@@ -1056,7 +1076,12 @@
         </Frames>
     </Frame>
 
-    <Frame name="ArchyMinDigSiteContainer" virtual="true" movable="true" enableMouse="true" clampedToScreen="true">
+    <Frame name="ArchyMinDigSiteContainer" virtual="true" movable="true" enableMouse="true" clampedToScreen="true" inherits="BackdropTemplate">
+	<KeyValues>
+            <KeyValue key="backdropInfo" value="BACKDROP_TOOLTIP_16_16_5555" type="global"/>
+            <KeyValue key="backdropBorderColor" value="TOOLTIP_DEFAULT_COLOR" type="global"/>
+            <KeyValue key="backdropBorderColorAlpha" value="0.25" type="number"/>
+    	</KeyValues>
         <Size>
             <AbsDimension x="340" y="200"/>
         </Size>
@@ -1175,12 +1200,12 @@
                                     HideUIPanel(WorldMapFrame)
                                     self.oldzoneID = nil
                                 else
-                                    WorldMapFrame:SetMapID(Archy:GetContinentFromMap(WorldMapFrame:GetMapID()), self.zoneID)
+                                    WorldMapFrame:SetMapID(self.zoneID)
                                     self.oldzoneID = self.zoneID
                                 end
                             else
                                 ShowUIPanel(WorldMapFrame)
-                                WorldMapFrame:SetMapID(Archy:GetContinentFromMap(WorldMapFrame:GetMapID()), self.zoneID)
+                                WorldMapFrame:SetMapID(self.zoneID)
                                 self.oldzoneID = self.zoneID
                             end
                         elseif button == "RightButton" and not self.digsite.race:IsOnDigSiteBlacklist() then
