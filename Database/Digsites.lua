@@ -799,7 +799,7 @@ function private.InitializeDigsiteTemplates()
 		-- ----------------------------------------------------------------------------
 		-- Northrend
 		-- ----------------------------------------------------------------------------
-		["113:0.760625:0.411718"] = {
+		["113:0.745638:0.428748"] = {
 			-- Altar of Quetz'lun Digsite
 			siteID = 435,
 			mapID = 121, -- Zul'Drak
@@ -816,7 +816,13 @@ function private.InitializeDigsiteTemplates()
 			mapID = 117, -- Howling Fjord
 			raceID = RaceID.ArchRaceVrykul,
 		},
-		["113:0.611679:0.306430"] = {
+		["113:0.797921:0.765361"] = {
+			-- Baleheim Digsite
+			siteID = 409,
+			mapID = 117, -- Howling Fjord
+			raceID = RaceID.ArchRaceVrykul,
+		},
+		["113:0.605295:0.329547"] = {
 			-- Brunnhildar Village Digsite
 			siteID = 445,
 			mapID = 120, -- The Storm Peaks
@@ -1009,7 +1015,7 @@ function private.InitializeDigsiteTemplates()
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424:0.483578:0.549441"] = {
+		["424:0.483578:0.549537"] = {
 			-- Emperor's Approach Digsite
 			siteID = 1318,
 			mapID = 1530, -- Vale of Eternal Blossoms
@@ -1512,7 +1518,7 @@ function private.InitializeDigsiteTemplates()
 			mapID = 550, -- Nagrand
 			raceID = RaceID.ArchRaceDraenorOrc,
 		},
-		["572:0.354214:0.244702"] = {
+		["572:0.354250:0.244733"] = {
 			-- Coldsnap Bluffs Digsite
 			siteID = 1738,
 			mapID = 525, -- Frostfire Ridge
@@ -1548,7 +1554,7 @@ function private.InitializeDigsiteTemplates()
 			mapID = 535, -- Talador
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["572:0.378317:0.236851"] = {
+        ["572:0.378351:0.236883"] = {
 			-- East Coldsnap Bluffs Digsite
 			siteID = 1736,
 			mapID = 525, -- Frostfire Ridge
@@ -1587,7 +1593,7 @@ function private.InitializeDigsiteTemplates()
 			mapID = 535, -- Talador
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["572:0.363583:0.375729"] = {
+		["572:0.363617:0.375750"] = {
 			-- Grom'gar Digsite
 			siteID = 1691,
 			mapID = 525, -- Frostfire Ridge
@@ -1756,7 +1762,7 @@ function private.InitializeDigsiteTemplates()
 			mapID = 543, -- Gorgrond
 			raceID = RaceID.ArchRaceOgre,
 		},
-		["572:0.266599:0.371771"] = {
+		["572:0.266641:0.371792"] = {
 			-- Wor'gol Ridge Digsite
 			siteID = 1683,
 			mapID = 525, -- Frostfire Ridge
@@ -2083,6 +2089,12 @@ function private.InitializeDigsiteTemplates()
 			mapID = 641, -- Val'sharah
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
+		--["619:0.365752:0.446868"] = {
+		--	-- Digsite: Southern Wash
+		--	siteID = 2004,
+		--	mapID = 630, -- Azsuna
+		--	raceID = RaceID.ArchRaceHighmountainTauren,
+		--},
 		["619:0.340059:0.751514"] = {
 			-- Digsite: Southern Watcher Isle
 			siteID = 1980,
@@ -2189,6 +2201,74 @@ function private.InitializeDigsiteTemplates()
 			raceID = RaceID.ArchRaceDemons,
 		},
         
+		-- ----------------------------------------------------------------------------
+		-- Zandalar
+		-- ----------------------------------------------------------------------------
+		["875:0.491571:0.807161"] = {
+			-- Digsite: Xibala
+			siteID = 2447,
+			mapID = 862, -- Zuldazar
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["875:0.487255:0.375556"] = {
+			-- Digsite: Plains of Tojek
+			siteID = 2463,
+			mapID = 863, -- Nazmir
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["875:0.565316:0.244307"] = {
+			-- Digsite: Natha'vor
+			siteID = 2469,
+			mapID = 863, -- Nazmir
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["875:0.589898:0.834486"] = {
+			-- Digsite: Tusk Isle
+			siteID = 2449,
+			mapID = 862, -- Zuldazar
+			raceID = RaceID.ArchRaceZandalari,
+		},
+		["875:0.539491:0.335391"] = {
+			-- Digsite: Terrace of Sorrows
+			siteID = 2465,
+			mapID = 863, -- Nazmir
+			raceID = RaceID.ArchRaceZandalari,
+		},
+        
+		-- ----------------------------------------------------------------------------
+		-- Kul Tiras
+		-- ----------------------------------------------------------------------------
+		["876:0.596420:0.463062"] = {
+			-- Digsite: Fernwood Ridge
+			siteID = 2403,
+			mapID = 895, -- Tiragarde Sound
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["876:0.456411:0.587582"] = {
+			-- Digsite: Brackish Coast
+			siteID = 2419,
+			mapID = 895, -- Tiragarde Sound
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["876:0.581542:0.726753"] = {
+			-- Digsite: Stagheart Cliffs
+			siteID = 2411,
+			mapID = 895, -- Tiragarde Sound
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["876:0.500512:0.703405"] = {
+			-- Digsite: Vigil Hill
+			siteID = 2407,
+			mapID = 895, -- Tiragarde Sound
+			raceID = RaceID.ArchRaceDrust,
+		},
+		["876:0.432987:0.716681"] = {
+			-- Digsite: Hunter's Run
+			siteID = 2417,
+			mapID = 895, -- Tiragarde Sound
+			raceID = RaceID.ArchRaceDrust,
+		},
+
         -- DIGSITES WITHOUT COORDINATES
 		-- ----------------------------------------------------------------------------
 		-- Draenor
@@ -2246,7 +2326,7 @@ function private.InitializeDigsiteTemplates()
 			raceID = RaceID.ArchRaceHighborneNightElves,
 		},
 	}
-
+    
 	local CONTINENT_RACES = {}
 	private.CONTINENT_RACES = CONTINENT_RACES
 
