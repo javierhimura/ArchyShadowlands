@@ -497,9 +497,8 @@ local function CompareAndResetDigCounters(digsiteListA, digsiteListB)
 end
 
 function UpdateAllSites()
-    MissingDigsites = {}
-    
-	local unknownSites = 0
+
+    local SourceCount = MissingDigsites.Count or 0
 	for continentID, continentData in pairs(MAP_CONTINENTS) do
 		local sites = {}
         
@@ -516,41 +515,16 @@ function UpdateAllSites()
                 end
                 local mapPositionX = continentSites[zoneSite.researchSiteID].position.x
                 local mapPositionY = continentSites[zoneSite.researchSiteID].position.y
-				local siteKey = ("%d:%.6f:%.6f"):format(continentID, mapPositionX, mapPositionY)
-				local digsiteTemplate = private.DIGSITE_TEMPLATES[siteKey]
-             
-                if not digsiteTemplate and MissingDigsites and MissingDigsites[siteKey] then
-                    digsiteTemplate = MissingDigsites[siteKey]
-                end
-             
-                if not digsiteTemplate then
-                    local oldsiteKey = private.DIGSITE_TEMPLATES_BY_ID[zoneSite.researchSiteID]
-                    if oldsiteKey then
-                        digsiteTemplate = private.DIGSITE_TEMPLATES[oldsiteKey]
-                        private.DIGSITE_TEMPLATES[oldsiteKey] = nil
-                        private.DIGSITE_TEMPLATES[siteKey] = digsiteTemplate
-                        Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, digsiteTemplate.raceID)
+                local digsiteTemplate = Archy:SearchDigsiteTemplate(continentID, zone, zoneSite, mapPositionX, mapPositionY)
+                if digsiteTemplate then
+                    if digsiteTemplate.mapID == zone.UIMapID then
+                        local digsite = private.Digsites[zoneSite.researchSiteID]			
+                        if not digsite then
+                            digsite = private.AddDigsite(digsiteTemplate, zoneSite.researchSiteID, zoneSite.name, zoneSite.position.x, zoneSite.position.y)
+                        end
+                        table.insert(sites, digsite)
                     end
                 end
-
-                if not digsiteTemplate then
-                    Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, 0)
-					Debug("\n\t\t["..zoneSite.researchSiteID.."] = {\n\t\t\t\id = "..zoneSite.researchSiteID..", -- "..zoneSite.name.."\n\t\t\tmapID = "..zone.UIMapID..", -- "..zone.name.."\n\t\t\traceID = RaceID.Unknown,\n\t\t},")
-                    digsiteTemplate = MissingDigsites[siteKey]
-                end
-                
-				if digsiteTemplate then
-                    if not digsiteTemplate.id then
-                        Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, digsiteTemplate.raceID)
-                    end
-					if digsiteTemplate.mapID == zone.UIMapID then
-						local digsite = private.Digsites[zoneSite.researchSiteID]			
-						if not digsite then
-							digsite = private.AddDigsite(digsiteTemplate, zoneSite.researchSiteID, zoneSite.name, zoneSite.position.x, zoneSite.position.y)
-						end
-						table.insert(sites, digsite)
-					end
-				end
 			end		
 		end
 		
@@ -563,7 +537,7 @@ function UpdateAllSites()
 		continent_digsites[continentID] = sites
 	end
 	
-	if MissingDigsites and MissingDigsites.Count > 0 then
+	if MissingDigsites and MissingDigsites.Count > SourceCount then
 		print(MissingDigsites.Count .. " missing digsites found. Please run /archy debug and report the list")
 	end
 end
@@ -607,39 +581,38 @@ function Archy:AddMissingDigSite(siteKey, id, name, continentID, mapID, zonename
         zonename = zonename,
         raceID = raceID,
     }
-    --875 Zandalar
-    -- 876  	Kul Tiras
     MissingDigsites.Count = MissingDigsites.Count + 1
 end
 
 function Archy:SearchDigsiteTemplate(continentID, zone, zoneSite, mapPositionX, mapPositionY)
     local siteKey = ("%d:%.6f:%.6f"):format(continentID, mapPositionX, mapPositionY)
     local digsiteTemplate = private.DIGSITE_TEMPLATES[siteKey]
-    --if not digsiteTemplate and MissingDigsites then
-    --    digsiteTemplate = MissingDigsites[siteKey]
-    --end
+    if not digsiteTemplate and MissingDigsites and MissingDigsites[siteKey] then
+        digsiteTemplate = MissingDigsites[siteKey]
+    end
+ 
     if not digsiteTemplate then
         local oldsiteKey = private.DIGSITE_TEMPLATES_BY_ID[zoneSite.researchSiteID]
         if oldsiteKey then
-            --print('Move sitekey '..zoneSite.name)
             digsiteTemplate = private.DIGSITE_TEMPLATES[oldsiteKey]
-            --private.DIGSITE_TEMPLATES[oldsiteKey] = nil
-            --private.DIGSITE_TEMPLATES[siteKey] = digsiteTemplate
-            Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, zone.UIMapID, zone.name, digsiteTemplate.raceID)
-            --return
+            private.DIGSITE_TEMPLATES[oldsiteKey] = nil
+            private.DIGSITE_TEMPLATES[siteKey] = digsiteTemplate
+            Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, digsiteTemplate.raceID)
         end
     end
+
+    if not digsiteTemplate then
+        Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, 0)
+        Debug("\n\t\t["..zoneSite.researchSiteID.."] = {\n\t\t\t\id = "..zoneSite.researchSiteID..", -- "..zoneSite.name.."\n\t\t\tmapID = "..zone.UIMapID..", -- "..zone.name.."\n\t\t\traceID = RaceID.Unknown,\n\t\t},")
+        digsiteTemplate = MissingDigsites[siteKey]
+    end
+    
     if digsiteTemplate then
         if not digsiteTemplate.id then
-            Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, zone.UIMapID, zone.name, digsiteTemplate.raceID)
-            --return MissingDigsites[siteKey]
+            Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, digsiteTemplate.raceID)
         end
-        return digsiteTemplate
-    else
-        Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, zone.UIMapID, zone.name, 0)
-        Debug("\n\t\t["..zoneSite.researchSiteID.."] = {\n\t\t\t\id = "..zoneSite.researchSiteID..", -- "..zoneSite.name.."\n\t\t\tmapID = "..zone.UIMapID..", -- "..zone.name.."\n\t\t\traceID = RaceID.Unknown,\n\t\t},")
-        return MissingDigsites[siteKey]
     end
+    return digsiteTemplate
 end
 
 function Archy:UpdateSiteDistances(force)
@@ -1001,36 +974,37 @@ local SUBCOMMAND_FUNCS = {
 
 		debugger:Display()
 	end,
-	-- @alpha@
+
 	scan = function()
-		local sites = {}
-		local found = 0
 
 		Debug("Scanning digsites:\n")
         
-        for continentID, continentName in pairs(MAP_CONTINENTS) do
-            local mapsites =  C_ResearchInfo.GetDigSitesForMap(continentID)
-            for siteIndex = 1, #mapsites do
-                local mapPositionX = mapsites[siteIndex].position.x
-                local mapPositionY = mapsites[siteIndex].position.y
-                local siteName = mapsites[siteIndex].name
-                local siteKey = ("%d:%.6f:%.6f"):format(continentID, mapPositionX, mapPositionY)
-				if not private.DIGSITE_TEMPLATES[siteKey] and not sites[siteKey] then
-                    local siteID = mapsites[siteIndex].researchSiteID
-                    local message = ([[Missing dig site data: ["%s"] = { -- %s siteID = %d, UIMapID = %d, typeID = RaceID.Unknown }]]):format(siteKey, siteName, siteID, continentID)
+        for continentID, continentData in pairs(MAP_CONTINENTS) do
 
-                    Debug(message)
-                    sites[siteKey] = true
-                    found = found + 1
-                end
+            local continentSites = {}
+            for _, continentSite in ipairs(C_ResearchInfo.GetDigSitesForMap(continentID)) do
+                continentSites[continentSite.researchSiteID] = continentSite
             end
+            
+            for continentZoneIndex = 1, #continentData.zones do
+                local zone = ZONE_DATA[continentData.zones[continentZoneIndex]]
+                for key, zoneSite in pairs(C_ResearchInfo.GetDigSitesForMap(zone.UIMapID)) do
+                    local mapPositionX = continentSites[zoneSite.researchSiteID].position.x
+                    local mapPositionY = continentSites[zoneSite.researchSiteID].position.y
+                    Archy:SearchDigsiteTemplate(continentID, zone, zoneSite, mapPositionX, mapPositionY)
+                end		
+            end
+            
         end
         
-		Debug(("%d found"):format(found))
+        if MissingDigsites and MissingDigsites.Count > 0 then
+            print(MissingDigsites.Count .. " missing digsites found. Please run /archy debug and report the list")
+        end
+        
+		Debug(("%d found"):format(MissingDigsites.Count))
 
 		debugger:Display()
 	end,
-	-- @end-alpha@
 }
 
 _G["SLASH_ARCHY1"] = "/archy"
