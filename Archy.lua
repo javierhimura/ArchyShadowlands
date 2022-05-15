@@ -497,7 +497,8 @@ local function CompareAndResetDigCounters(digsiteListA, digsiteListB)
 end
 
 function UpdateAllSites()
-
+    MissingDigsites = {}
+    
     local SourceCount = MissingDigsites.Count or 0
 	for continentID, continentData in pairs(MAP_CONTINENTS) do
 		local sites = {}
@@ -569,10 +570,10 @@ function Archy:AddMissingDigSite(siteKey, id, name, continentID, mapID, zonename
     MissingDigsites.Sites = MissingDigsites.Sites or {}
     local RaceID = private.RaceID
     if raceID == RaceID.Unknown and continentID == 875 then --Zandalar
-        raceID = RaceID.Zandalar
+        raceID = 2
     end
     if raceID == RaceID.Unknown and continentID == 876 then --Kul Tiras
-        raceID = RaceID.ArchRaceDrust
+        raceID = 1
     end
     MissingDigsites.Sites[siteKey] = { 
         id = id,
@@ -580,6 +581,7 @@ function Archy:AddMissingDigSite(siteKey, id, name, continentID, mapID, zonename
         mapID = mapID,
         zonename = zonename,
         raceID = raceID,
+        continentID = continentID
     }
     MissingDigsites.Count = MissingDigsites.Count + 1
 end
@@ -587,8 +589,8 @@ end
 function Archy:SearchDigsiteTemplate(continentID, zone, zoneSite, mapPositionX, mapPositionY)
     local siteKey = ("%d:%.6f:%.6f"):format(continentID, mapPositionX, mapPositionY)
     local digsiteTemplate = private.DIGSITE_TEMPLATES[siteKey]
-    if not digsiteTemplate and MissingDigsites and MissingDigsites[siteKey] then
-        digsiteTemplate = MissingDigsites[siteKey]
+    if not digsiteTemplate and MissingDigsites and MissingDigsites.Sites and MissingDigsites.Sites[siteKey] then
+        digsiteTemplate = MissingDigsites.Sites[siteKey]
     end
  
     if not digsiteTemplate then
@@ -604,7 +606,7 @@ function Archy:SearchDigsiteTemplate(continentID, zone, zoneSite, mapPositionX, 
     if not digsiteTemplate then
         Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, 0)
         Debug("\n\t\t["..zoneSite.researchSiteID.."] = {\n\t\t\t\id = "..zoneSite.researchSiteID..", -- "..zoneSite.name.."\n\t\t\tmapID = "..zone.UIMapID..", -- "..zone.name.."\n\t\t\traceID = RaceID.Unknown,\n\t\t},")
-        digsiteTemplate = MissingDigsites[siteKey]
+        digsiteTemplate = MissingDigsites.Sites[siteKey]
     end
     
     if digsiteTemplate then
