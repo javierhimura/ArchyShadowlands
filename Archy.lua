@@ -1122,10 +1122,13 @@ function Archy:UpdateSkillBar()
 	ArtifactFrame.skillBar.text:SetFormattedText("%s : %d/%d", _G.GetArchaeologyInfo(), rank, maxRank)
 end
 
-function Archy:GetContinentFromMap(mapID)
-	local info = C_Map.GetMapInfo(mapID)
-	if not info then
+function Archy:GetContinentFromMap(UIMapID)
+	local info = C_Map.GetMapInfo(UIMapID)
+	if not info or info.mapType == Enum.UIMapType.Orphan then
 		return
+	end
+	if info.mapType == Enum.UIMapType.Continent then
+		return info.mapID
 	end
 	while info.parentMapID > 0 and info.mapType ~= Enum.UIMapType.Continent do
 		info = C_Map.GetMapInfo(info.parentMapID)
@@ -1150,17 +1153,10 @@ function Archy:UpdatePlayerPosition(force)
 		return
 	end
 
-	if UIMapType == Enum.UIMapType.Orphan then
-		return
-	end
+	continentID = Archy:GetContinentFromMap(UIMapID)
 
-	if UIMapType == Enum.UIMapType.Orphan then
+	if not continentID then
 		return
-	end
-	if UIMapType == Enum.UIMapType.Continent then
-		continentID = UIMapID
-	else
-		continentID = Archy:GetContinentFromMap(UIMapID)
 	end
 
 	if not playerLocation.UIMapID then
