@@ -2188,6 +2188,63 @@ function private.InitializeDigsiteTemplates()
 			mapID = 641, -- Val'sharah,
 			raceID = RaceID.ArchRaceDemons,
 		},
+        
+        -- DIGSITES WITHOUT COORDINATES
+		-- ----------------------------------------------------------------------------
+		-- Draenor
+		-- ----------------------------------------------------------------------------
+		["1695"] = {
+			-- Stonefang Ridge Digsite
+			siteID = 1695,
+			mapID = 525, -- Frostfire Ridge
+			raceID = RaceID.ArchRaceDraenorOrc,
+		},
+		
+		-- ----------------------------------------------------------------------------
+		-- Broken Isles
+		-- ----------------------------------------------------------------------------
+		["1986"] = {
+			-- Digsite: The Ruined Sanctum
+			siteID = 1986,
+			mapID = 630, -- Azsuna
+			raceID = RaceID.ArchRaceHighborneNightElves,
+		},
+		["2037"] = {
+			-- Digsite: Koralune Fields
+			siteID = 2037,
+			mapID = 680, -- Suramar
+			raceID = RaceID.ArchRaceHighborneNightElves,
+		},
+		["2073"] = {
+			-- Digsite: Upper Felsoul Hold
+			siteID = 2073,
+			mapID = 680, -- Suramar
+			raceID = RaceID.ArchRaceDemons,
+		},
+		["2077"] = {
+			-- Digsite: Highmountain Burial Ground
+			siteID = 2077,
+			mapID = 650, -- Highmountain
+			raceID = RaceID.ArchRaceHighmountainTauren,
+		},
+		["2079"] = {
+			-- Digsite: Path of Huln
+			siteID = 2079,
+			mapID = 650, -- Highmountain
+			raceID = RaceID.ArchRaceHighmountainTauren,
+		},
+		["2081"] = {
+			-- Digsite: Black Rook Courtyard
+			siteID = 2081,
+			mapID = 641, -- Val'sharah
+			raceID = RaceID.Unknown,
+		},
+		["2085"] = {
+			-- Digsite: Gloaming Reef
+			siteID = 2085,
+			mapID = 641, -- Val'sharah
+			raceID = RaceID.ArchRaceHighborneNightElves,
+		},
 	}
 
 	local CONTINENT_RACES = {}
