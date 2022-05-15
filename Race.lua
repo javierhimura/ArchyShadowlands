@@ -66,8 +66,8 @@ local RaceTextureIDToRaceLabel = {
 	[1445573] = "ArchRaceDemons",
 	[1445575] = "ArchRaceHighborneNightElves",
 	[1445577] = "ArchRaceHighmountainTauren",
-	[2060049] = "ArchRaceZandalari",
-	[2060051] = "ArchRaceDrust",
+	[2060051] = "ArchRaceZandalari",
+	[2060049] = "ArchRaceDrust",
 }
 
 -- ----------------------------------------------------------------------------
