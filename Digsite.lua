@@ -272,7 +272,6 @@ end
 function Digsite:EnableMapIcon(tooltipText)
 	local mapIcon = self.mapIconFrame
 	if not mapIcon.isEnabled then
-        print('HereBeDragonsPins:AddMinimapIconMap '.. self.UIMapID..' '..self.coordX..' '..self.coordY)
 		mapIcon.isEnabled = true
 		mapIcon.tooltip = tooltipText or ("%s %s\n%s"):format(self.name, _G.PARENS_TEMPLATE:format(self.race.name), self.zoneName)
 		mapIcon:Show()
