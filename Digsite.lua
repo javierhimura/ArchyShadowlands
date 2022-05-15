@@ -165,6 +165,16 @@ function private.AddDigsite(digsiteTemplate, siteID, digsiteName, coordX, coordY
 		zoneName = HereBeDragons:GetLocalizedMap(digsiteTemplate.mapID) or ("%s %s"):format(_G.UNKNOWN, _G.PARENS_TEMPLATE:format(zoneID)),
 	}, digsiteMetatable)
 
+    if not digsite.stats then
+        digsite.stats = {
+                            surveys = 0,
+                            fragments = 0,
+                            looted = 0,
+                            keystones = 0,
+                            counter = 0
+                        }
+    end
+
 	Digsites[digsite.siteID] = digsite
 
 	local mapIconFrame = _G.CreateFrame("Frame", ("ArchyMinimap_Digsite%sPOI"):format(digsite.siteID), _G.Minimap)
