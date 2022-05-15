@@ -2251,10 +2251,15 @@ function private.InitializeDigsiteTemplates()
 	private.CONTINENT_RACES = CONTINENT_RACES
 
 	local DIGSITE_TEMPLATES_BY_ID = {}
+	local DIGSITE_TEMPLATES_BY_ZONE = {}
 
 	for siteKey, site in pairs(DIGSITE_TEMPLATES) do
         if site.siteID and site.siteID ~= siteKey and not DIGSITE_TEMPLATES_BY_ID[site.siteID] then
             DIGSITE_TEMPLATES_BY_ID[site.siteID] = siteKey
+        end
+        if site.mapID then
+            DIGSITE_TEMPLATES_BY_ZONE[site.mapID] = DIGSITE_TEMPLATES_BY_ZONE[site.mapID ] or {}
+            DIGSITE_TEMPLATES_BY_ZONE[site.mapID][siteKey] = true
         end
 		if site.raceID ~= RaceID.Unknown then
 			local continentID = tonumber(((":"):split(siteKey)))
@@ -2263,6 +2268,7 @@ function private.InitializeDigsiteTemplates()
 		end
 	end
 
+	private.DIGSITE_TEMPLATES_BY_ZONE = DIGSITE_TEMPLATES_BY_ZONE
 	private.DIGSITE_TEMPLATES_BY_ID = DIGSITE_TEMPLATES_BY_ID
 	private.DIGSITE_TEMPLATES = DIGSITE_TEMPLATES
 end
