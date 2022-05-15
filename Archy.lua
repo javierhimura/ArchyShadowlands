@@ -550,7 +550,7 @@ local function SortSitesByZoneNameAndName(a, b)
 	return a.zoneName .. ":" .. a.name < b.zoneName .. ":" .. b.name
 end
 
-function Archy:UpdateSiteDistances()
+function Archy:UpdateSiteDistances(force)
 	local continentDigsites = continent_digsites[private.CurrentContinentID]
 	if not continentDigsites or #continentDigsites == 0 then
 		nearestDigsite = nil
@@ -569,7 +569,7 @@ function Archy:UpdateSiteDistances()
 		end
 	end
 
-	if closestDigsite and nearestDigsite ~= closestDigsite then
+	if closestDigsite and (nearestDigsite ~= closestDigsite or force) then
 		nearestDigsite = closestDigsite
 		TomTomHandler.isActive = true
 		TomTomHandler:Refresh(nearestDigsite)
@@ -1550,18 +1550,14 @@ function Archy:PLAYER_ENTERING_WORLD()
 	private.notInWorld = nil
 
 	-- If TomTom is configured to automatically set a waypoint to the closest quest objective, that will interfere with Archy. Warn, if applicable.
-    --if TomTomHandler ~= nil then
-        TomTomHandler:CheckForConflict()
-    --else
-    --    print('TomTomHandler nil')
-    --end
+	TomTomHandler:CheckForConflict()
 
 	if _G.IsInInstance() then
 		HideFrames()
 	else
 		ShowFrames()
-
 		self:UpdatePlayerPosition()
+        self:UpdateSiteDistances(true)
 	end
 end
 
