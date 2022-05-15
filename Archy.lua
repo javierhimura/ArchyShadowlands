@@ -570,10 +570,10 @@ function Archy:AddMissingDigSite(siteKey, id, name, continentID, mapID, zonename
     MissingDigsites.Sites = MissingDigsites.Sites or {}
     local RaceID = private.RaceID
     if raceID == RaceID.Unknown and continentID == 875 then --Zandalar
-        raceID = 2
+        raceID = RaceID.ArchRaceZandalari
     end
     if raceID == RaceID.Unknown and continentID == 876 then --Kul Tiras
-        raceID = 1
+        raceID = RaceID.ArchRaceDrust
     end
     MissingDigsites.Sites[siteKey] = { 
         id = id,
