@@ -968,495 +968,495 @@ function private.InitializeDigsiteTemplates()
 		-- ----------------------------------------------------------------------------
 		-- Pandaria
 		-- ----------------------------------------------------------------------------
-		["424::0.270692:0.822365"] = {
+		["424:0.270692:0.822365"] = {
 			-- Amber Quarry Digsite
 			siteID = 1495,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.491570:0.453632"] = {
+		["424:0.491570:0.453632"] = {
 			-- Chow Farmstead Digsite
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.764011:0.661878"] = {
+		["424:0.764011:0.661878"] = {
 			-- Den of Sorrow Digsite
 			siteID = 1047,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.542101:0.327176"] = {
+		["424:0.542101:0.327176"] = {
 			-- Destroyed Village Digsite
 			siteID = 1015,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.411391:0.317218"] = {
+		["424:0.411391:0.317218"] = {
 			-- East Snow Covered Hills Digsite
 			siteID = 1009,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.199987:0.382090"] = {
+		["424:0.199987:0.382090"] = {
 			-- East Sra'vess Digsite
 			siteID = 1473,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.551060:0.536969"] = {
+		["424:0.551060:0.536969"] = {
 			-- East Summer Fields Digsite
 			siteID = 1326,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.483578:0.549441"] = {
+		["424:0.483578:0.549441"] = {
 			-- Emperor's Approach Digsite
 			siteID = 1318,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.699043:0.406936"] = {
+		["424:0.699043:0.406936"] = {
 			-- Emperor's Omen Digsite
 			siteID = 936,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.461858:0.762617"] = {
+		["424:0.461858:0.762617"] = {
 			-- Fallsong Village Digsite
 			siteID = 981,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.348808:0.361787"] = {
+		["424:0.348808:0.361787"] = {
 			-- Fire Camp Osul Digsite
 			siteID = 1338,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.431952:0.535132"] = {
+		["424:0.431952:0.535132"] = {
 			-- Five Sisters Digsite
 			siteID = 1288,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.677516:0.454985"] = {
+		["424:0.677516:0.454985"] = {
 			-- Forest Heart Digsite
 			siteID = 1033,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.476553:0.470454"] = {
+		["424:0.476553:0.470454"] = {
 			-- Gate to Golden Valley Digsite
 			siteID = 1005,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.648512:0.473161"] = {
+		["424:0.648512:0.473161"] = {
 			-- Gong of Hope Digsite
 			siteID = 1035,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.699365:0.539386"] = {
+		["424:0.699365:0.539386"] = {
 			-- Great Bridge Digsite
 			siteID = 1037,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.533722:0.384700"] = {
+		["424:0.533722:0.384700"] = {
 			-- Grumblepaw Ranch Digsite
 			siteID = 1019,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.401724:0.458466"] = {
+		["424:0.401724:0.458466"] = {
 			-- Hatred's Vice Digsite
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.173239:0.353570"] = {
+		["424:0.173239:0.353570"] = {
 			-- Ikz'ka Ridge Digsite
 			siteID = 1479,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.713803:0.558142"] = {
+		["424:0.713803:0.558142"] = {
 			-- Jade Temple Grounds Digsite
 			siteID = 1043,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.327668:0.556981"] = {
+		["424:0.327668:0.556981"] = {
 			-- Kor'vess Digsite
 			siteID = 1463,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.508972:0.783500"] = {
+		["424:0.508972:0.783500"] = {
 			-- Krasarang Wilds Digsite
 			siteID = 987,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.427118:0.300203"] = {
+		["424:0.427118:0.300203"] = {
 			-- Kun-Lai Peak Digsite
 			siteID = 1029,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.386190:0.573030"] = {
+		["424:0.386190:0.573030"] = {
 			-- Kypari Vor Digsite
 			siteID = 1507,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.348228:0.689528"] = {
+		["424:0.348228:0.689528"] = {
 			-- Kypari'ik Digsite
 			siteID = 1489,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.368079:0.720659"] = {
+		["424:0.368079:0.720659"] = {
 			-- Kypari'zar Digsite
 			siteID = 1501,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.201470:0.411287"] = {
+		["424:0.201470:0.411287"] = {
 			-- Kzzok Warcamp Digsite
 			siteID = 1471,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.387673:0.691752"] = {
+		["424:0.387673:0.691752"] = {
 			-- Lake of Stars Digsite
 			siteID = 1503,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.400886:0.725589"] = {
+		["424:0.400886:0.725589"] = {
 			-- Lake of Stars Digsite
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.578517:0.720755"] = {
+		["424:0.578517:0.720755"] = {
 			-- Lost Dynasty Digsite
 			siteID = 989,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.465918:0.571773"] = {
+		["424:0.465918:0.571773"] = {
 			-- Mistfall Village Digsite
 			siteID = 1286,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.240334:0.430719"] = {
+		["424:0.240334:0.430719"] = {
 			-- Niuzao Temple Digsite
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.481258:0.635775"] = {
+		["424:0.481258:0.635775"] = {
 			-- North Fruited Fields Digsite
 			siteID = 973,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.416677:0.658881"] = {
+		["424:0.416677:0.658881"] = {
 			-- North Great Wall Digsite
 			siteID = 957,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.542874:0.753626"] = {
+		["424:0.542874:0.753626"] = {
 			-- North Ruins of Dojan Digsite
 			siteID = 1358,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.457153:0.499651"] = {
+		["424:0.457153:0.499651"] = {
 			-- North Ruins of Guo-Lai Digsite
 			siteID = 1292,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.268307:0.503905"] = {
+		["424:0.268307:0.503905"] = {
 			-- North Sik'vess Digsite
 			siteID = 1485,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.543326:0.520630"] = {
+		["424:0.543326:0.520630"] = {
 			-- North Summer Fields Digsite
 			siteID = 1322,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.502334:0.809603"] = {
+		["424:0.502334:0.809603"] = {
 			-- North Temple of the Red Crane Digsite
 			siteID = 995,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.537138:0.465717"] = {
+		["424:0.537138:0.465717"] = {
 			-- Old Village Digsite
 			siteID = 1017,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.723793:0.507965"] = {
+		["424:0.723793:0.507965"] = {
 			-- Orchard Digsite
 			siteID = 1039,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.432596:0.623013"] = {
+		["424:0.432596:0.623013"] = {
 			-- Paoquan Hollow Digsite
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.552929:0.604934"] = {
+		["424:0.552929:0.604934"] = {
 			-- Pools of Purity Digsite
 			siteID = 979,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.503365:0.234751"] = {
+		["424:0.503365:0.234751"] = {
 			-- Remote Village Digsite
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.669073:0.360724"] = {
+		["424:0.669073:0.360724"] = {
 			-- Ruins of Gan Shi Digsite
 			siteID = 934,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.444907:0.792974"] = {
+		["424:0.444907:0.792974"] = {
 			-- Ruins of Korja Digsite
 			siteID = 983,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::Setting Sun Garrison Digsite"] = {
+		["424:Setting Sun Garrison Digsite"] = {
 			-- NEEDS UPDATE
 			blobID = 92020,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.225768:0.253507"] = {
+		["424:0.225768:0.253507"] = {
 			-- Shanze'Dao Digsite
 			siteID = 1342,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::Shrine Meadow Digsite"] = {
+		["424:Shrine Meadow Digsite"] = {
 			-- NEEDS UPDATE
 			blobID = 67037,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.709484:0.457596"] = {
+		["424:0.709484:0.457596"] = {
 			-- Shrine of the Dawn Digsite
 			siteID = 928,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.283582:0.508255"] = {
+		["424:0.283582:0.508255"] = {
 			-- Sik'vess Digsite
 			siteID = 1481,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.454188:0.654820"] = {
+		["424:0.454188:0.654820"] = {
 			-- Singing Marshes Digsite
 			siteID = 955,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.376523:0.352313"] = {
+		["424:0.376523:0.352313"] = {
 			-- Small Gate Digsite
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.398888:0.323212"] = {
+		["424:0.398888:0.323212"] = {
 			-- Snow Covered Hills Digsite
 			siteID = 1007,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.473330:0.672319"] = {
+		["424:0.473330:0.672319"] = {
 			-- South Fruited Fields Digsite
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.414292:0.711184"] = {
+		["424:0.414292:0.711184"] = {
 			-- South Great Wall Digsite
 			siteID = 961,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.673584:0.621660"] = {
+		["424:0.673584:0.621660"] = {
 			-- South Orchard Digsite
 			siteID = 1045,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.539201:0.771318"] = {
+		["424:0.539201:0.771318"] = {
 			-- South Ruins of Dojan Digsite
 			siteID = 1356,
 			mapID = 418, -- Krasarang Wilds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.441168:0.523821"] = {
+		["424:0.441168:0.523821"] = {
 			-- South Ruins of Guo-Lai Digsite
 			siteID = 1294,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.266695:0.405293"] = {
+		["424:0.266695:0.405293"] = {
 			-- Sra'thik Digsite
 			siteID = 1332,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.201792:0.347865"] = {
+		["424:0.201792:0.347865"] = {
 			-- Sra'thik Swarmdock Digsite
 			siteID = 1465,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.422993:0.580378"] = {
+		["424:0.422993:0.580378"] = {
 			-- Terrace of Gurthan Digsite
 			siteID = 1348,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.707937:0.493077"] = {
+		["424:0.707937:0.493077"] = {
 			-- The Arboretum Digsite
 			siteID = 938,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.303305:0.752369"] = {
+		["424:0.303305:0.752369"] = {
 			-- The Briny Muck Digsite
 			siteID = 1497,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.333984:0.637128"] = {
+		["424:0.333984:0.637128"] = {
 			-- The Clutches of Shek'zeer Digsite
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.179233:0.413704"] = {
+		["424:0.179233:0.413704"] = {
 			-- The Feeding Pits Digsite
 			siteID = 1469,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.574327:0.555338"] = {
+		["424:0.574327:0.555338"] = {
 			-- The Spring Road Digsite
 			siteID = 967,
 			mapID = 433, -- The Veiled Stair
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.328699:0.412060"] = {
+		["424:0.328699:0.412060"] = {
 			-- The Underbough Digsite
 			siteID = 1475,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.651284:0.629684"] = {
+		["424:0.651284:0.629684"] = {
 			-- Thunderwood Digsite
 			siteID = 941,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.655344:0.401909"] = {
+		["424:0.655344:0.401909"] = {
 			-- Tian Digsite
 			siteID = 923,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.611130:0.476351"] = {
+		["424:0.611130:0.476351"] = {
 			-- Tiger's Wood Digsite
 			siteID = 918,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.439686:0.734000"] = {
+		["424:0.439686:0.734000"] = {
 			-- Torjari Pit Digsite
 			siteID = 963,
 			mapID = 376, -- Valley of the Four Winds
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.484545:0.569260"] = {
+		["424:0.484545:0.569260"] = {
 			-- Tu Shen Digsite
 			siteID = 1300,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.479647:0.294692"] = {
+		["424:0.479647:0.294692"] = {
 			-- Valley of Kings Digsite
 			siteID = 1003,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.261346:0.655980"] = {
+		["424:0.261346:0.655980"] = {
 			-- Venomous Ledge Digsite
 			siteID = 1493,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::Veridian Grove Digsite"] = {
+		["424:Veridian Grove Digsite"] = {
 			-- NEEDS UPDATE
 			blobID = 67039,
 			mapID = 371, -- The Jade Forest
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::West Old Village Digsite"] = {
+		["424:West Old Village Digsite"] = {
 			-- NEEDS UPDATE
 			blobID = 66989,
 			mapID = 379, -- Kun-Lai Summit
 			raceID = RaceID.ArchRacePandaren,
 		},
-		["424::0.442844:0.504195"] = {
+		["424:0.442844:0.504195"] = {
 			-- West Ruins of Guo-Lai Digsite
 			siteID = 1308,
 			mapID = 1530, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.261539:0.516763"] = {
+		["424:0.261539:0.516763"] = {
 			-- West Sik'vess Digsite
 			siteID = 1483,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.177107:0.393594"] = {
+		["424:0.177107:0.393594"] = {
 			-- West Sra'vess Digsite
 			siteID = 1467,
 			mapID = 388, -- Townlong Steppes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.451481:0.551857"] = {
+		["424:0.451481:0.551857"] = {
 			-- Winterbough Digsite
 			mapID = 390, -- Vale of Eternal Blossoms
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.398952:0.659654"] = {
+		["424:0.398952:0.659654"] = {
 			-- Writhingwood Digsite
 			siteID = 1352,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMogu,
 		},
-		["424::0.250325:0.757590"] = {
+		["424:0.250325:0.757590"] = {
 			-- Zan'vess Digsite
 			siteID = 1491,
 			mapID = 422, -- Dread Wastes
 			raceID = RaceID.ArchRaceMantid,
 		},
-		["424::0.601140:0.688851"] = {
+		["424:0.601140:0.688851"] = {
 			-- Zhu Province Digsite
 			siteID = 999,
 			mapID = 418, -- Krasarang Wilds
