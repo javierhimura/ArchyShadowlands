@@ -97,7 +97,7 @@ L["Enable TomTom Crazy Arrow"] = "Activar la flecha loca de TomTom"
 L["Enable TomTom integration"] = "Habilitar integración con TomTom"
 L["Filter by Continent"] = "Filtrar por Continente"
 L["Filter Dig Sites"] = "Filtrar Zonas de Excavación"
-L["Filter the Artifact list by races on the continent"] = "Filtrar lista de Artefactos por raza en el continente"
+L["Filter the Artifact list by races on the continent"] = "Filtrar lista de Artefactos por raza en el continente actual"
 L["FIND_COMPLETE_MESSAGE_FORMAT"] = "%s descubierto."
 L["First Time Color"] = "Artefacto nuevo"
 L["Font"] = "Fuente"
@@ -318,6 +318,8 @@ L["Your Archaeology skill is at %d of %d.  Are you sure you would like to solve 
 L["Zone Font Options"] = "Opciones de la fuente de zona"
 L["Zone Font Outline"] = "Contorno de la fuente de zona"
 L["Zone Font Size"] = "Tamaño de la fuente de zona"
+L["Play a sound when standing over a survey"]  = "Reproducir un sonido encima de un punto de excavación"
+L["When you standing over a survey a sound can be played to indicate this.  You can enable or disable this sound using this setting."] = "Cuando estés encima de un punto de excavación se puede reproducir un sonido para indicarlo. Puedes activar o desactivar este sonido usando esta opción."
 
 -- ProjectNames
 L["Mummified Monkey Paw"] = "Mano de mono momificada"
