@@ -881,11 +881,11 @@ local function GetDigSiteOptions()
 							end,
 						},
                         standingPing = {
-                            order = 1.5,
+                            order = 2,
                             type = "toggle",
                             name = L["Play a sound when standing over a survey"],
                             desc = L["When you standing over a survey a sound can be played to indicate this.  You can enable or disable this sound using this setting."],
-                            width = "double",
+                            width = "full",
                             get = function() return digsiteSettings.ping end,
                             set = function(_, value)
                                 digsiteSettings.ping = value
@@ -893,7 +893,7 @@ local function GetDigSiteOptions()
                         },
 						showOptions = {
 							name = _G.DISPLAY_OPTIONS,
-							order = 2,
+							order = 3,
 							type = "group",
 							guiInline = true,
 							disabled = function()
@@ -914,7 +914,7 @@ local function GetDigSiteOptions()
 							},
 						},
 						displayProgressBar = {
-							order = 3,
+							order = 4,
 							type = "toggle",
 							width = "double",
 							name = _G.ARCHAEOLOGY_DIGSITE_PROGRESS_BAR_TITLE,
@@ -928,7 +928,7 @@ local function GetDigSiteOptions()
 							end,
 						},
 						announceNearest = {
-							order = 4,
+							order = 5,
 							type = "toggle",
 							width = "double",
 							name = L["Announce Nearest Dig Site"],
@@ -942,7 +942,7 @@ local function GetDigSiteOptions()
 						minimalOptions = {
 							name = L["Minimal Style Options"],
 							type = "group",
-							order = 10,
+							order = 11,
 							guiInline = true,
 							disabled = function() return (generalSettings.theme == "Graphical") end,
 							args = {
