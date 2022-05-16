@@ -2,7 +2,7 @@
 ## Title: Archy - Archaeology Assistant
 ## Title-zhCN: Archy - 考古学助手
 ## Title-zhTW: Archy - 考古學助手
-## Version: 9.2.0
+## Version: 9.2.0.0
 ## Notes: Archaeology assistant
 ## Notes-zhCN: 考古学助手
 ## Notes-zhTW: 考古學助手
