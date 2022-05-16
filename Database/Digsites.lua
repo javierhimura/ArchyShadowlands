@@ -2534,8 +2534,70 @@ function private.InitializeDigsiteTemplates()
 		},
 	}
     
-	local CONTINENT_RACES = {}
-	private.CONTINENT_RACES = CONTINENT_RACES
+    	local CONTINENT_RACES =
+	{
+		-- Kalimdor
+		[12] =
+		{
+			[RaceID.ArchRaceDwarf] = 0,
+			[RaceID.ArchRaceNightElf] = 0,
+			[RaceID.ArchRaceTroll] = 0,
+			[RaceID.ArchRaceTolvir] = 0,
+		},
+		-- Eastern Kingdoms
+		[13] =
+		{
+			[RaceID.ArchRaceDwarf] = 0,
+			[RaceID.ArchRaceNightElf] = 0,
+			[RaceID.ArchRaceTroll] = 0,
+			[RaceID.ArchRaceNerubian] = 0,
+		},
+		-- Outland
+		[101] =
+		{
+			[RaceID.ArchRaceOrc] = 0,
+			[RaceID.ArchRaceDraenei] = 0,
+		},
+		-- Northrend
+		[113] =
+		{
+			[RaceID.ArchRaceNightElf] = 0,
+			[RaceID.ArchRaceVrykul] = 0,
+			[RaceID.ArchRaceNerubian] = 0,
+			[RaceID.ArchRaceTroll] = 0,
+		},		
+		-- Pandaria
+		[424] =
+		{
+			[RaceID.ArchRacePandaren] = 0,
+			[RaceID.ArchRaceMantid] = 0,
+			[RaceID.ArchRaceMogu] = 0,
+		},
+		-- Draenor
+		[572] =
+		{
+			[RaceID.ArchRaceArakkoa] = 0,
+			[RaceID.ArchRaceDraenorOrc] = 0,
+			[RaceID.ArchRaceOgre] = 0,
+		},
+		-- Broken Isles
+		[619] = 
+		{
+			[RaceID.ArchRaceDemons] = 0,	
+			[RaceID.ArchRaceHighborneNightElves] = 0,
+			[RaceID.ArchRaceHighmountainTauren] = 0,
+		},
+		-- Zandalar
+		[875] =
+		{
+			[RaceID.ArchRaceZandalari] = 0,
+		},
+		-- Kul Tiras
+		[876] =
+		{
+			[RaceID.ArchRaceDrust] = 0,
+		},
+	}
 
 	local DIGSITE_TEMPLATES_BY_ID = {}
 	local DIGSITE_TEMPLATES_BY_ZONE = {}
@@ -2548,13 +2610,9 @@ function private.InitializeDigsiteTemplates()
             DIGSITE_TEMPLATES_BY_ZONE[site.mapID] = DIGSITE_TEMPLATES_BY_ZONE[site.mapID ] or {}
             DIGSITE_TEMPLATES_BY_ZONE[site.mapID][siteKey] = true
         end
-		if site.raceID ~= RaceID.Unknown then
-			local continentID = tonumber(((":"):split(siteKey)))
-			CONTINENT_RACES[continentID] = CONTINENT_RACES[continentID] or {}
-			CONTINENT_RACES[continentID][site.raceID] = true
-		end
 	end
 
+	private.CONTINENT_RACES = CONTINENT_RACES
 	private.DIGSITE_TEMPLATES_BY_ZONE = DIGSITE_TEMPLATES_BY_ZONE
 	private.DIGSITE_TEMPLATES_BY_ID = DIGSITE_TEMPLATES_BY_ID
 	private.DIGSITE_TEMPLATES = DIGSITE_TEMPLATES
