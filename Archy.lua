@@ -426,6 +426,7 @@ local CONFIG_UPDATE_FUNCTIONS = {
 			_G.TomTom.profile.arrow.enablePing = tomtomSettings.ping
 		end
 		TomTomHandler:Refresh(nearestDigsite)
+        WaypoingHandler:Refresh(nearestDigsite)
 	end,
 }
 
@@ -446,6 +447,7 @@ function Archy:ConfigUpdated(namespace, option)
 		SuspendClickToMove()
 
 		TomTomHandler:Refresh(nearestDigsite)
+        WaypoingHandler:Refresh(nearestDigsite)
 	end
 end
 
@@ -647,6 +649,8 @@ function Archy:UpdateSiteDistances(force)
 		nearestDigsite = closestDigsite
 		TomTomHandler.isActive = true
 		TomTomHandler:Refresh(nearestDigsite)
+        WaypoingHandler.isActive = true
+		WaypoingHandler:Refresh(nearestDigsite)
 		UpdateMinimapIcons()
 
 		if private.ProfileSettings.digsite.announceNearest and private.ProfileSettings.general.show then
@@ -891,6 +895,9 @@ function Archy:OnEnable()
 	TomTomHandler.hasTomTom = IsAddOnLoaded("TomTom")
 	TomTomHandler.hasPOIIntegration = TomTomHandler.hasTomTom and (_G.TomTom.profile and _G.TomTom.profile.poi and _G.TomTom.EnableDisablePOIIntegration) and true or false
 
+    WaypoingHandler = private.WaypoingHandler
+	WaypoingHandler.isActive = true
+
 	private.InitializeRaces()
 	private.InitializeDigsiteTemplates()
 	private.InitializeArtifactTemplates()
@@ -963,6 +970,7 @@ local SUBCOMMAND_FUNCS = {
 	tomtom = function()
 		private.ProfileSettings.tomtom.enabled = not private.ProfileSettings.tomtom.enabled
 		TomTomHandler:Refresh(nearestDigsite)
+        WaypoingHandler:Refresh(nearestDigsite)
 	end,
 	test = function()
 		ArtifactFrame:SetBackdropBorderColor(1, 1, 1, 0.5)
@@ -1271,6 +1279,8 @@ function Archy:UpdatePlayerPosition(force)
 
 	TomTomHandler:ClearWaypoint()
 	TomTomHandler:Refresh(nearestDigsite)
+    WaypoingHandler:ClearWaypoint()
+    WaypoingHandler:Refresh(nearestDigsite)
 
 	for raceID, race in pairs(private.Races) do
 		race:UpdateCurrentProject()
@@ -1384,7 +1394,8 @@ do
 
 		TomTomHandler.isActive = false
 		TomTomHandler:ClearWaypoint()
-
+        WaypoingHandler.isActive = false
+		WaypoingHandler:ClearWaypoint()
 		self:RefreshDigSiteDisplay()
 	end
 end

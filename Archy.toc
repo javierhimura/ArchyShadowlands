@@ -68,6 +68,7 @@ Race.lua
 Tooltip.lua
 Config.lua
 TomTomHandler.lua
+WaypoingHandler.lua
 Database\Digsites.lua
 Database\Artifacts.lua
 Bindings.xml
