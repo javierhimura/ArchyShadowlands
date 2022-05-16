@@ -883,8 +883,8 @@ local function GetDigSiteOptions()
                         standingPing = {
                             order = 1.5,
                             type = "toggle",
-                            name = "Play a sound when standing over a survey",
-                            desc = "When you standing over a survey a sound can be played to indicate this.  You can enable or disable this sound using this setting.",
+                            name = L["Play a sound when standing over a survey"],
+                            desc = L["When you standing over a survey a sound can be played to indicate this.  You can enable or disable this sound using this setting."],
                             width = "double",
                             get = function() return digsiteSettings.ping end,
                             set = function(_, value)
