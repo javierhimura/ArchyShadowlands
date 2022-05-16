@@ -48,6 +48,7 @@ local ZONE_DATA = {}
 private.ZONE_DATA = ZONE_DATA
 
 local MAP_CONTINENTS = {} -- Popupated in Archy:OnEnable()
+private.MAP_CONTINENTS = MAP_CONTINENTS
 
 local EasySurveyButton -- Populated in Archy:OnInitialize()
 
