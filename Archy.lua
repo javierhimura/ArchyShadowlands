@@ -409,13 +409,21 @@ local CONFIG_UPDATE_FUNCTIONS = {
 		else
 			Archy:RefreshDigSiteDisplay()
 		end
-
+        
 		Archy:SetFramePosition(DigSiteFrame)
 		Archy:SetFramePosition(DistanceIndicatorFrame)
 		DistanceIndicatorFrame:Toggle()
 	end,
 	minimap = function(option)
 		UpdateMinimapIcons()
+	end,
+	waypoint = function(option)
+		local digsiteSettings = private.ProfileSettings.digsite
+        if not digsiteSettings.waypointNearest then
+            WaypoingHandler:ClearWaypoint(true)
+        else
+            WaypoingHandler:Refresh(nearestDigsite, true)
+        end
 	end,
 	tomtom = function(option)
 		local tomtomSettings = private.ProfileSettings.tomtom
@@ -426,7 +434,6 @@ local CONFIG_UPDATE_FUNCTIONS = {
 			_G.TomTom.profile.arrow.enablePing = tomtomSettings.ping
 		end
 		TomTomHandler:Refresh(nearestDigsite)
-        WaypoingHandler:Refresh(nearestDigsite)
 	end,
 }
 
@@ -447,7 +454,7 @@ function Archy:ConfigUpdated(namespace, option)
 		SuspendClickToMove()
 
 		TomTomHandler:Refresh(nearestDigsite)
-        WaypoingHandler:Refresh(nearestDigsite)
+        WaypoingHandler:Refresh(nearestDigsite, false)
 	end
 end
 
@@ -650,7 +657,7 @@ function Archy:UpdateSiteDistances(force)
 		TomTomHandler.isActive = true
 		TomTomHandler:Refresh(nearestDigsite)
         WaypoingHandler.isActive = true
-		WaypoingHandler:Refresh(nearestDigsite)
+		WaypoingHandler:Refresh(nearestDigsite, false)
 		UpdateMinimapIcons()
 
 		if private.ProfileSettings.digsite.announceNearest and private.ProfileSettings.general.show then
@@ -970,7 +977,14 @@ local SUBCOMMAND_FUNCS = {
 	tomtom = function()
 		private.ProfileSettings.tomtom.enabled = not private.ProfileSettings.tomtom.enabled
 		TomTomHandler:Refresh(nearestDigsite)
-        WaypoingHandler:Refresh(nearestDigsite)
+	end,
+	waypoint = function(option)
+		private.ProfileSettings.digsite.waypointNearest = not private.ProfileSettings.digsite.waypointNearest
+        if not private.ProfileSettings.digsite.waypointNearest then
+            WaypoingHandler:ClearWaypoint(true)
+        else
+            WaypoingHandler:Refresh(nearestDigsite, true)
+        end
 	end,
 	test = function()
 		ArtifactFrame:SetBackdropBorderColor(1, 1, 1, 0.5)
@@ -1279,8 +1293,8 @@ function Archy:UpdatePlayerPosition(force)
 
 	TomTomHandler:ClearWaypoint()
 	TomTomHandler:Refresh(nearestDigsite)
-    WaypoingHandler:ClearWaypoint()
-    WaypoingHandler:Refresh(nearestDigsite)
+    WaypoingHandler:ClearWaypoint(false)
+    WaypoingHandler:Refresh(nearestDigsite, false)
 
 	for raceID, race in pairs(private.Races) do
 		race:UpdateCurrentProject()
@@ -1395,7 +1409,7 @@ do
 		TomTomHandler.isActive = false
 		TomTomHandler:ClearWaypoint()
         WaypoingHandler.isActive = false
-		WaypoingHandler:ClearWaypoint()
+		WaypoingHandler:ClearWaypoint(false)
 		self:RefreshDigSiteDisplay()
 	end
 end

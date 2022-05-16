@@ -18,16 +18,24 @@ local WaypoingHandler = {
 	-- ----------------------------------------------------------------------------
 	-- Methods.
 	-- ----------------------------------------------------------------------------
-	ClearWaypoint = function(self)
-        -- Only clear user map point if it was created by Archy
+	ClearWaypoint = function(self, force)
+        if not private.ProfileSettings.general.show or not private.ProfileSettings.digsite.announceNearest then
+            return
+        end
+        if not force and not private.ProfileSettings.digsite.waypointNearest then
+            return
+        end
         local currentuiMapPoint = C_Map.GetUserWaypoint()
         if currentuiMapPoint then
             C_Map.ClearUserWaypoint()
             self.uiMapPoint = nil
         end
 	end,
-	Refresh = function(self, digsite)
-		if not digsite or digsite == self.currentDigsite or not self.isActive or not private.ProfileSettings.general.show then
+	Refresh = function(self, digsite, force)
+        if force then
+            self.currentDigsite = nil
+        end
+		if not digsite or digsite == self.currentDigsite or not self.isActive or not private.ProfileSettings.general.show or not private.ProfileSettings.digsite.announceNearest or not private.ProfileSettings.digsite.waypointNearest then
 			return
 		end
 

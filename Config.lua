@@ -939,6 +939,19 @@ local function GetDigSiteOptions()
 								Archy:ConfigUpdated("digsite")
 							end,
 						},
+   						waypointNearest = {
+							order = 6,
+							disabled = function() return (not digsiteSettings.announceNearest) end,
+							type = "toggle",
+							width = "double",
+							name = L["Waypoint Nearest Dig Site"],
+							desc = L["Set Waypoint to the nearest dig site when it is found"],
+							get = function() return digsiteSettings.waypointNearest end,
+							set = function(_, value)
+								digsiteSettings.waypointNearest = value
+								Archy:ConfigUpdated("waypoint")
+							end,
+						},
 						minimalOptions = {
 							name = L["Minimal Style Options"],
 							type = "group",

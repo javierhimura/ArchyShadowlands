@@ -329,3 +329,5 @@ L["stealth"] = true
 L["ProjectNames/Mummified Monkey Paw"] = true
 L["Play a sound when standing over a survey"] = true
 L["When you standing over a survey a sound can be played to indicate this.  You can enable or disable this sound using this setting."] = true
+L["Waypoint Nearest Dig Site"] = true
+L["Set Waypoint to the nearest dig site when it is found"] = true
