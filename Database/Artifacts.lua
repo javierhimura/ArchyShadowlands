@@ -1721,6 +1721,7 @@ function private.InitializeArtifactTemplates()
 	private.ARTIFACT_TEMPLATES = ARTIFACT_TEMPLATES
 
     local PRISTINE_ARTIFACT_TO_QUESTID = {}
+    local ARTIFACTS_RESTORE = {}
 	for raceID = 1, _G.GetNumArchaeologyRaces() do
 		local artifactTemplates = private.ARTIFACT_TEMPLATES[raceID]
 
@@ -1734,6 +1735,7 @@ function private.InitializeArtifactTemplates()
 				end
                 if template.pristineItemId then
                     PRISTINE_ARTIFACT_TO_QUESTID[template.pristineItemId] = template.pristineQuestId
+                    ARTIFACTS_RESTORE[itemID] = true
                 end
 			end
 
@@ -1741,4 +1743,5 @@ function private.InitializeArtifactTemplates()
 		end
 	end
 	private.PRISTINE_ARTIFACT_TO_QUESTID = PRISTINE_ARTIFACT_TO_QUESTID
+	private.ARTIFACTS_RESTORE = ARTIFACTS_RESTORE
 end

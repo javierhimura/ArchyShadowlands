@@ -1072,7 +1072,7 @@ do
 		[87540] = true, -- Troll
 		[87541] = true, -- Vrykul
 	}
-
+    
 	local function FindCrateable(bag, slot)
 		if not private.hasArchaeology then
 			return
@@ -1089,17 +1089,10 @@ do
 			if CRATE_OF_FRAGMENTS[itemID] then
 				private.crate_item_id = itemID
 				return true
-			end
-			DatamineTooltip:SetBagItem(bag, slot)
-
-			for line_num = 1, DatamineTooltip:NumLines() do
-				local linetext = (_G["ArchyScanTipTextLeft" .. line_num]:GetText())
-
-				if linetext == CRATE_USE_STRING then
-					private.crate_item_id = itemID
-					return true
-				end
-			end
+			elseif private.ARTIFACTS_RESTORE[itemID]  then
+                private.crate_item_id = itemID
+                return true
+            end
 		end
 		return false
 	end

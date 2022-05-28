@@ -2534,7 +2534,7 @@ function private.InitializeDigsiteTemplates()
 		},
 	}
     
-    	local CONTINENT_RACES =
+    local CONTINENT_RACES =
 	{
 		-- Kalimdor
 		[12] =
