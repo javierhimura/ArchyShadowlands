@@ -1564,6 +1564,7 @@ function Archy:CURRENCY_DISPLAY_UPDATE()
 		if diff < 0 then
 			-- we've spent fragments, aka. Solved an artifact
 			race.currentProject.keystones_added = 0
+            Archy:ScanBags()
 		elseif diff > 0 then
 			-- we've gained fragments, aka. Successfully dug at a dig site
 			if currentDigsite then
