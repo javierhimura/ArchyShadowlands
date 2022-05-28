@@ -31,6 +31,14 @@ local WaypoingHandler = {
             return true
         end
         
+        local waypointKey = ("%d:%.6f:%.6f"):format(currentuiMapPoint.position.uiMapID, currentuiMapPoint.position.x, currentuiMapPoint.position.y)
+        if Archy.db.char.waypoint and Archy.db.char.waypoint[waypointKey] then
+            Archy.db.char.waypoint[waypointKey] = nil
+            C_Map.ClearUserWaypoint()
+            self.uiMapPoint = nil
+            return true
+        end
+        
         local continent_digsites = private.continent_digsites
         local MAP_CONTINENTS = private.MAP_CONTINENTS
         for continentID, continentData in pairs(MAP_CONTINENTS) do
@@ -49,17 +57,21 @@ local WaypoingHandler = {
         if force then
             self.currentDigsite = nil
         end
-		if not digsite or digsite == self.currentDigsite or not self.isActive or not private.ProfileSettings.general.show or not private.ProfileSettings.digsite.announceNearest or not private.ProfileSettings.digsite.waypointNearest then
+		if not digsite or digsite == self.currentDigsite or not self.isActive or not private.ProfileSettings.general.show or not private.ProfileSettings.digsite.announceNearest or not private.ProfileSettings.digsite.waypointNearest or _G.CanScanResearchSite() then
 			return
 		end
         
-        if not self:ClearWaypoint() then
+        if not self:ClearWaypoint(false) then
             return
         end
-
+        
         if C_Map.CanSetUserWaypointOnMap(digsite.UIMapID) then
             currentuiMapPoint = UiMapPoint.CreateFromCoordinates(digsite.UIMapID, digsite.coordX, digsite.coordY)
             if currentuiMapPoint ~= nil then
+                local waypointKey = ("%d:%.6f:%.6f"):format(currentuiMapPoint.position.uiMapID, currentuiMapPoint.position.x, currentuiMapPoint.position.y)
+                if Archy.db.char.waypoint and not Archy.db.char.waypoint[waypointKey] then
+                    Archy.db.char.waypoint[waypointKey] = true
+                end
                 self.currentDigsite = digsite
                 C_Map.SetUserWaypoint(currentuiMapPoint)
                 C_SuperTrack.SetSuperTrackedUserWaypoint(true)

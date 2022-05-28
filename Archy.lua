@@ -689,6 +689,8 @@ function Archy:OnInitialize()
 
 	self.db.global.surveyNodes = self.db.global.surveyNodes or {}
 
+	self.db.char.waypoint = self.db.char.waypoint or {}
+
 	self.db.char.digsites = self.db.char.digsites or {
 		stats = {},
 		blacklist = {}
@@ -1280,6 +1282,10 @@ function Archy:UpdatePlayerPosition(force)
 				self:ScheduleTimer("UpdatePlayerPosition", 1, true)
 			end
 		end
+        if _G.CanScanResearchSite() then
+            TomTomHandler:ClearWaypoint()
+            WaypoingHandler:ClearWaypoint(false)
+        end
 		return
 	end
 	private.CurrentContinentID = continentID
@@ -1291,9 +1297,11 @@ function Archy:UpdatePlayerPosition(force)
 	UpdateAllSites()
 
 	TomTomHandler:ClearWaypoint()
-	TomTomHandler:Refresh(nearestDigsite)
     WaypoingHandler:ClearWaypoint(false)
-    WaypoingHandler:Refresh(nearestDigsite, false)
+    if not _G.CanScanResearchSite() then
+        TomTomHandler:Refresh(nearestDigsite)
+        WaypoingHandler:Refresh(nearestDigsite, false)
+    end
 
 	for raceID, race in pairs(private.Races) do
 		race:UpdateCurrentProject()
