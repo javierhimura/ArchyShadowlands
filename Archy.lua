@@ -1542,7 +1542,7 @@ do
 		local _, subEvent, _, sourceGUID, _, _, _, _, _, _, _, spellID, spellDescription, _ = CombatLogGetCurrentEventInfo()
 		if subEvent == "SPELL_CAST_SUCCESS" and sourceGUID == private.PlayerGUID and spellID == STANDING_ON_IT_SPELL_ID then
 			self:Pour(spellDescription)
-            if digsiteSettings.ping then
+            if digsiteSettings.standingPing then
                 _G.PlaySoundFile([[Interface\AddOns\Archy\Media\dingding.mp3]])
             end
 		end

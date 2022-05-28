@@ -886,9 +886,9 @@ local function GetDigSiteOptions()
                             name = L["Play a sound when standing over a survey"],
                             desc = L["When you standing over a survey a sound can be played to indicate this.  You can enable or disable this sound using this setting."],
                             width = "full",
-                            get = function() return digsiteSettings.ping end,
+                            get = function() return digsiteSettings.standingPing end,
                             set = function(_, value)
-                                digsiteSettings.ping = value
+                                digsiteSettings.standingPing = value
                             end,
                         },
 						showOptions = {
