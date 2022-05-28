@@ -718,6 +718,7 @@ function Archy:OnInitialize()
 
 	LDBI:Register("Archy", private.LDB_object, profileSettings.general.icon)
 
+    local survey_spell_name = GetSpellInfo(SURVEY_SPELL_ID);
 	do
 		local surveyButtonName = "Archy_EasySurveyButton"
 		local surveyButton = _G.CreateFrame("Button", surveyButtonName, _G.UIParent, "SecureActionButtonTemplate")
@@ -726,8 +727,9 @@ function Archy:OnInitialize()
 		surveyButton:SetFrameStrata("LOW")
 		surveyButton:EnableMouse(true)
 		surveyButton:RegisterForClicks("RightButtonDown")
-		surveyButton:SetAttribute("type", "spell")
-		surveyButton:SetAttribute("spell", SURVEY_SPELL_ID)
+
+		surveyButton:SetAttribute("type", "macro")
+		surveyButton:SetAttribute("macrotext", "/use [noflying] " .. survey_spell_name)
 		surveyButton:SetAttribute("action", nil)
 
 		surveyButton:SetScript("PostClick", function(self, mouse_button, is_down)
@@ -772,6 +774,8 @@ function Archy:OnInitialize()
 	ArtifactFrame = private.ArtifactFrame
 	DigSiteFrame = private.DigSiteFrame
 	DistanceIndicatorFrame = private.DistanceIndicatorFrame
+    DistanceIndicatorFrame.surveyButton:SetAttribute("type", "macro")
+	DistanceIndicatorFrame.surveyButton:SetAttribute("macrotext", "/use [noflying] " .. survey_spell_name) 
 
 	-- ----------------------------------------------------------------------------
 	-- DB cleanups.
@@ -1120,8 +1124,9 @@ do
 		local crateButton = DistanceIndicatorFrame.crateButton
 
 		if private.crate_bag_id then
-			crateButton:SetAttribute("type1", "macro")
-			crateButton:SetAttribute("macrotext1", "/run _G.ClearCursor() if _G.MerchantFrame:IsShown() then HideUIPanel(_G.MerchantFrame) end\n/use " .. private.crate_bag_id .. " " .. private.crate_bag_slot_id)
+			crateButton:SetAttribute("type", "macro")
+			crateButton:SetAttribute("macrotext", "/run _G.ClearCursor() if _G.MerchantFrame:IsShown() then HideUIPanel(_G.MerchantFrame) end\n/use [noflying] " .. private.crate_bag_id .. " " .. private.crate_bag_slot_id)
+
 			crateButton:Enable()
 			crateButton.icon:SetDesaturated(false)
 			crateButton.tooltip = private.crate_item_id
@@ -1147,8 +1152,8 @@ do
 		-- Prioritize map, since it affects Archy's lists. (randomize digsites)
 		if lorewalkersMapCount > 0 then
 			local itemName = _G.GetItemInfo(LorewalkersMap.itemID)
-			loreItemButton:SetAttribute("type1", "item")
-			loreItemButton:SetAttribute("item1", itemName)
+			loreItemButton:SetAttribute("type", "macro")
+			loreItemButton:SetAttribute("macrotext", "/use [noflying] " .. itemName)
 			loreItemButton:Enable()
 			loreItemButton.icon:SetDesaturated(false)
 			loreItemButton.tooltip = LorewalkersMap.itemID
@@ -1161,8 +1166,8 @@ do
 
 		if lorewalkersLodestoneCount > 0 then
 			local itemName = _G.GetItemInfo(LorewalkersLodestone.itemID)
-			loreItemButton:SetAttribute("type2", "item")
-			loreItemButton:SetAttribute("item2", itemName)
+			loreItemButton:SetAttribute("type", "macro")
+			loreItemButton:SetAttribute("macrotext", "/use [noflying] " .. itemName)
 			loreItemButton:Enable()
 			loreItemButton.icon:SetDesaturated(false)
 
