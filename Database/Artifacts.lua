@@ -37,16 +37,22 @@ function private.InitializeArtifactTemplates()
 				-- Apexis Crystal
 				itemID = 114204,
 				spellID = 168328,
+                pristineQuestId = 36778,
+                pristineItemId = 114222,
 			},
 			[114205] = {
 				-- Apexis Hieroglyph
 				itemID = 114205,
 				spellID = 168329,
+                pristineQuestId = 36779,
+                pristineItemId = 114223,
 			},
 			[114206] = {
 				-- Apexis Scroll
 				itemID = 114206,
 				spellID = 168330,
+                pristineQuestId = 36780,
+                pristineItemId = 114224,
 			},
 			[114207] = {
 				-- Beakbreaker of Terokk
@@ -58,36 +64,50 @@ function private.InitializeArtifactTemplates()
 				-- Burial Urn
 				itemID = 114198,
 				spellID = 168322,
+                pristineQuestId = 235346,
+                pristineItemId = 114216,
 			},
 			[114199] = {
 				-- Decree Scrolls
 				itemID = 114199,
 				spellID = 168323,
+                pristineQuestId = 36773,
+                pristineItemId = 114217,
 			},
 			[114197] = {
 				-- Dreamcatcher
 				itemID = 114197,
 				spellID = 168321,
+                pristineQuestId = 36771,
+                pristineItemId = 114215,
 			},
 			[114203] = {
 				-- Outcast Dreamcatcher
 				itemID = 114203,
 				spellID = 168327,
+                pristineQuestId = 36777,
+                pristineItemId = 114221,
 			},
 			[114200] = {
 				-- Solar Orb
 				itemID = 114200,
 				spellID = 168324,
+                pristineQuestId = 36774,
+                pristineItemId = 114218,
 			},
 			[114201] = {
 				-- Sundial
 				itemID = 114201,
 				spellID = 168325,
+                pristineQuestId = 36775,
+                pristineItemId = 114219,
 			},
 			[114202] = {
 				-- Talonpriest Mask
 				itemID = 114202,
 				spellID = 168326,
+                pristineQuestId = 36776,
+                pristineItemId = 114220,
 			},
 		},
 
@@ -111,11 +131,15 @@ function private.InitializeArtifactTemplates()
 				-- Flayed-Skin Chronicle
 				itemID = 130917,
 				spellID = 196481,
+                pristineQuestId = 40360,
+                pristineItemId = 130932,
 			},
 			[130920] = {
 				-- Houndstooth Hauberk
 				itemID = 130920,
 				spellID = 196484,
+                pristineQuestId = 40363,
+                pristineItemId = 130935,
 			},
 			[131735] = {
 				-- Imp Generator
@@ -127,6 +151,8 @@ function private.InitializeArtifactTemplates()
 				-- Imp's Cup
 				itemID = 130916,
 				spellID = 196480,
+                pristineQuestId = 40359,
+                pristineItemId = 130931,
 			},
 			[136922] = {
 				-- Infernal Device
@@ -138,11 +164,15 @@ function private.InitializeArtifactTemplates()
 				-- Malformed Abyssal
 				itemID = 130918,
 				spellID = 196482,
+                pristineQuestId = 40361,
+                pristineItemId = 130933,
 			},
 			[130919] = {
 				-- Orb of Inner Chaos
 				itemID = 130919,
 				spellID = 196483,
+                pristineQuestId = 40362,
+                pristineItemId = 130934,
 			},
 			[131732] = {
 				-- Purple Hills of Mac'Aree
@@ -224,56 +254,78 @@ function private.InitializeArtifactTemplates()
 				-- Ancestral Talisman
 				itemID = 114171,
 				spellID = 168305,
+                pristineQuestId = 36756,
+                pristineItemId = 114172,
 			},
 			[114163] = {
 				-- Barbed Fishing Hook
 				itemID = 114163,
 				spellID = 168301,
+                pristineQuestId = 235326,
+                pristineItemId = 114164,
 			},
 			[114157] = {
 				-- Blackrock Razor
 				itemID = 114157,
 				spellID = 168298,
+                pristineQuestId = 36750,
+                pristineItemId = 114158,
 			},
 			[114165] = {
 				-- Calcified Eye In a Jar
 				itemID = 114165,
 				spellID = 168302,
+                pristineQuestId = 36754,
+                pristineItemId = 114166,
 			},
 			[114167] = {
 				-- Ceremonial Tattoo Needles
 				itemID = 114167,
 				spellID = 168303,
+                pristineQuestId = 36755,
+                pristineItemId = 114168,
 			},
 			[114169] = {
 				-- Cracked Ivory Idol
 				itemID = 114169,
 				spellID = 168304,
+                pristineQuestId = 36757,
+                pristineItemId = 114170,
 			},
 			[114177] = {
 				-- Doomsday Prophecy
 				itemID = 114177,
 				spellID = 168308,
+                pristineQuestId = 235333,
+                pristineItemId = 114178,
 			},
 			[114155] = {
 				-- Elemental Bellows
 				itemID = 114155,
 				spellID = 168297,
+                pristineQuestId = 36749,
+                pristineItemId = 114156,
 			},
 			[114141] = {
 				-- Fang-Scarred Frostwolf Axe
 				itemID = 114141,
 				spellID = 168290,
+                pristineQuestId = 36725,
+                pristineItemId = 114142,
 			},
 			[114173] = {
 				-- Flask of Blazegrease
 				itemID = 114173,
 				spellID = 168306,
+                pristineQuestId = 36758,
+                pristineItemId = 114174,
 			},
 			[114143] = {
 				-- Frostwolf Ancestry Scrimshaw
 				itemID = 114143,
 				spellID = 168291,
+                pristineQuestId = 36743,
+                pristineItemId = 114144,
 			},
 			[117380] = {
 				-- Frostwolf Ghostpup
@@ -285,41 +337,57 @@ function private.InitializeArtifactTemplates()
 				-- Gronn-Tooth Necklace
 				itemID = 114175,
 				spellID = 168307,
+                pristineQuestId = 36759,
+                pristineItemId = 114176,
 			},
 			[114161] = {
 				-- Hooked Dagger
 				itemID = 114161,
 				spellID = 168300,
+                pristineQuestId = 36752,
+                pristineItemId = 114162,
 			},
 			[114153] = {
 				-- Metalworker's Hammer
 				itemID = 114153,
 				spellID = 168296,
+                pristineQuestId = 36748,
+                pristineItemId = 114154,
 			},
 			[114149] = {
 				-- Screaming Bullroarer
 				itemID = 114149,
 				spellID = 168294,
+                pristineQuestId = 36746,
+                pristineItemId = 114150,
 			},
 			[114147] = {
 				-- Warsinger's Drums
 				itemID = 114147,
 				spellID = 168293,
+                pristineQuestId = 36745,
+                pristineItemId = 114148,
 			},
 			[114151] = {
 				-- Warsong Ceremonial Pike
 				itemID = 114151,
 				spellID = 168295,
+                pristineQuestId = 36747,
+                pristineItemId = 114152,
 			},
 			[114159] = {
 				-- Weighted Chopping Axe
 				itemID = 114159,
 				spellID = 168299,
+                pristineQuestId = 36751,
+                pristineItemId = 114160,
 			},
 			[114145] = {
 				-- Wolfskin Snowshoes
 				itemID = 114145,
 				spellID = 168292,
+                pristineQuestId = 36744,
+                pristineItemId = 114146,
 			},
 		},
 		
@@ -332,31 +400,43 @@ function private.InitializeArtifactTemplates()
 				-- Ceremonial Bonesaw
 				itemID = 154921,
 				spellID = 257715,
+                pristineQuestId = 51950,
+                pristineItemId = 154926,
 			},
 			[154922] = {
 				-- Ancient Runebound Tome
 				itemID = 154922,
 				spellID = 257716,
+                pristineQuestId = 51951,
+                pristineItemId = 154927,
 			},
 			[154923] = {
 				-- Disembowling Sickle
 				itemID = 154923,
 				spellID = 257717,
+                pristineQuestId = 51952,
+                pristineItemId = 154928,
 			},
 			[154924] = {
 				-- Jagged Blade of the Drust
 				itemID = 154924,
 				spellID = 257718,
+                pristineQuestId = 51953,
+                pristineItemId = 154929,
 			},
 			[154925] = {
 				-- Ritual Fetish
 				itemID = 154925,
 				spellID = 257719,
+                pristineQuestId = 51954,
+                pristineItemId = 154930,
 			},
 			[160741] = {
 				-- Soul Coffer
 				itemID = 160741,
 				spellID = 273851,
+                pristineQuestId = 51955,
+                pristineItemId = 160742,
 			},
 			[160751] = {
 				-- Dance of the Dead
@@ -653,6 +733,8 @@ function private.InitializeArtifactTemplates()
 				-- Inert Leystone Charm
 				itemID = 130907,
 				spellID = 196471,
+                pristineQuestId = 40350,
+                pristineItemId = 130922,
 			},
 			[131745] = {
 				-- Key of Kalyndras
@@ -670,6 +752,8 @@ function private.InitializeArtifactTemplates()
 				-- Nobleman's Letter Opener
 				itemID = 130910,
 				spellID = 196474,
+                pristineQuestId = 40353,
+                pristineItemId = 130925,
 			},
 			[134078] = {
 				-- Orb of Sciallax
@@ -681,11 +765,15 @@ function private.InitializeArtifactTemplates()
 				-- Pre-War Highborne Tapestry
 				itemID = 130909,
 				spellID = 196473,
+                pristineQuestId = 40352,
+                pristineItemId = 130924,
 			},
 			[130908] = {
 				-- Quietwine Vial
 				itemID = 130908,
 				spellID = 196472,
+                pristineQuestId = 40351,
+                pristineItemId = 130923,
 			},
 			[131717] = {
 				-- Starlight Beacon
@@ -697,6 +785,8 @@ function private.InitializeArtifactTemplates()
 				-- Violetglass Vessel
 				itemID = 130906,
 				spellID = 196470,
+                pristineQuestId = 40349,
+                pristineItemId = 130921,
 			},
 		},
 
@@ -708,16 +798,22 @@ function private.InitializeArtifactTemplates()
 				-- Drogbar Gem-Roller
 				itemID = 130914,
 				spellID = 196478,
+                pristineQuestId = 40357,
+                pristineItemId = 130929,
 			},
 			[130913] = {
 				-- Hand-Smoothed Pyrestone
 				itemID = 130913,
 				spellID = 196477,
+                pristineQuestId = 40356,
+                pristineItemId = 130928,
 			},
 			[130912] = {
 				-- Moosebone Fish-Hook
 				itemID = 130912,
 				spellID = 196476,
+                pristineQuestId = 40355,
+                pristineItemId = 130927,
 			},
 			[131736] = {
 				-- Prizerock Neckband
@@ -741,11 +837,15 @@ function private.InitializeArtifactTemplates()
 				-- Stonewood Bow
 				itemID = 130915,
 				spellID = 196479,
+                pristineQuestId = 40358,
+                pristineItemId = 130930,
 			},
 			[130911] = {
 				-- Trailhead Drum
 				itemID = 130911,
 				spellID = 196475,
+                pristineQuestId = 40354,
+                pristineItemId = 130926,
 			},
 		},
 
@@ -757,26 +857,36 @@ function private.InitializeArtifactTemplates()
 				-- Ancient Sap Feeder
 				itemID = 95376,
 				spellID = 139779,
+                pristineQuestId = 32687,
+                pristineItemId = 95384,
 			},
 			[95375] = {
 				-- Banner of the Mantid Empire
 				itemID = 95375,
 				spellID = 139776,
+                pristineQuestId = 32686,
+                pristineItemId = 95383,
 			},
 			[95378] = {
 				-- Inert Sound Beacon
 				itemID = 95378,
 				spellID = 139781,
+                pristineQuestId = 32689,
+                pristineItemId = 95386,
 			},
 			[95382] = {
 				-- Kypari Sap Container
 				itemID = 95382,
 				spellID = 139785,
+                pristineQuestId = 32693,
+                pristineItemId = 95390,
 			},
 			[95380] = {
 				-- Mantid Lamp
 				itemID = 95380,
 				spellID = 139783,
+                pristineQuestId = 32691,
+                pristineItemId = 95388,
 			},
 			[95391] = {
 				-- Mantid Sky Reaver
@@ -788,11 +898,15 @@ function private.InitializeArtifactTemplates()
 				-- Pollen Collector
 				itemID = 95381,
 				spellID = 139784,
+                pristineQuestId = 32692,
+                pristineItemId = 95389,
 			},
 			[95379] = {
 				-- Remains of a Paragon
 				itemID = 95379,
 				spellID = 139782,
+                pristineQuestId = 32690,
+                pristineItemId = 95387,
 			},
 			[95392] = {
 				-- Sonic Pulse Generator
@@ -804,6 +918,8 @@ function private.InitializeArtifactTemplates()
 				-- The Praying Mantid
 				itemID = 95377,
 				spellID = 139780,
+                pristineQuestId = 95385,
+                pristineItemId = 32688,
 			},
 		},
 
@@ -827,51 +943,71 @@ function private.InitializeArtifactTemplates()
 				-- Cracked Mogu Runestone
 				itemID = 79909,
 				spellID = 113983,
+                pristineQuestId = 31787,
+                pristineItemId = 89170,
 			},
 			[79913] = {
 				-- Edicts of the Thunder King
 				itemID = 79913,
 				spellID = 113987,
+                pristineQuestId = 31791,
+                pristineItemId = 89174,
 			},
 			[79914] = {
 				-- Iron Amulet
 				itemID = 79914,
 				spellID = 113988,
+                pristineQuestId = 31792,
+                pristineItemId = 89175,
 			},
 			[79908] = {
 				-- Manacles of Rebellion
 				itemID = 79908,
 				spellID = 113982,
+                pristineQuestId = 31786,
+                pristineItemId = 89169,
 			},
 			[79916] = {
 				-- Mogu Coin
 				itemID = 79916,
 				spellID = 113990,
+                pristineQuestId = 31794,
+                pristineItemId = 85477,
 			},
 			[79911] = {
 				-- Petrified Bone Whip
 				itemID = 79911,
 				spellID = 113985,
+                pristineQuestId = 31789,
+                pristineItemId = 89172,
 			},
 			[79910] = {
 				-- Terracotta Arm
 				itemID = 79910,
 				spellID = 113984,
+                pristineQuestId = 31788,
+                pristineItemId = 89171,
 			},
 			[79912] = {
 				-- Thunder King Insignia
 				itemID = 79912,
 				spellID = 113986,
+                pristineQuestId = 31790,
+                pristineItemId = 89173,
 			},
 			[79915] = {
 				-- Warlord's Branding Iron
 				itemID = 79915,
 				spellID = 113989,
+                pristineQuestId = 89176,
+                pristineItemId = 31793,
 			},
 			[79917] = {
 				-- Worn Monument Ledger
 				itemID = 79917,
 				spellID = 113991,
+                pristineQuestId = 31805, -- Another Quest? 32105
+                pristineItemId = 89209,
 			},
 		},
 
@@ -1074,36 +1210,50 @@ function private.InitializeArtifactTemplates()
 				-- Eye of Har'gunn the Blind
 				itemID = 114191,
 				spellID = 168315,
+                pristineQuestId = 36767,
+                pristineItemId = 114210,
 			},
 			[114189] = {
 				-- Gladiator's Shield
 				itemID = 114189,
 				spellID = 168313,
+                pristineQuestId = 36765,
+                pristineItemId = 114208,
 			},
 			[114194] = {
 				-- Imperial Decree Stele
 				itemID = 114194,
 				spellID = 168318,
+                pristineQuestId = 36770,
+                pristineItemId = 114213,
 			},
 			[114190] = {
 				-- Mortar and Pestle
 				itemID = 114190,
 				spellID = 168314,
+                pristineQuestId = 36766,
+                pristineItemId = 114209,
 			},
 			[114185] = {
 				-- Ogre Figurine
 				itemID = 114185,
 				spellID = 168311,
+                pristineQuestId = 36763,
+                pristineItemId = 114186,
 			},
 			[114187] = {
 				-- Pictogram Carving
 				itemID = 114187,
 				spellID = 168312,
+                pristineQuestId = 36764,
+                pristineItemId = 114188,
 			},
 			[114193] = {
 				-- Rylak Riding Harness
 				itemID = 114193,
 				spellID = 168317,
+                pristineQuestId = 36769,
+                pristineItemId = 114212,
 			},
 			[114195] = {
 				-- Sorcerer-King Toe Ring
@@ -1115,16 +1265,22 @@ function private.InitializeArtifactTemplates()
 				-- Stone Dentures
 				itemID = 114192,
 				spellID = 168316,
+                pristineQuestId = 36768,
+                pristineItemId = 114211,
 			},
 			[114183] = {
 				-- Stone Manacles
 				itemID = 114183,
 				spellID = 168310,
+                pristineQuestId = 36762,
+                pristineItemId = 114184,
 			},
 			[114181] = {
 				-- Stonemaul Succession Stone
 				itemID = 114181,
 				spellID = 168309,
+                pristineQuestId = 36761,
+                pristineItemId = 114182,
 			},
 			[114196] = {
 				-- Warmaul of the Warmaul Chieftain
@@ -1199,36 +1355,50 @@ function private.InitializeArtifactTemplates()
 				-- Apothecary Tins
 				itemID = 79903,
 				spellID = 113977,
+                pristineQuestId = 31802,
+                pristineItemId = 89183,
 			},
 			[79901] = {
 				-- Carved Bronze Mirror
 				itemID = 79901,
 				spellID = 113975,
+                pristineQuestId = 31800,
+                pristineItemId = 89181,
 			},
 			[79900] = {
 				-- Empty Keg
 				itemID = 79900,
 				spellID = 113974,
+                pristineQuestId = 31799,
+                pristineItemId = 89180,
 			},
 			[79902] = {
 				-- Gold-Inlaid Figurine
 				itemID = 79902,
 				spellID = 113976,
+                pristineQuestId = 31801,
+                pristineItemId = 89182,
 			},
 			[79897] = {
 				-- Pandaren Game Board
 				itemID = 79897,
 				spellID = 113971,
+                pristineQuestId = 31796,
+                pristineItemId = 85558,
 			},
 			[79896] = {
 				-- Pandaren Tea Set
 				itemID = 79896,
 				spellID = 113968,
+                pristineQuestId = 31795,
+                pristineItemId = 85557,
 			},
 			[79904] = {
 				-- Pearl of Yu'lon
 				itemID = 79904,
 				spellID = 113978,
+                pristineQuestId = 31803,
+                pristineItemId = 89184,
 			},
 			[79907] = {
 				-- Spear of Xuen
@@ -1240,11 +1410,15 @@ function private.InitializeArtifactTemplates()
 				-- Standard of Niuzao
 				itemID = 79905,
 				spellID = 113979,
+                pristineQuestId = 31804,
+                pristineItemId = 89185,
 			},
 			[79898] = {
 				-- Twin Stein Set
 				itemID = 79898,
 				spellID = 113972,
+                pristineQuestId = 31797,
+                pristineItemId = 89178,
 			},
 			[79906] = {
 				-- Umbrella of Chi-Ji
@@ -1256,6 +1430,8 @@ function private.InitializeArtifactTemplates()
 				-- Walking Cane
 				itemID = 79899,
 				spellID = 113973,
+                pristineQuestId = 31798,
+                pristineItemId = 89179,
 			},
 		},
 
@@ -1483,26 +1659,36 @@ function private.InitializeArtifactTemplates()
 				-- Akun'Jar Vase
 				itemID = 154913,
 				spellID = 257720,
+                pristineQuestId = 51926,
+                pristineItemId = 154931,
 			},
 			[154914] = {
 				-- Urn of Passage
 				itemID = 154914,
 				spellID = 257721,
+                pristineQuestId = 51929,
+                pristineItemId = 154932,
 			},
 			[154915] = {
 				-- Rezan Idol
 				itemID = 154915,
 				spellID = 257722,
+                pristineQuestId = 51932,
+                pristineItemId = 154933,
 			},
 			[154916] = {
 				-- High Apothecary's Hood
 				itemID = 154916,
 				spellID = 257723,
+                pristineQuestId = 51934,
+                pristineItemId = 154934,
 			},
 			[154917] = {
 				-- Bwonsamdi Voodoo Mask
 				itemID = 154917,
 				spellID = 257724,
+                pristineQuestId = 51936,
+                pristineItemId = 154935,
 			},
 			[160740] = {
 				-- Croak Crock
@@ -1514,6 +1700,8 @@ function private.InitializeArtifactTemplates()
 				-- Blowgun of the Sethra
 				itemID = 160743,
 				spellID = 273812,
+                pristineQuestId = 51937,
+                pristineItemId = 160744,
 			},
 			[160753] = {
 				-- Sanguinating Totem
@@ -1532,6 +1720,7 @@ function private.InitializeArtifactTemplates()
 
 	private.ARTIFACT_TEMPLATES = ARTIFACT_TEMPLATES
 
+    local PRISTINE_ARTIFACT_TO_QUESTID = {}
 	for raceID = 1, _G.GetNumArchaeologyRaces() do
 		local artifactTemplates = private.ARTIFACT_TEMPLATES[raceID]
 
@@ -1543,9 +1732,13 @@ function private.InitializeArtifactTemplates()
 					private.RaceArtifactProcessingQueue[template] = race
 					Archy:RegisterEvent("GET_ITEM_INFO_RECEIVED")
 				end
+                if template.pristineItemId then
+                    PRISTINE_ARTIFACT_TO_QUESTID[template.pristineItemId] = template.pristineQuestId
+                end
 			end
 
 			race:UpdateCurrentProject()
 		end
 	end
+	private.PRISTINE_ARTIFACT_TO_QUESTID = PRISTINE_ARTIFACT_TO_QUESTID
 end
