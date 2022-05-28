@@ -2279,10 +2279,10 @@ function private.InitializeDigsiteTemplates()
 			mapID = 895, -- Tiragarde Sound
 			raceID = RaceID.ArchRaceDrust,
 		},
-		["876:0.432987:0.716681"] = {
+		["2417"] = {
 			-- Digsite: Hunter's Run
 			siteID = 2417,
-			mapID = 895, -- Tiragarde Sound
+			mapID = 896, -- Drustvar
 			raceID = RaceID.ArchRaceDrust,
 		},
         
@@ -2350,7 +2350,7 @@ function private.InitializeDigsiteTemplates()
 
 		["2401"] = {
 			siteID = 2401, -- Digsite: Brokenbough Roost
-			mapID = 895, -- Drustvar
+			mapID = 896, -- Drustvar
 			raceID = RaceID.ArchRaceDrust,
 		},
 		["2405"] = {
