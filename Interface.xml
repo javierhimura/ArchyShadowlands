@@ -426,17 +426,6 @@
         <Anchors>
             <Anchor point="CENTER" relativeTo="UIParent"/>
         </Anchors>
-        <Backdrop bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
-            <EdgeSize>
-                <AbsValue val="8"/>
-            </EdgeSize>
-            <TileSize>
-                <AbsValue val="8"/>
-            </TileSize>
-            <BackgroundInsets>
-                <AbsInset left="2" right="2" top="2" bottom="2"/>
-            </BackgroundInsets>
-        </Backdrop>
         <Frames>
             <Frame name="$parentContainer" parentKey="container">
                 <Anchors>
@@ -483,7 +472,20 @@
             </CheckButton>
         </Frames>
         <Scripts>
-            <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
+            <OnLoad>
+                local backdropInfo =
+                {
+                    bgFile = "Interface\\TutorialFrame\\TutorialFrameBackground",
+                    edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+                    tile = true,
+                    tileSize = 8,
+                    edgeSize = 8,
+                    insets = { left = 2, right = 2, top = 2, bottom = 2 },
+                };
+
+                self:SetBackdrop(backdropInfo);
+                self:RegisterForDrag("LeftButton");
+            </OnLoad>
             <OnDragStart>
                 if (Archy.db.profile.general.locked == false) then
                 self:StartMoving()
@@ -687,17 +689,6 @@
         <Anchors>
             <Anchor point="CENTER" relativeTo="UIParent"/>
         </Anchors>
-        <Backdrop bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
-            <EdgeSize>
-                <AbsValue val="8"/>
-            </EdgeSize>
-            <TileSize>
-                <AbsValue val="8"/>
-            </TileSize>
-            <BackgroundInsets>
-                <AbsInset left="2" right="2" top="2" bottom="2"/>
-            </BackgroundInsets>
-        </Backdrop>
         <Frames>
             <CheckButton name="$parentStyleButton" parentKey="styleButton" inherits="UICheckButtonTemplate" frameLevel="2">
                 <Size>
@@ -758,7 +749,20 @@
             </Frame>
         </Frames>
         <Scripts>
-            <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
+            <OnLoad>
+                local backdropInfo =
+                {
+                    bgFile = "Interface\\TutorialFrame\\TutorialFrameBackground",
+                    edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+                    tile = true,
+                    tileSize = 8,
+                    edgeSize = 8,
+                    insets = { left = 2, right = 2, top = 2, bottom = 2 },
+                };
+
+                self:SetBackdrop(backdropInfo);
+                self:RegisterForDrag("LeftButton");
+            </OnLoad>
             <OnDragStart>
                 if (Archy.db.profile.general.locked == false) then
                 self:StartMoving()
@@ -889,17 +893,6 @@
         <Anchors>
             <Anchor point="CENTER" relativeTo="UIParent"/>
         </Anchors>
-        <Backdrop bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
-            <EdgeSize>
-                <AbsValue val="8"/>
-            </EdgeSize>
-            <TileSize>
-                <AbsValue val="8"/>
-            </TileSize>
-            <BackgroundInsets>
-                <AbsInset left="2" right="2" top="2" bottom="2"/>
-            </BackgroundInsets>
-        </Backdrop>
         <Frames>
             <Frame name="$parentTitle" parentKey="title">
                 <Anchors>
@@ -933,7 +926,20 @@
             </Frame>
         </Frames>
         <Scripts>
-            <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
+            <OnLoad>
+                local backdropInfo =
+                {
+                    bgFile = "Interface\\TutorialFrame\\TutorialFrameBackground",
+                    edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+                    tile = true,
+                    tileSize = 8,
+                    edgeSize = 8,
+                    insets = { left = 2, right = 2, top = 2, bottom = 2 },
+                };
+
+                self:SetBackdrop(backdropInfo);
+                self:RegisterForDrag("LeftButton");
+            </OnLoad>
             <OnDragStart>
                 if (Archy.db.profile.general.locked == false) then
                 self:StartMoving()
@@ -1088,17 +1094,6 @@
         <Anchors>
             <Anchor point="CENTER" relativeTo="UIParent"/>
         </Anchors>
-        <Backdrop bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
-            <EdgeSize>
-                <AbsValue val="8"/>
-            </EdgeSize>
-            <TileSize>
-                <AbsValue val="8"/>
-            </TileSize>
-            <BackgroundInsets>
-                <AbsInset left="2" right="2" top="2" bottom="2"/>
-            </BackgroundInsets>
-        </Backdrop>
         <Frames>
             <Frame name="$parentContainer" parentKey="container">
                 <Anchors>
@@ -1108,7 +1103,20 @@
             </Frame>
         </Frames>
         <Scripts>
-            <OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
+            <OnLoad>
+                local backdropInfo =
+                {
+                    bgFile = "Interface\\TutorialFrame\\TutorialFrameBackground",
+                    edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+                    tile = true,
+                    tileSize = 8,
+                    edgeSize = 8,
+                    insets = { left = 2, right = 2, top = 2, bottom = 2 },
+                };
+
+                self:SetBackdrop(backdropInfo);
+                self:RegisterForDrag("LeftButton");
+            </OnLoad>
             <OnDragStart>
                 if (Archy.db.profile.general.locked == false) then
                 self:StartMoving()
