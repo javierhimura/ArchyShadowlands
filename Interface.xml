@@ -46,7 +46,7 @@
                         </Anchor>
                     </Anchors>
                 </FontString>
-                <Texture name="$parentBorder" parentKey="border" urgency="5" file="Interface\PaperDollInfoFrame\UI-Character-Skills-BarBorder">
+                <Texture name="$parentBorder" parentKey="border" file="Interface\PaperDollInfoFrame\UI-Character-Skills-BarBorder">
                     <Size>
                         <AbsDimension x="309" y="44"/>
                     </Size>
@@ -65,7 +65,7 @@
                 </Texture>
             </Layer>
         </Layers>
-        <BarTexture name="$parentBar" urgency="5" file="Interface\PaperDollInfoFrame\UI-Character-Skills-Bar"/>
+        <BarTexture name="$parentBar" file="Interface\PaperDollInfoFrame\UI-Character-Skills-Bar"/>
         <BarColor r="0.03125" g="0.85" b="0.0"/>
         <Scripts>
             <OnEnter>
