@@ -1088,7 +1088,7 @@ do
 			private.regen_scan_bags = true
 			return
 		end
-		local itemID = _G.GetContainerItemID(bag, slot)
+		local itemID = C_Container.GetContainerItemID(bag, slot)
 
 		if itemID then
 			-- 86068,73410 for debug or any book-type item
