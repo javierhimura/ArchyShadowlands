@@ -1,8 +1,8 @@
-## Interface: 90205
+## Interface: 100002
 ## Title: Archy - Archaeology Assistant
 ## Title-zhCN: Archy - 考古学助手
 ## Title-zhTW: Archy - 考古學助手
-## Version: 9.2.5.0
+## Version: 10.0.2.0
 ## Notes: Archaeology assistant
 ## Notes-zhCN: 考古学助手
 ## Notes-zhTW: 考古學助手
