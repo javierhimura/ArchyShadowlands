@@ -71,4 +71,3 @@ TomTomHandler.lua
 WaypoingHandler.lua
 Database\Digsites.lua
 Database\Artifacts.lua
-Bindings.xml
