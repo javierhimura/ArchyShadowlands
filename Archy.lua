@@ -1331,7 +1331,7 @@ function Archy:UpdateTracking()
 	end
 
 	if digsitesTrackingID then
-		_G.SetTracking(digsitesTrackingID, private.ProfileSettings.general.show)
+		C_Minimap.SetTracking(digsitesTrackingID, private.ProfileSettings.general.show)
 	end
 end
 
