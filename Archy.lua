@@ -896,7 +896,7 @@ function Archy:OnEnable()
 	DatamineTooltip:SetSpellByID(private.CRATE_SPELL_ID)
 	CRATE_USE_STRING = ("%s %s"):format(_G.ITEM_SPELL_TRIGGER_ONUSE, _G["ArchyScanTipTextLeft" .. DatamineTooltip:NumLines()]:GetText())
 
-	for trackingTypeIndex = 1, _G.GetNumTrackingTypes() do
+	for trackingTypeIndex = 1, C_Minimap.GetNumTrackingTypes() do
 		if (_G.GetTrackingInfo(trackingTypeIndex)) == _G.MINIMAP_TRACKING_DIGSITES then
 			digsitesTrackingID = trackingTypeIndex
 			break
