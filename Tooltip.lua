@@ -90,7 +90,7 @@ local function Archy_cell_script(_, what, button)
 end
 
 function StatusBarCellPrototype:InitializeCell()
-	local bar = self:CreateTexture(nil, "OVERLAY", self)
+	local bar = self:CreateTexture(nil, "OVERLAY")
 	self.bar = bar
 	bar:SetWidth(100)
 	bar:SetHeight(12)
