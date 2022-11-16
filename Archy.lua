@@ -1111,7 +1111,7 @@ do
 		private.crate_bag_id, private.crate_bag_slot_id, private.crate_item_id = nil, nil, nil
 
 		for bag = _G.BACKPACK_CONTAINER, _G.NUM_BAG_SLOTS, 1 do
-			for slot = 1, _G.GetContainerNumSlots(bag), 1 do
+			for slot = 1, C_Container.GetContainerNumSlots(bag), 1 do
 				if not private.crate_bag_id and FindCrateable(bag, slot) then
 					private.crate_bag_id = bag
 					private.crate_bag_slot_id = slot
