@@ -1,4 +1,4 @@
-## Interface: 100002
+## Interface: 100105
 ## Title: Archy - Archaeology Assistant
 ## Title-zhCN: Archy - 考古学助手
 ## Title-zhTW: Archy - 考古學助手
