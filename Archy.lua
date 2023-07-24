@@ -752,7 +752,7 @@ function Archy:OnInitialize()
 
 		_G.WorldFrame:HookScript("OnMouseDown", function(frame, button, down)
 			uiMapID = C_Map.GetBestMapForUnit("player")
-			if button == "RightButton" and profileSettings.general.easyCast and _G.ArchaeologyMapUpdateAll(uiMapID) > 0 and not IsTaintable() and not _G.IsEquippedItemType(FISHING_POLE_ITEM_TYPE_NAME) and _G.CanScanResearchSite() and _G.GetSpellCooldown(SURVEY_SPELL_ID) == 0 and not _G.IsFlying() then
+			if button == "RightButton" and profileSettings.general.easyCast and uiMapID and ArchaeologyMapUpdateAll(uiMapID) > 0 and not IsTaintable() and not _G.IsEquippedItemType(FISHING_POLE_ITEM_TYPE_NAME) and _G.CanScanResearchSite() and _G.GetSpellCooldown(SURVEY_SPELL_ID) == 0 and not _G.IsFlying() then
 				-- Ensure the LootFrame contains no items; we don't care if it's simply visible.
 				if _G.GetNumLootItems() == 0 and previousClickTime then
 					local doubleClickTime = _G.GetTime() - previousClickTime
@@ -883,8 +883,7 @@ function Archy:OnEnable()
 	self:RegisterEvent("UNIT_SPELLCAST_INTERRUPTED", "UNIT_SPELLCAST_SUCCEEDED")
 	self:RegisterEvent("UNIT_SPELLCAST_STOP", "UNIT_SPELLCAST_SUCCEEDED")
 	self:RegisterEvent("UNIT_SPELLCAST_SENT")
-
-	self:RegisterBucketEvent("RESEARCH_ARTIFACT_HISTORY_READY", 0.2)
+    self:RESEARCH_ARTIFACT_HISTORY_READY()
 
 	self:SKILL_LINES_CHANGED()
 

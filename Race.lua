@@ -74,7 +74,6 @@ local RaceTextureIDToRaceLabel = {
 -- Helpers.
 -- ----------------------------------------------------------------------------
 function private.InitializeRaces()
-	_G.RequestArtifactCompletionHistory()
 
 	for raceID = 1, _G.GetNumArchaeologyRaces() do
 		local race = private.AddRace(raceID)
@@ -342,8 +341,6 @@ function Race:UpdateCurrentProject()
 	end
 
 	project.keystones_added = prevAdded
-
-	_G.RequestArtifactCompletionHistory()
 
 	if not private.isLoading and private.ProfileSettings.general.show and not self:IsOnArtifactBlacklist() then
 		local currencyOwned = project.fragments + project.keystone_adjustment
