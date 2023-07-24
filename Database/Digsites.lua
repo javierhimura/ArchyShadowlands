@@ -229,7 +229,7 @@ function private.InitializeDigsiteTemplates()
 			raceID = RaceID.ArchRaceNightElf,
 		},
 		["12:0.434937:0.502743"] = {
-			-- Ruins of Eldre'Thar
+			siteID = 179, -- Ruins of Eldre'Thar
 			mapID = 65, -- Stonetalon Mountains
 			raceID = RaceID.ArchRaceNightElf,
 		},
@@ -369,11 +369,6 @@ function private.InitializeDigsiteTemplates()
 			siteID = 315, -- Zul'Farrak Digsite
 			mapID = 71, -- Tanaris
 			raceID = RaceID.ArchRaceTroll,
-		},
-		["12:0.603905:0.359971"] = {
-			siteID = 185, -- Ruins of Eldre’Thar
-			mapID = 65, -- Stonetalon Mountains
-			raceID = RaceID.ArchRaceNightElf,
 		},
         
 		-- ----------------------------------------------------------------------------
