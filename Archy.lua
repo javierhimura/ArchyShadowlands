@@ -1727,6 +1727,8 @@ function Archy:PLAYER_ENTERING_WORLD()
 		self:UpdatePlayerPosition()
         self:UpdateSiteDistances(true)
 	end
+    
+    self:DebugMissingDigsites()
 end
 
 function Archy:PLAYER_LEAVING_WORLD()
