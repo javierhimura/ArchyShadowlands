@@ -622,11 +622,12 @@ function Archy:SearchDigsiteTemplate(continentID, zone, zoneSite, mapPositionX, 
         digsiteTemplate = MissingDigsites.Sites[siteKey]
     end
     
-    if digsiteTemplate then
-        if not digsiteTemplate.siteID then
-            Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, digsiteTemplate.raceID)
-        end
-    end
+    --if digsiteTemplate then
+    --    if not digsiteTemplate.siteID then
+    --        Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, digsiteTemplate.raceID)
+    --        Debug("\n\t\t["..zoneSite.researchSiteID.."] = {\n\t\t\t\id = "..zoneSite.researchSiteID..", -- "..zoneSite.name.."\n\t\t\tmapID = "..zone.UIMapID..", -- "..zone.name.."\n\t\t\traceID = RaceID.Unknown,\n\t\t},")
+    --    end
+    --end
     return digsiteTemplate
 end
 
@@ -1575,6 +1576,10 @@ function Archy:CURRENCY_DISPLAY_UPDATE()
                 if currentDigsite.raceID == RaceID.Unknown then
                     if MissingDigsites and MissingDigsites[currentDigsite.templateKey] then
                         MissingDigsites[currentDigsite.templateKey].raceID = raceID
+                    end
+                    if not private.DIGSITE_TEMPLATES[currentDigsite.templateKey] then
+                        private.DIGSITE_TEMPLATES[currentDigsite.templateKey] = {}
+                        private.DIGSITE_TEMPLATES[currentDigsite.templateKey].mapID = playerLocation.UIMapID
                     end
                     private.DIGSITE_TEMPLATES[currentDigsite.templateKey].raceID = raceID
                 end
