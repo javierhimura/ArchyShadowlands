@@ -70,6 +70,31 @@ local RaceTextureIDToRaceLabel = {
 	[2060049] = "ArchRaceDrust",
 }
 
+local RaceIDToRaceLabel = {
+	[0] = "ArchRaceUnknown",
+	[1] = "ArchRaceDrust",
+	[2] = "ArchRaceZandalari",
+	[3] = "ArchRaceDemons",
+	[4] = "ArchRaceHighmountainTauren",
+	[5] = "ArchRaceHighborneNightElves",
+	[6] = "ArchRaceOgre",
+	[7] = "ArchRaceDraenorOrc",
+	[8] = "ArchRaceArakkoa",
+	[9] = "ArchRaceMogu",
+	[10] = "ArchRacePandaren",
+	[11] = "ArchRaceMantid",
+	[12] = "ArchRaceVrykul",
+	[13] = "ArchRaceTroll",
+	[14] = "ArchRaceTolvir",
+	[15] = "ArchRaceOrc",
+	[16] = "ArchRaceNerubian",
+	[17] = "ArchRaceNightElf",
+	[18] = "ArchRaceFossil",
+	[19] = "ArchRaceDraenei",
+	[20] = "ArchRaceDwarf",
+}
+private.RaceIDToRaceLabel = RaceIDToRaceLabel
+
 -- ----------------------------------------------------------------------------
 -- Helpers.
 -- ----------------------------------------------------------------------------

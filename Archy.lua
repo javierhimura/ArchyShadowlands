@@ -108,7 +108,7 @@ _G.BINDING_NAME_DIGSITESARCHY = L["BINDING_NAME_DIGSITES"]
 -- ----------------------------------------------------------------------------
 -- Variables
 -- ----------------------------------------------------------------------------
-MissingDigsites = {}
+MissingDigsites = MissingDigsites or {}
 local continent_digsites = {}
 private.continent_digsites = continent_digsites
 
@@ -151,7 +151,7 @@ do
 		end
 
 		local message = string.format(...)
-		debugger:AddLine(message, "%X")
+		debugger:AddLine(message)
 
 		return message
 	end
@@ -506,9 +506,9 @@ local function CompareAndResetDigCounters(digsiteListA, digsiteListB)
 	end
 end
 
+local SourceCount = 0
 function UpdateAllSites()
 
-    local SourceCount = MissingDigsites.Count or 0
 	for continentID, continentData in pairs(MAP_CONTINENTS) do
 		local sites = {}
         
@@ -549,8 +549,9 @@ function UpdateAllSites()
 	end
 	
 	if MissingDigsites and MissingDigsites.Count and MissingDigsites.Count > SourceCount then
-		print(MissingDigsites.Count .. " missing digsites found. Please run /archy debug and report the list")
+        Archy:DebugMissingDigsites()
 	end
+    SourceCount = MissingDigsites.Count or 0
 end
 
 local function SortSitesByDistance(digsiteA, digsiteB)
@@ -596,12 +597,31 @@ function Archy:AddMissingDigSite(siteKey, id, name, continentID, mapID, zonename
     MissingDigsites.Count = MissingDigsites.Count + 1
 end
 
+function Archy:DebugMissingDigsites()
+    if MissingDigsites  and MissingDigsites.Sites then
+        MissingDigsites.Count = 0
+        for siteKey, site in pairs(MissingDigsites.Sites) do
+            if private.DIGSITE_TEMPLATES[siteKey] then
+                MissingDigsites.Sites[siteKey] = nil
+            elseif private.DIGSITE_TEMPLATES_BY_ID[site.id] then
+                MissingDigsites.Sites[siteKey] = nil
+            else
+                local raceID = site.raceID
+                local raceName = private.RaceIDToRaceLabel[raceID];
+                Debug("\n\t\t[\""..siteKey.."\"] = {\n\t\t\t\siteID = "..site.id..", -- "..site.name.."\n\t\t\tmapID = "..site.mapID..", -- "..site.zonename.."\n\t\t\traceID = RaceID."..raceName..",\n\t\t},")
+                MissingDigsites.Count = MissingDigsites.Coun + 1
+            end
+        end
+	end
+    
+    if MissingDigsites and MissingDigsites.Count > 0 then
+        print(MissingDigsites.Count .. " missing digsites found. Please run /archy debug and report the list")
+    end
+end
+
 function Archy:SearchDigsiteTemplate(continentID, zone, zoneSite, mapPositionX, mapPositionY)
     local siteKey = ("%d:%.6f:%.6f"):format(continentID, mapPositionX, mapPositionY)
     local digsiteTemplate = private.DIGSITE_TEMPLATES[siteKey]
-    if not digsiteTemplate and MissingDigsites and MissingDigsites.Sites and MissingDigsites.Sites[siteKey] then
-        digsiteTemplate = MissingDigsites.Sites[siteKey]
-    end
  
     if not digsiteTemplate then
         local oldsiteKey = private.DIGSITE_TEMPLATES_BY_ID[zoneSite.researchSiteID]
@@ -615,19 +635,21 @@ function Archy:SearchDigsiteTemplate(continentID, zone, zoneSite, mapPositionX, 
     if not digsiteTemplate then
         digsiteTemplate = private.DIGSITE_TEMPLATES[zoneSite.researchSiteID]
     end
+    
+    if not digsiteTemplate and MissingDigsites and MissingDigsites.Sites and MissingDigsites.Sites[siteKey] then
+        digsiteTemplate = MissingDigsites.Sites[siteKey]
+    end
 
     if not digsiteTemplate then
         Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, 0)
-        Debug("\n\t\t["..zoneSite.researchSiteID.."] = {\n\t\t\t\id = "..zoneSite.researchSiteID..", -- "..zoneSite.name.."\n\t\t\tmapID = "..zone.UIMapID..", -- "..zone.name.."\n\t\t\traceID = RaceID.Unknown,\n\t\t},")
         digsiteTemplate = MissingDigsites.Sites[siteKey]
     end
     
-    --if digsiteTemplate then
-    --    if not digsiteTemplate.siteID then
-    --        Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, digsiteTemplate.raceID)
-    --        Debug("\n\t\t["..zoneSite.researchSiteID.."] = {\n\t\t\t\id = "..zoneSite.researchSiteID..", -- "..zoneSite.name.."\n\t\t\tmapID = "..zone.UIMapID..", -- "..zone.name.."\n\t\t\traceID = RaceID.Unknown,\n\t\t},")
-    --    end
-    --end
+    if digsiteTemplate then
+        if not digsiteTemplate.siteID then
+            Archy:AddMissingDigSite(siteKey, zoneSite.researchSiteID, zoneSite.name, continentID, zone.UIMapID, zone.name, digsiteTemplate.raceID)
+        end
+    end
     return digsiteTemplate
 end
 
@@ -1032,7 +1054,7 @@ local SUBCOMMAND_FUNCS = {
         end
         
         if MissingDigsites and MissingDigsites.Count > 0 then
-            print(MissingDigsites.Count .. " missing digsites found. Please run /archy debug and report the list")
+            Archy:DebugMissingDigsites()
         end
         
 		Debug(("%d found"):format(MissingDigsites.Count))
@@ -1393,7 +1415,7 @@ do
 		currentDigsite = nearestDigsite
 		currentDigsite.stats.surveys = currentDigsite.stats.surveys + 1
 		currentDigsite.stats.counter = numFindsCompleted
-
+        
 		DistanceIndicatorFrame.isActive = true
 		DistanceIndicatorFrame:Toggle()
 		DistanceIndicatorFrame:Reset()
@@ -1574,8 +1596,8 @@ function Archy:CURRENCY_DISPLAY_UPDATE()
 				currentDigsite:AddSurveyNode(playerLocation.UIMapID, playerLocation.x, playerLocation.y)
                 local RaceID = private.RaceID
                 if currentDigsite.raceID == RaceID.Unknown then
-                    if MissingDigsites and MissingDigsites[currentDigsite.templateKey] then
-                        MissingDigsites[currentDigsite.templateKey].raceID = raceID
+                    if MissingDigsites and MissingDigsites.Sites[currentDigsite.templateKey] then
+                        MissingDigsites.Sites[currentDigsite.templateKey].raceID = raceID
                     end
                     if not private.DIGSITE_TEMPLATES[currentDigsite.templateKey] then
                         private.DIGSITE_TEMPLATES[currentDigsite.templateKey] = {}
