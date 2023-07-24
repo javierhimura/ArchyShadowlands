@@ -573,6 +573,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["14:0.518835:0.710886"] = {
 			-- Terror Wing Fossil Field
+			siteID = 215, -- Terror Wing Fossil Field
 			mapID = 36, -- Burning Steppes
 			raceID = RaceID.ArchRaceFossil,
 		},
