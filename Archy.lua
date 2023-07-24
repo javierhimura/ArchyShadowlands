@@ -609,7 +609,7 @@ function Archy:DebugMissingDigsites()
                 local raceID = site.raceID
                 local raceName = private.RaceIDToRaceLabel[raceID];
                 Debug("\n\t\t[\""..siteKey.."\"] = {\n\t\t\t\siteID = "..site.id..", -- "..site.name.."\n\t\t\tmapID = "..site.mapID..", -- "..site.zonename.."\n\t\t\traceID = RaceID."..raceName..",\n\t\t},")
-                MissingDigsites.Count = MissingDigsites.Coun + 1
+                MissingDigsites.Count = MissingDigsites.Count + 1
             end
         end
 	end
